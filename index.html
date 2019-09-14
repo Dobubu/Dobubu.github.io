@@ -62,6 +62,199 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-css-contextual-selector" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/14/css-contextual-selector/" class="article-date">
+  <time datetime="2019-09-14T10:24:48.000Z" itemprop="datePublished">2019-09-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/F2E/">F2E</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/14/css-contextual-selector/">css-contextual-selector 關聯選取器</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>將CSS樣式應用到一群有關連的元素上</p>
+<p><strong><code>前代元素名稱合併子後代元素名稱{屬性名稱：屬性數值;}</code></strong></p>
+<h2 id="後代選取器（合併子是一個空白字元）"><a href="#後代選取器（合併子是一個空白字元）" class="headerlink" title="後代選取器（合併子是一個空白字元）"></a>後代選取器（合併子是一個<font color="red">空白字元</font>）</h2><p><strong>後代元素包含在前代元素之內</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span> <span class="selector-tag">em</span> &#123;<span class="attribute">color</span>: red;&#125;  </span><br><span class="line"></span><br><span class="line"><span class="selector-tag">h1</span> <span class="selector-tag">em</span>, <span class="selector-tag">h2</span> <span class="selector-tag">em</span> &#123;<span class="attribute">color</span>: green;&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>cake<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span>chocolate<span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span> // chocolate 會變成 red</span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span>cake<span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span>        // cake 會變成 green</span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span>chocolate<span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">h2</span>&gt;</span>   // chocolate 會變成 green</span><br></pre></td></tr></table></figure>
+
+<h2 id="子代選取器（合併子是一個-gt-字元）"><a href="#子代選取器（合併子是一個-gt-字元）" class="headerlink" title="子代選取器（合併子是一個&gt;字元）"></a>子代選取器（合併子是一個<font color="red">&gt;</font>字元）</h2><p><strong>前代與後代<font color="red">元素之間不可以有其他元素</font>存在</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span>&gt;<span class="selector-tag">em</span> &#123;<span class="attribute">color</span>: red;&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">strong</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span>cake<span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">strong</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span>chocolate<span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span> // chocolate 會變成 red</span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="相鄰選取器（合併子是一個-字元）"><a href="#相鄰選取器（合併子是一個-字元）" class="headerlink" title="相鄰選取器（合併子是一個+字元）"></a>相鄰選取器（合併子是一個<font color="red">+</font>字元）</h2><p><strong><font color="red">只有直接接在</font>前代元素後面的後代元素</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span> + <span class="selector-tag">p</span> &#123;<span class="attribute">color</span>: red;&#125;</span><br><span class="line"><span class="selector-tag">p</span> &#123;<span class="attribute">color</span>: green;&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>cake<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>chocolate<span class="tag">&lt;/<span class="name">p</span>&gt;</span>  // chocolate 會變成 red</span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>cookie<span class="tag">&lt;/<span class="name">p</span>&gt;</span>     // cookie 是green</span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>puff<span class="tag">&lt;/<span class="name">p</span>&gt;</span>       // puff 是green</span><br></pre></td></tr></table></figure>
+
+<h2 id="一般選取器（合併子是一個～字元）"><a href="#一般選取器（合併子是一個～字元）" class="headerlink" title="一般選取器（合併子是一個～字元）"></a>一般選取器（合併子是一個<font color="red">～</font>字元）</h2><p><strong><font color="red">所有</font>接在前代元素後面的 後代元素 都會吃到</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span> ～ <span class="selector-tag">p</span> &#123;<span class="attribute">color</span>: red;&#125;</span><br><span class="line"><span class="selector-tag">p</span> &#123;<span class="attribute">color</span>: green;&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>cake<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>chocolate<span class="tag">&lt;/<span class="name">p</span>&gt;</span>  // chocolate 會變成 red</span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>cookie<span class="tag">&lt;/<span class="name">p</span>&gt;</span>     // cookie 會變成 red</span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>puff<span class="tag">&lt;/<span class="name">p</span>&gt;</span>       // puff 會變成 red</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dobubu.github.io/2019/09/14/css-contextual-selector/" data-id="ck0jesbqo0004ahx86q6gmiy6" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/contextual-selector/">contextual selector</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/selector/">selector</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-css-attribute-selector" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/14/css-attribute-selector/" class="article-date">
+  <time datetime="2019-09-14T10:16:45.000Z" itemprop="datePublished">2019-09-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/F2E/">F2E</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/14/css-attribute-selector/">CSS-attribute-selector 屬性選取器</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>用來指定HTML元素屬性的CSS樣式<br>對於不包含 class 與 id 屬性的 XML文件 特別有用</p>
+<h2 id="E-attr"><a href="#E-attr" class="headerlink" title="E[attr]"></a>E[attr]</h2><p><strong><code>elemen[attribute]{ properties }</code></strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">img</span><span class="selector-attr">[title]</span> &#123; <span class="attribute">border</span>: <span class="number">1px</span> solid red; &#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"first.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span> <span class="attr">title</span>=<span class="string">'first'</span>&gt;</span>  // 會應用到css樣式</span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"second.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="E-attr-val-（必須完全相等）"><a href="#E-attr-val-（必須完全相等）" class="headerlink" title="E[attr=val]（必須完全相等）"></a>E[attr=val]（必須完全相等）</h2><p><strong><code>elemen[attribute=&#39;value&#39;]{ properties }</code></strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">img</span><span class="selector-attr">[title='first']</span> &#123; <span class="attribute">border</span>: <span class="number">1px</span> solid red; &#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"first.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span> <span class="attr">title</span>=<span class="string">'first'</span>&gt;</span>  // 會應用到css樣式</span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"second.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span> <span class="attr">title</span>=<span class="string">'second'</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="E-attr-val-（部分相等即可）"><a href="#E-attr-val-（部分相等即可）" class="headerlink" title="E[attr~=val]（部分相等即可）"></a>E[attr~=val]（部分相等即可）</h2><p><strong><code>elemen[attribute~=&#39;value&#39;]{ properties }</code></strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">img</span><span class="selector-attr">[title~='img']</span> &#123; <span class="attribute">border</span>: <span class="number">1px</span> solid red; &#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"first.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span> <span class="attr">title</span>=<span class="string">'first img'</span>&gt;</span>    // 會應用到css樣式</span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"second.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span> <span class="attr">title</span>=<span class="string">'second img'</span>&gt;</span>  // 會應用到css樣式</span><br></pre></td></tr></table></figure>
+
+<h2 id="E-attr-val-（必須等於-value-或-value-）"><a href="#E-attr-val-（必須等於-value-或-value-）" class="headerlink" title="E[attr|=val]（必須等於 value 或 value-）"></a>E[attr|=val]（必須等於 value 或 value-）</h2><p><strong><code>elemen[attribute|=&#39;value&#39;]{ properties }</code></strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">img</span><span class="selector-attr">[title|='img']</span> &#123; <span class="attribute">border</span>: <span class="number">1px</span> solid red; &#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"first.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span> <span class="attr">title</span>=<span class="string">'img'</span>&gt;</span>          // 會應用到css樣式</span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"second.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span> <span class="attr">title</span>=<span class="string">'img-second'</span>&gt;</span>  // 會應用到css樣式</span><br></pre></td></tr></table></figure>
+
+<h2 id="E-attr-val-（屬性開頭必須是-value）"><a href="#E-attr-val-（屬性開頭必須是-value）" class="headerlink" title="E[attr^=val]（屬性開頭必須是 value）"></a>E[attr^=val]（屬性<font color="red">開頭</font>必須是 value）</h2><p><strong><code>elemen[attribute^=&#39;value&#39;]{ properties }</code></strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">img</span><span class="selector-attr">[title^='img']</span> &#123; <span class="attribute">border</span>: <span class="number">1px</span> solid red; &#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"first.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span> <span class="attr">title</span>=<span class="string">'first img'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"second.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span> <span class="attr">title</span>=<span class="string">'img second'</span>&gt;</span>  // 會應用到css樣式</span><br></pre></td></tr></table></figure>
+
+<h2 id="E-attr-val-（屬性結尾必須是-value）"><a href="#E-attr-val-（屬性結尾必須是-value）" class="headerlink" title="E[attr$=val]（屬性結尾必須是 value）"></a>E[attr$=val]（屬性<font color="red">結尾</font>必須是 value）</h2><p><strong><code>elemen[attribute$=&#39;value&#39;]{ properties }</code></strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">img</span><span class="selector-attr">[title$='img']</span> &#123; <span class="attribute">border</span>: <span class="number">1px</span> solid red; &#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"first.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span> <span class="attr">title</span>=<span class="string">'first img'</span>&gt;</span>    // 會應用到css樣式</span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"second.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span> <span class="attr">title</span>=<span class="string">'img second'</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="E-attr-val-（屬性值必須包含value）"><a href="#E-attr-val-（屬性值必須包含value）" class="headerlink" title="E[attr*=val]（屬性值必須包含value）"></a>E[attr*=val]（屬性值<font color="red">必須包含value</font>）</h2><p><strong><code>elemen[attribute*=&#39;value&#39;]{ properties }</code></strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">img</span><span class="selector-attr">[title*='img']</span> &#123; <span class="attribute">border</span>: <span class="number">1px</span> solid red; &#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"first.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span> <span class="attr">title</span>=<span class="string">'first img'</span>&gt;</span>    // 會應用到css樣式</span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"second.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span> <span class="attr">title</span>=<span class="string">'second'</span>&gt;</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dobubu.github.io/2019/09/14/css-attribute-selector/" data-id="ck0jesbqn0002ahx89gz47hww" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/attribute-selector/">attribute selector</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/selector/">selector</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-css-selector" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/14/css-selector/" class="article-date">
+  <time datetime="2019-09-14T03:40:13.000Z" itemprop="datePublished">2019-09-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/F2E/">F2E</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/14/css-selector/">CSS-Selector（元素選取器、類別選取器）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>CSS樣式是由 選取器＋樣式宣告 所組成</p>
+<h2 id="元素選取器"><a href="#元素選取器" class="headerlink" title="元素選取器"></a>元素選取器</h2><p><strong><code>元素名稱{屬性名稱：屬性數值;}</code></strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;<span class="attribute">color</span>: red;&#125;           </span><br><span class="line"><span class="selector-tag">h1</span>, <span class="selector-tag">h2</span>, <span class="selector-tag">p</span> &#123;<span class="attribute">color</span>: pink;&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="萬用選取器"><a href="#萬用選取器" class="headerlink" title="萬用選取器"></a>萬用選取器</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* &#123;<span class="attribute">color</span>: red;&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="類別選取器"><a href="#類別選取器" class="headerlink" title="類別選取器"></a>類別選取器</h2><h3 id="class"><a href="#class" class="headerlink" title="class"></a>class</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.primary</span> &#123;<span class="attribute">color</span>: red;&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"primary"</span>&gt;</span>cake<span class="tag">&lt;/<span class="name">p</span>&gt;</span>          // cake 會變成 red</span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">"primary"</span>&gt;</span>chocolate<span class="tag">&lt;/<span class="name">h1</span>&gt;</span>   // chocolate 會變成 red</span><br></pre></td></tr></table></figure>
+
+<h3 id="id"><a href="#id" class="headerlink" title="id"></a>id</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#primary</span> &#123;<span class="attribute">color</span>: green;&#125;</span><br><span class="line"><span class="selector-id">#secondary</span> &#123;<span class="attribute">color</span>: blue;&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"primary"</span>&gt;</span>cake<span class="tag">&lt;/<span class="name">p</span>&gt;</span>          // cake 會變成 green</span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">id</span>=<span class="string">"secondary"</span>&gt;</span>chocolate<span class="tag">&lt;/<span class="name">h1</span>&gt;</span> // chocolate 會變成 blue</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dobubu.github.io/2019/09/14/css-selector/" data-id="ck0jesbqr0007ahx8cpotfqml" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-JavaScript-Patterns-2012-1-1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/07/14/JavaScript-Patterns-2012-1-1/" class="article-date">
@@ -153,7 +346,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/07/14/JavaScript-Patterns-2012-1-1/" data-id="ck0j0lheg0000s6x8ioqv4lzt" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/07/14/JavaScript-Patterns-2012-1-1/" data-id="ck0jesbqv000dahx8633mfn38" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/閱讀/">閱讀</a></li></ul>
@@ -213,7 +406,7 @@ watch: {
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/06/29/vue-watch-window-resize/" data-id="ck0j0lheq0007s6x8504xnkf6" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/06/29/vue-watch-window-resize/" data-id="ck0jesbqy000hahx8ejt51713" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue-js/">Vue.js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/work/">work</a></li></ul>
@@ -292,7 +485,7 @@ watch: {
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/06/23/install-nvm/" data-id="ck0j0lher0008s6x8t4x19y3l" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/06/23/install-nvm/" data-id="ck0jesbqt0009ahx8v58241ty" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nvm/">nvm</a></li></ul>
@@ -343,7 +536,7 @@ watch: {
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/06/22/hello-world/" data-id="ck0j0lheo0006s6x88rer1tvw" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/06/22/hello-world/" data-id="ck0jesbqs0008ahx8zr1sksk7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -373,7 +566,7 @@ watch: {
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue-js/">Vue.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nvm/">nvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/work/">work</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/閱讀/">閱讀</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue-js/">Vue.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/attribute-selector/">attribute selector</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/contextual-selector/">contextual selector</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nvm/">nvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/selector/">selector</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/work/">work</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/閱讀/">閱讀</a></li></ul>
     </div>
   </div>
 
@@ -383,7 +576,7 @@ watch: {
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Vue-js/" style="font-size: 10px;">Vue.js</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/work/" style="font-size: 10px;">work</a> <a href="/tags/閱讀/" style="font-size: 10px;">閱讀</a>
+      <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Vue-js/" style="font-size: 10px;">Vue.js</a> <a href="/tags/attribute-selector/" style="font-size: 10px;">attribute selector</a> <a href="/tags/contextual-selector/" style="font-size: 10px;">contextual selector</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/selector/" style="font-size: 15px;">selector</a> <a href="/tags/work/" style="font-size: 10px;">work</a> <a href="/tags/閱讀/" style="font-size: 10px;">閱讀</a>
     </div>
   </div>
 
@@ -392,7 +585,7 @@ watch: {
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li></ul>
     </div>
   </div>
 
@@ -405,19 +598,23 @@ watch: {
       <ul>
         
           <li>
+            <a href="/2019/09/14/css-contextual-selector/">css-contextual-selector 關聯選取器</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/14/css-attribute-selector/">CSS-attribute-selector 屬性選取器</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/14/css-selector/">CSS-Selector（元素選取器、類別選取器）</a>
+          </li>
+        
+          <li>
             <a href="/2019/07/14/JavaScript-Patterns-2012-1-1/">JavaScript-Patterns-2012-介紹[1-1]</a>
           </li>
         
           <li>
             <a href="/2019/06/29/vue-watch-window-resize/">使用Vue.js監聽視窗大小（寬）</a>
-          </li>
-        
-          <li>
-            <a href="/2019/06/23/install-nvm/">在mac環境下安裝nvm過程</a>
-          </li>
-        
-          <li>
-            <a href="/2019/06/22/hello-world/">Hello World</a>
           </li>
         
       </ul>

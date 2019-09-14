@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>css-contextual-selector 關聯選取器 | Stick to it!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="將CSS樣式應用到一群有關連的元素上 前代元素名稱合併子後代元素名稱{屬性名稱：屬性數值;} 後代選取器（合併子是一個空白字元）後代元素包含在前代元素之內 123ul li em &amp;#123;color: red;&amp;#125;  h1 em, h2 em &amp;#123;color: green;&amp;#125;  1234567&amp;lt;ul&amp;gt;  &amp;lt;li&amp;gt;cake&amp;lt;/li&amp;gt;">
+<meta name="keywords" content="css,selector,contextual selector">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css-contextual-selector 關聯選取器">
+<meta property="og:url" content="https://dobubu.github.io/2019/09/14/css-contextual-selector/index.html">
+<meta property="og:site_name" content="Stick to it!">
+<meta property="og:description" content="將CSS樣式應用到一群有關連的元素上 前代元素名稱合併子後代元素名稱{屬性名稱：屬性數值;} 後代選取器（合併子是一個空白字元）後代元素包含在前代元素之內 123ul li em &amp;#123;color: red;&amp;#125;  h1 em, h2 em &amp;#123;color: green;&amp;#125;  1234567&amp;lt;ul&amp;gt;  &amp;lt;li&amp;gt;cake&amp;lt;/li&amp;gt;">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-09-14T10:26:58.666Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="css-contextual-selector 關聯選取器">
+<meta name="twitter:description" content="將CSS樣式應用到一群有關連的元素上 前代元素名稱合併子後代元素名稱{屬性名稱：屬性數值;} 後代選取器（合併子是一個空白字元）後代元素包含在前代元素之內 123ul li em &amp;#123;color: red;&amp;#125;  h1 em, h2 em &amp;#123;color: green;&amp;#125;  1234567&amp;lt;ul&amp;gt;  &amp;lt;li&amp;gt;cake&amp;lt;/li&amp;gt;">
+  
+    <link rel="alternate" href="/atom.xml" title="Stick to it!" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Stick to it!</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://dobubu.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-css-contextual-selector" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/14/css-contextual-selector/" class="article-date">
+  <time datetime="2019-09-14T10:24:48.000Z" itemprop="datePublished">2019-09-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/F2E/">F2E</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      css-contextual-selector 關聯選取器
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>將CSS樣式應用到一群有關連的元素上</p>
+<p><strong><code>前代元素名稱合併子後代元素名稱{屬性名稱：屬性數值;}</code></strong></p>
+<h2 id="後代選取器（合併子是一個空白字元）"><a href="#後代選取器（合併子是一個空白字元）" class="headerlink" title="後代選取器（合併子是一個空白字元）"></a>後代選取器（合併子是一個<font color="red">空白字元</font>）</h2><p><strong>後代元素包含在前代元素之內</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span> <span class="selector-tag">em</span> &#123;<span class="attribute">color</span>: red;&#125;  </span><br><span class="line"></span><br><span class="line"><span class="selector-tag">h1</span> <span class="selector-tag">em</span>, <span class="selector-tag">h2</span> <span class="selector-tag">em</span> &#123;<span class="attribute">color</span>: green;&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>cake<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span>chocolate<span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span> // chocolate 會變成 red</span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span>cake<span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span>        // cake 會變成 green</span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span>chocolate<span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">h2</span>&gt;</span>   // chocolate 會變成 green</span><br></pre></td></tr></table></figure>
+
+<h2 id="子代選取器（合併子是一個-gt-字元）"><a href="#子代選取器（合併子是一個-gt-字元）" class="headerlink" title="子代選取器（合併子是一個&gt;字元）"></a>子代選取器（合併子是一個<font color="red">&gt;</font>字元）</h2><p><strong>前代與後代<font color="red">元素之間不可以有其他元素</font>存在</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span>&gt;<span class="selector-tag">em</span> &#123;<span class="attribute">color</span>: red;&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">strong</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span>cake<span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">strong</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span>chocolate<span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span> // chocolate 會變成 red</span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="相鄰選取器（合併子是一個-字元）"><a href="#相鄰選取器（合併子是一個-字元）" class="headerlink" title="相鄰選取器（合併子是一個+字元）"></a>相鄰選取器（合併子是一個<font color="red">+</font>字元）</h2><p><strong><font color="red">只有直接接在</font>前代元素後面的後代元素</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span> + <span class="selector-tag">p</span> &#123;<span class="attribute">color</span>: red;&#125;</span><br><span class="line"><span class="selector-tag">p</span> &#123;<span class="attribute">color</span>: green;&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>cake<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>chocolate<span class="tag">&lt;/<span class="name">p</span>&gt;</span>  // chocolate 會變成 red</span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>cookie<span class="tag">&lt;/<span class="name">p</span>&gt;</span>     // cookie 是green</span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>puff<span class="tag">&lt;/<span class="name">p</span>&gt;</span>       // puff 是green</span><br></pre></td></tr></table></figure>
+
+<h2 id="一般選取器（合併子是一個～字元）"><a href="#一般選取器（合併子是一個～字元）" class="headerlink" title="一般選取器（合併子是一個～字元）"></a>一般選取器（合併子是一個<font color="red">～</font>字元）</h2><p><strong><font color="red">所有</font>接在前代元素後面的 後代元素 都會吃到</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span> ～ <span class="selector-tag">p</span> &#123;<span class="attribute">color</span>: red;&#125;</span><br><span class="line"><span class="selector-tag">p</span> &#123;<span class="attribute">color</span>: green;&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>cake<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>chocolate<span class="tag">&lt;/<span class="name">p</span>&gt;</span>  // chocolate 會變成 red</span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>cookie<span class="tag">&lt;/<span class="name">p</span>&gt;</span>     // cookie 會變成 red</span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>puff<span class="tag">&lt;/<span class="name">p</span>&gt;</span>       // puff 會變成 red</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dobubu.github.io/2019/09/14/css-contextual-selector/" data-id="ck0jesbqo0004ahx86q6gmiy6" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/contextual-selector/">contextual selector</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/selector/">selector</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/09/14/css-attribute-selector/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">CSS-attribute-selector 屬性選取器</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/F2E/">F2E</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue-js/">Vue.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/attribute-selector/">attribute selector</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/contextual-selector/">contextual selector</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nvm/">nvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/selector/">selector</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/work/">work</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/閱讀/">閱讀</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Vue-js/" style="font-size: 10px;">Vue.js</a> <a href="/tags/attribute-selector/" style="font-size: 10px;">attribute selector</a> <a href="/tags/contextual-selector/" style="font-size: 10px;">contextual selector</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/selector/" style="font-size: 15px;">selector</a> <a href="/tags/work/" style="font-size: 10px;">work</a> <a href="/tags/閱讀/" style="font-size: 10px;">閱讀</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/09/14/css-contextual-selector/">css-contextual-selector 關聯選取器</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/14/css-attribute-selector/">CSS-attribute-selector 屬性選取器</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/14/css-selector/">CSS-Selector（元素選取器、類別選取器）</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/14/JavaScript-Patterns-2012-1-1/">JavaScript-Patterns-2012-介紹[1-1]</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/29/vue-watch-window-resize/">使用Vue.js監聽視窗大小（寬）</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Mischa Hung<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
