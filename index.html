@@ -62,6 +62,219 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-css-selector" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/14/css-selector/" class="article-date">
+  <time datetime="2019-09-14T03:40:13.000Z" itemprop="datePublished">2019-09-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/F2E/">F2E</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/14/css-selector/">CSS-selector</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dobubu.github.io/2019/09/14/css-selector/" data-id="ck0j0t12u0000sqx8foe4h1tq" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript-Patterns-2012-1-2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/31/JavaScript-Patterns-2012-1-2/" class="article-date">
+  <time datetime="2019-07-31T13:27:20.000Z" itemprop="datePublished">2019-07-31</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/F2E/">F2E</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/31/JavaScript-Patterns-2012-1-2/">JavaScript-Patterns-2012-介紹[1-2]</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>頁碼 p.18 ~ p.</p>
+<h2 id="for迴圈（重複陣列"><a href="#for迴圈（重複陣列" class="headerlink" title="for迴圈（重複陣列"></a>for迴圈（重複陣列</h2><p><strong>可遍歷整個陣列或類似陣列的物件</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 這個寫法，每次都要存取陣列的長度，這會拖慢你的程式</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; myArray.length; i++) &#123;</span><br><span class="line">  <span class="comment">// do something ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 這個寫法，只需計算一次length，用於整個迴圈中 👍</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>, max = myArray.length; i &lt; max ; i++) &#123;</span><br><span class="line">  <span class="comment">// do something ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="迴圈模式的變形。優化效能"><a href="#迴圈模式的變形。優化效能" class="headerlink" title="迴圈模式的變形。優化效能"></a>迴圈模式的變形。優化效能</h3><ul>
+<li><font color="green">可少用一個變數（這邊指 max）👍</font></li>
+<li><font color="green">遞減至0，通常比較快 👍</font><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一種</span></span><br><span class="line"><span class="keyword">var</span> i, myArray = [];</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(i = myArray.length; i--;) &#123;</span><br><span class="line"><span class="comment">// do something ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 第二種</span></span><br><span class="line"><span class="keyword">var</span> myArray = [],</span><br><span class="line">  i = myArray.length;</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span>(i--) &#123;</span><br><span class="line"><span class="comment">// do something ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<hr>
+<h2 id="for-in迴圈（重複物件"><a href="#for-in迴圈（重複物件" class="headerlink" title="for-in迴圈（重複物件"></a>for-in迴圈（重複物件</h2><p>  <strong>用來歷整整個<font color="red">非陣列物件</font>，又稱「列舉 enumeration」</strong></p>
+<ul>
+<li><p>使用 <font background="yellow">hasOwnProperty()</font> 過濾掉來自原型鏈的屬性</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. 建立一個物件</span></span><br><span class="line"><span class="keyword">var</span> family = &#123;</span><br><span class="line">  sisters: <span class="number">2</span>,</span><br><span class="line">  brothers: <span class="number">1</span>,</span><br><span class="line">  father: <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2. 將clone方法，加到所有物件中。用擴充Object原型</span></span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">typeof</span> <span class="built_in">Object</span>.prototype.clone === <span class="string">"undefined"</span>) &#123;</span><br><span class="line">  <span class="built_in">Object</span>.prototype.clone = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3. 使用 for-in，並搭配 hasOwnProperty()，來印出屬性</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> family) &#123;</span><br><span class="line">  <span class="keyword">if</span> (family.hasOwnProperty(i)) &#123;   <span class="comment">// 過濾掉原型鏈的屬性</span></span><br><span class="line">    <span class="built_in">console</span>.log(i, <span class="string">":"</span> , family[i])</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">會印出這些：</span></span><br><span class="line"><span class="comment">sisters : 2</span></span><br><span class="line"><span class="comment">brothers : 1</span></span><br><span class="line"><span class="comment">father : 1</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 4. 使用 for-in，直接印出屬性</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> family) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(i, <span class="string">":"</span> , family[i])</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">會印出這些：</span></span><br><span class="line"><span class="comment">sisters : 2</span></span><br><span class="line"><span class="comment">brothers : 1</span></span><br><span class="line"><span class="comment">father : 1</span></span><br><span class="line"><span class="comment">clone : ƒ () &#123;&#125;   // 多了這個</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>也可使用，Object.prototype呼叫 hasOwnProperty()</p>
+<ul>
+<li>避免命名衝突</li>
+<li>若嫌這句話太長，可以用一個區域變數快取它<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用 Object.prototype 呼叫</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> family) &#123;</span><br><span class="line">  <span class="keyword">if</span> (<span class="built_in">Object</span>.prototype.hasOwnProperty.call(family, i)) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i, <span class="string">":"</span> , family[i])</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用變數快取</span></span><br><span class="line"><span class="keyword">var</span> i,</span><br><span class="line">    hasOwn = <span class="built_in">Object</span>.prototype.hasOwnProperty;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> family) &#123;</span><br><span class="line">  <span class="keyword">if</span> (hasOwn.call(family, i)) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i, <span class="string">":"</span> , family[i])</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 上述兩個結果都跟上面，用 hasOwnProperty() 判斷的一樣</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="switch"><a href="#switch" class="headerlink" title="switch"></a>switch</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dobubu.github.io/2019/07/31/JavaScript-Patterns-2012-1-2/" data-id="ck0j0lhek0002s6x8as3nm8j8" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/閱讀/">閱讀</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript-Patterns-2012-1-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/14/JavaScript-Patterns-2012-1-1/" class="article-date">
+  <time datetime="2019-07-14T12:49:13.000Z" itemprop="datePublished">2019-07-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/F2E/">F2E</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/14/JavaScript-Patterns-2012-1-1/">JavaScript-Patterns-2012-介紹[1-1]</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>記錄閱讀 JavaScript-Patterns 2012 書籍（雖然有點舊，但還是值得來看一下～ 🤔<br>頁碼 p.10 ~ p.17</p>
+<h2 id="JavaScript重要觀念"><a href="#JavaScript重要觀念" class="headerlink" title="JavaScript重要觀念"></a>JavaScript重要觀念</h2><ol>
+<li>JavaScript是個物件導向語言：在JavaScript看到的程式碼，極可能都是個物件。主要有兩種物件：<ul>
+<li>Native（原生物件）</li>
+<li>Host（宿主物件）</li>
+</ul>
+</li>
+<li>沒有Class</li>
+<li>原型：是一個物件，當你建立的每個函式，都會自動取得一個prototype屬性指向一個新的空白物件。每個函式都有prototype屬性</li>
+</ol>
+<hr>
+<h2 id="撰寫可維護的程式碼"><a href="#撰寫可維護的程式碼" class="headerlink" title="撰寫可維護的程式碼"></a>撰寫可維護的程式碼</h2><p><strong>撰寫可維護的程式碼：閱讀程式碼的時間，比撰寫的時間還多</strong> 👍</p>
+<ul>
+<li>可讀性</li>
+<li>一致性</li>
+<li>可預料的</li>
+<li>看起來是同一人寫的</li>
+<li>文件化</li>
+</ul>
+<hr>
+<h2 id="減少全域變數"><a href="#減少全域變數" class="headerlink" title="減少全域變數"></a>減少全域變數</h2><p><strong>建立的全域變數，都會變成全域物件的屬性，造成命名衝突危機</strong>（這很嚴重 😨</p>
+<ol>
+<li><p>關於變數</p>
+<ul>
+<li>區域變數：定義在函式內，函式外無法取得</li>
+<li>全域變數：定義在函式外，或沒宣告直接使用的變數</li>
+</ul>
+</li>
+<li><p>var 的副作用</p>
+<ul>
+<li>用var創造出來的全域變數，不可以刪除</li>
+<li>不使用var，隱含創造出來的全域變數，可以刪除（因為隱含的全域變數不是真的變數，是全域物件的屬性，可用delete刪除<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> global_first = <span class="number">1</span>;</span><br><span class="line">global_secont = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">delete</span> global_first;  <span class="comment">// false 不可被刪除</span></span><br><span class="line"><span class="keyword">delete</span> global_secont; <span class="comment">// true  可被刪除</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>存取全域物件：在任何一段程式碼中，都可以透過 window 屬性存取全域物件</p>
+<ul>
+<li>可在任何層級的函式作用域中這麼做 😊<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 讓你可以永遠拿到全域物件</span></span><br><span class="line"><span class="keyword">var</span> global = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">&#125;());</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>單一var模式：在函示開頭使用單一個var述句，是非常有用的</p>
+<ul>
+<li>避免未宣告就使用，造成邏輯錯誤</li>
+<li>尋找變數時，只需要尋找同個地方</li>
+<li>幫助我們記得宣告變數，檢查全域變數</li>
+<li><font color="red">記得宣告，同時賦予初始值。（宣告但為初始的變數，會被初始為undefined）<font></font></font></li>
+</ul>
+</li>
+<li><p>Hoisting：分散的var造成的問題</p>
+<ul>
+<li><p>在函式內可有多個var敘述，並放在任何位置，這樣的行為跟在函式頂端宣告一模一樣。</p>
+</li>
+<li><p>避免為此產生不必要的困惑，最好都在函式最上方宣告所有變數。（要記得 😠</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">myName = <span class="string">'global'</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(myName);  <span class="comment">// undefined</span></span><br><span class="line">  <span class="keyword">var</span> myName = <span class="string">'local'</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(myName);  <span class="comment">// local</span></span><br><span class="line">&#125;</span><br><span class="line">func()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>（參考這兩個，他們是一樣的）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">myName = <span class="string">'global'</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> myName;           <span class="comment">// 等於 var myName = undefined;</span></span><br><span class="line">  <span class="built_in">console</span>.log(myName);  <span class="comment">// undefined</span></span><br><span class="line">  myName = <span class="string">'local'</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(myName);  <span class="comment">// local</span></span><br><span class="line">&#125;</span><br><span class="line">func()</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dobubu.github.io/2019/07/14/JavaScript-Patterns-2012-1-1/" data-id="ck0j0lheg0000s6x8ioqv4lzt" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/閱讀/">閱讀</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-vue-watch-window-resize" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/06/29/vue-watch-window-resize/" class="article-date">
@@ -110,7 +323,7 @@ watch: {
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/06/29/vue-watch-window-resize/" data-id="cjy2y4cb0000056x8xd1lg6zm" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/06/29/vue-watch-window-resize/" data-id="ck0j0lheq0007s6x8504xnkf6" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue-js/">Vue.js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/work/">work</a></li></ul>
@@ -189,7 +402,7 @@ watch: {
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/06/23/install-nvm/" data-id="cjy2y4cb8000556x8ny8p6w37" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/06/23/install-nvm/" data-id="ck0j0lher0008s6x8t4x19y3l" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nvm/">nvm</a></li></ul>
@@ -240,7 +453,7 @@ watch: {
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/06/22/hello-world/" data-id="cjy2y4cb4000256x83fatitg5" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/06/22/hello-world/" data-id="ck0j0lheo0006s6x88rer1tvw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -270,7 +483,7 @@ watch: {
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue-js/">Vue.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nvm/">nvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/work/">work</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue-js/">Vue.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nvm/">nvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/work/">work</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/閱讀/">閱讀</a></li></ul>
     </div>
   </div>
 
@@ -280,7 +493,7 @@ watch: {
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Vue-js/" style="font-size: 10px;">Vue.js</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/work/" style="font-size: 10px;">work</a>
+      <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Vue-js/" style="font-size: 10px;">Vue.js</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/work/" style="font-size: 10px;">work</a> <a href="/tags/閱讀/" style="font-size: 20px;">閱讀</a>
     </div>
   </div>
 
@@ -289,7 +502,7 @@ watch: {
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li></ul>
     </div>
   </div>
 
@@ -302,15 +515,23 @@ watch: {
       <ul>
         
           <li>
+            <a href="/2019/09/14/css-selector/">CSS-selector</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/31/JavaScript-Patterns-2012-1-2/">JavaScript-Patterns-2012-介紹[1-2]</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/14/JavaScript-Patterns-2012-1-1/">JavaScript-Patterns-2012-介紹[1-1]</a>
+          </li>
+        
+          <li>
             <a href="/2019/06/29/vue-watch-window-resize/">使用Vue.js監聽視窗大小（寬）</a>
           </li>
         
           <li>
             <a href="/2019/06/23/install-nvm/">在mac環境下安裝nvm過程</a>
-          </li>
-        
-          <li>
-            <a href="/2019/06/22/hello-world/">Hello World</a>
           </li>
         
       </ul>

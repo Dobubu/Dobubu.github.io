@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>JavaScript-Patterns-2012-介紹[1-1] | Stick to it!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="記錄閱讀 JavaScript-Patterns 2012 書籍（雖然有點舊，但還是值得來看一下～ 🤔頁碼 p.10 ~ p.17 JavaScript重要觀念 JavaScript是個物件導向語言：在JavaScript看到的程式碼，極可能都是個物件。主要有兩種物件： Native（原生物件） Host（宿主物件）   沒有Class 原型：是一個物件，當你建立的每個函式，都會自動取得一個pr">
+<meta name="keywords" content="JavaScript,閱讀">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript-Patterns-2012-介紹[1-1]">
+<meta property="og:url" content="https://dobubu.github.io/2019/07/14/JavaScript-Patterns-2012-1-1/index.html">
+<meta property="og:site_name" content="Stick to it!">
+<meta property="og:description" content="記錄閱讀 JavaScript-Patterns 2012 書籍（雖然有點舊，但還是值得來看一下～ 🤔頁碼 p.10 ~ p.17 JavaScript重要觀念 JavaScript是個物件導向語言：在JavaScript看到的程式碼，極可能都是個物件。主要有兩種物件： Native（原生物件） Host（宿主物件）   沒有Class 原型：是一個物件，當你建立的每個函式，都會自動取得一個pr">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-31T13:30:19.717Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript-Patterns-2012-介紹[1-1]">
+<meta name="twitter:description" content="記錄閱讀 JavaScript-Patterns 2012 書籍（雖然有點舊，但還是值得來看一下～ 🤔頁碼 p.10 ~ p.17 JavaScript重要觀念 JavaScript是個物件導向語言：在JavaScript看到的程式碼，極可能都是個物件。主要有兩種物件： Native（原生物件） Host（宿主物件）   沒有Class 原型：是一個物件，當你建立的每個函式，都會自動取得一個pr">
+  
+    <link rel="alternate" href="/atom.xml" title="Stick to it!" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Stick to it!</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://dobubu.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-JavaScript-Patterns-2012-1-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/14/JavaScript-Patterns-2012-1-1/" class="article-date">
+  <time datetime="2019-07-14T12:49:13.000Z" itemprop="datePublished">2019-07-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/F2E/">F2E</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JavaScript-Patterns-2012-介紹[1-1]
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>記錄閱讀 JavaScript-Patterns 2012 書籍（雖然有點舊，但還是值得來看一下～ 🤔<br>頁碼 p.10 ~ p.17</p>
+<h2 id="JavaScript重要觀念"><a href="#JavaScript重要觀念" class="headerlink" title="JavaScript重要觀念"></a>JavaScript重要觀念</h2><ol>
+<li>JavaScript是個物件導向語言：在JavaScript看到的程式碼，極可能都是個物件。主要有兩種物件：<ul>
+<li>Native（原生物件）</li>
+<li>Host（宿主物件）</li>
+</ul>
+</li>
+<li>沒有Class</li>
+<li>原型：是一個物件，當你建立的每個函式，都會自動取得一個prototype屬性指向一個新的空白物件。每個函式都有prototype屬性</li>
+</ol>
+<hr>
+<h2 id="撰寫可維護的程式碼"><a href="#撰寫可維護的程式碼" class="headerlink" title="撰寫可維護的程式碼"></a>撰寫可維護的程式碼</h2><p><strong>撰寫可維護的程式碼：閱讀程式碼的時間，比撰寫的時間還多</strong> 👍</p>
+<ul>
+<li>可讀性</li>
+<li>一致性</li>
+<li>可預料的</li>
+<li>看起來是同一人寫的</li>
+<li>文件化</li>
+</ul>
+<hr>
+<h2 id="減少全域變數"><a href="#減少全域變數" class="headerlink" title="減少全域變數"></a>減少全域變數</h2><p><strong>建立的全域變數，都會變成全域物件的屬性，造成命名衝突危機</strong>（這很嚴重 😨</p>
+<ol>
+<li><p>關於變數</p>
+<ul>
+<li>區域變數：定義在函式內，函式外無法取得</li>
+<li>全域變數：定義在函式外，或沒宣告直接使用的變數</li>
+</ul>
+</li>
+<li><p>var 的副作用</p>
+<ul>
+<li>用var創造出來的全域變數，不可以刪除</li>
+<li>不使用var，隱含創造出來的全域變數，可以刪除（因為隱含的全域變數不是真的變數，是全域物件的屬性，可用delete刪除<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> global_first = <span class="number">1</span>;</span><br><span class="line">global_secont = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">delete</span> global_first;  <span class="comment">// false 不可被刪除</span></span><br><span class="line"><span class="keyword">delete</span> global_secont; <span class="comment">// true  可被刪除</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>存取全域物件：在任何一段程式碼中，都可以透過 window 屬性存取全域物件</p>
+<ul>
+<li>可在任何層級的函式作用域中這麼做 😊<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 讓你可以永遠拿到全域物件</span></span><br><span class="line"><span class="keyword">var</span> global = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">&#125;());</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>單一var模式：在函示開頭使用單一個var述句，是非常有用的</p>
+<ul>
+<li>避免未宣告就使用，造成邏輯錯誤</li>
+<li>尋找變數時，只需要尋找同個地方</li>
+<li>幫助我們記得宣告變數，檢查全域變數</li>
+<li><font color="red">記得宣告，同時賦予初始值。（宣告但為初始的變數，會被初始為undefined）<font></font></font></li>
+</ul>
+</li>
+<li><p>Hoisting：分散的var造成的問題</p>
+<ul>
+<li><p>在函式內可有多個var敘述，並放在任何位置，這樣的行為跟在函式頂端宣告一模一樣。</p>
+</li>
+<li><p>避免為此產生不必要的困惑，最好都在函式最上方宣告所有變數。（要記得 😠</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">myName = <span class="string">'global'</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(myName);  <span class="comment">// undefined</span></span><br><span class="line">  <span class="keyword">var</span> myName = <span class="string">'local'</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(myName);  <span class="comment">// local</span></span><br><span class="line">&#125;</span><br><span class="line">func()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>（參考這兩個，他們是一樣的）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">myName = <span class="string">'global'</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> myName;           <span class="comment">// 等於 var myName = undefined;</span></span><br><span class="line">  <span class="built_in">console</span>.log(myName);  <span class="comment">// undefined</span></span><br><span class="line">  myName = <span class="string">'local'</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(myName);  <span class="comment">// local</span></span><br><span class="line">&#125;</span><br><span class="line">func()</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dobubu.github.io/2019/07/14/JavaScript-Patterns-2012-1-1/" data-id="ck0j0lheg0000s6x8ioqv4lzt" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/閱讀/">閱讀</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/07/31/JavaScript-Patterns-2012-1-2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          JavaScript-Patterns-2012-介紹[1-2]
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/06/29/vue-watch-window-resize/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">使用Vue.js監聽視窗大小（寬）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/F2E/">F2E</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue-js/">Vue.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nvm/">nvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/work/">work</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/閱讀/">閱讀</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Vue-js/" style="font-size: 10px;">Vue.js</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/work/" style="font-size: 10px;">work</a> <a href="/tags/閱讀/" style="font-size: 20px;">閱讀</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/09/14/css-selector/">CSS-selector</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/31/JavaScript-Patterns-2012-1-2/">JavaScript-Patterns-2012-介紹[1-2]</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/14/JavaScript-Patterns-2012-1-1/">JavaScript-Patterns-2012-介紹[1-1]</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/29/vue-watch-window-resize/">使用Vue.js監聽視窗大小（寬）</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/23/install-nvm/">在mac環境下安裝nvm過程</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Mischa Hung<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
