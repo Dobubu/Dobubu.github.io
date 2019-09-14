@@ -5,15 +5,20 @@
   
 
   
-  <title>Tag: attribute selector | Stick to it!</title>
+  <title>jQuery 動態插入元素（before、after、prepend、append） | Stick to it!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Stick to it!">
-<meta property="og:url" content="https://dobubu.github.io/tags/attribute-selector/index.html">
+  <meta name="description" content="$(&amp;#39;代表插入位置的選擇器&amp;#39;).方法名稱(&amp;#39;插入元素&amp;#39;)這幾個和這篇 jQuery 動態插入元素 （insertBefore、insertAfter、prependTo、appendTo）類似，差別在於物件與參數之間的關係是顛倒的 這邊就直接上程式碼，不另外多說 123456$(function() &amp;#123;  $(&apos;#puff&apos;).before(&apos;&amp;lt;p&amp;">
+<meta name="keywords" content="jQuery,.before(),.after(),.prepend(),.append()">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery 動態插入元素（before、after、prepend、append）">
+<meta property="og:url" content="https://dobubu.github.io/2019/09/14/jQuery-dynamic-2/index.html">
 <meta property="og:site_name" content="Stick to it!">
+<meta property="og:description" content="$(&amp;#39;代表插入位置的選擇器&amp;#39;).方法名稱(&amp;#39;插入元素&amp;#39;)這幾個和這篇 jQuery 動態插入元素 （insertBefore、insertAfter、prependTo、appendTo）類似，差別在於物件與參數之間的關係是顛倒的 這邊就直接上程式碼，不另外多說 123456$(function() &amp;#123;  $(&apos;#puff&apos;).before(&apos;&amp;lt;p&amp;">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-09-14T13:04:21.513Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Stick to it!">
+<meta name="twitter:title" content="jQuery 動態插入元素（before、after、prepend、append）">
+<meta name="twitter:description" content="$(&amp;#39;代表插入位置的選擇器&amp;#39;).方法名稱(&amp;#39;插入元素&amp;#39;)這幾個和這篇 jQuery 動態插入元素 （insertBefore、insertAfter、prependTo、appendTo）類似，差別在於物件與參數之間的關係是顛倒的 這邊就直接上程式碼，不另外多說 123456$(function() &amp;#123;  $(&apos;#puff&apos;).before(&apos;&amp;lt;p&amp;">
   
     <link rel="alternate" href="/atom.xml" title="Stick to it!" type="application/atom+xml">
   
@@ -60,40 +65,63 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/14/css-attribute-selector/" class="archive-article-date">
-  <time datetime="2019-09-14T10:16:45.000Z" itemprop="datePublished">Sep 14</time>
+        <section id="main"><article id="post-jQuery-dynamic-2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/14/jQuery-dynamic-2/" class="article-date">
+  <time datetime="2019-09-14T12:45:51.000Z" itemprop="datePublished">2019-09-14</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/F2E/">F2E</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/14/css-attribute-selector/">CSS-attribute-selector 屬性選取器</a>
+    <h1 class="article-title" itemprop="name">
+      jQuery 動態插入元素（before、after、prepend、append）
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong><code>$(&#39;代表插入位置的選擇器&#39;).方法名稱(&#39;插入元素&#39;)</code></strong><br>這幾個和這篇 <a href="/2019/09/14/jQuery-dynamic-1/" title="jQuery 動態插入元素 （insertBefore、insertAfter、prependTo、appendTo）">jQuery 動態插入元素 （insertBefore、insertAfter、prependTo、appendTo）</a>類似，差別在於物件與參數之間的關係是顛倒的</p>
+<p>這邊就直接上程式碼，不另外多說</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  $(<span class="string">'#puff'</span>).before(<span class="string">'&lt;p&gt;蛋糕N&lt;/p&gt;'</span>);</span><br><span class="line">  $(<span class="string">'#puff'</span>).after(<span class="string">'&lt;p&gt;布丁N&lt;/p&gt;'</span>);</span><br><span class="line">  $(<span class="string">'#puff'</span>).prepend(<span class="string">'&lt;li&gt;餅乾N&lt;/li&gt;'</span>);</span><br><span class="line">  $(<span class="string">'#puff'</span>).append(<span class="string">'&lt;li&gt;蘋果派N&lt;/li&gt;'</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>蛋糕N<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"puff"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>餅乾N<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>泡芙<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>蘋果派N<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>布丁N<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="統整"><a href="#統整" class="headerlink" title="統整"></a>統整</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.before()</span><br><span class="line">  #puff</span><br><span class="line">    .prepend()</span><br><span class="line">    li 泡芙</span><br><span class="line">    .append()</span><br><span class="line">.after()</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dobubu.github.io/2019/09/14/jQuery-dynamic-2/" data-id="ck0jkbk7c000akrx8dbc3u758" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/after/">.after()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/append/">.append()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/before/">.before()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/prepend/">.prepend()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/09/14/jQuery-dynamic-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">jQuery 動態插入元素（insertBefore、insertAfter、prependTo、appendTo）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
 
 </section>
         
