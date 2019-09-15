@@ -62,6 +62,108 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-jQuery-dynamic-5" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/15/jQuery-dynamic-5/" class="article-date">
+  <time datetime="2019-09-15T03:19:20.000Z" itemprop="datePublished">2019-09-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/F2E/">F2E</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/15/jQuery-dynamic-5/">jQuery 置換元素（replaceWith、replaceAll）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>將現存的元素置換成另一種元素</strong></p>
+<h2 id="replaceWith"><a href="#replaceWith" class="headerlink" title=".replaceWith()"></a>.replaceWith()</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  $(<span class="string">'h2'</span>).replaceWith(<span class="string">'&lt;div&gt;水餃_N&lt;/div&gt;'</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 執行前 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>蛋糕<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 執行後 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>水餃_N<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="replaceAll"><a href="#replaceAll" class="headerlink" title=".replaceAll()"></a>.replaceAll()</h2><p>與 .replaceWith() 類似，<font color="red">差別在物件與參數關係顛倒<font>。可和  <a href="/2019/09/14/jQuery-dynamic-2/" title="jQuery 動態插入元素 （before、after、prepend、append）">jQuery 動態插入元素 （before、after、prepend、append）</a>視為一樣的關係</font></font></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  $(<span class="string">'&lt;div&gt;水餃_N&lt;/div&gt;'</span>).replaceAll(<span class="string">'h2'</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 執行前 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>蛋糕<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 執行後 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>水餃_N<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dobubu.github.io/2019/09/15/jQuery-dynamic-5/" data-id="ck0kfe36t000u00x8009rc2d8" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/replaceAll/">.replaceAll()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/replaceWith/">.replaceWith()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-jQuery-dynamic-4" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/15/jQuery-dynamic-4/" class="article-date">
+  <time datetime="2019-09-15T02:04:18.000Z" itemprop="datePublished">2019-09-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/F2E/">F2E</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/15/jQuery-dynamic-4/">jQuery 刪除元素（remove、empty、unwrap）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="remove-刪除現存的元素（整個刪除）"><a href="#remove-刪除現存的元素（整個刪除）" class="headerlink" title=".remove() 刪除現存的元素（整個刪除）"></a>.remove() 刪除現存的元素（整個刪除）</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  $(<span class="string">'#banner'</span>).remove();</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 執行前 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>蛋糕<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>泡芙<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>布丁<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">'banner'</span>&gt;</span>banner<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 執行後 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>蛋糕<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>泡芙<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>布丁<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="empty-刪除現存的元素（刪除元素內容）"><a href="#empty-刪除現存的元素（刪除元素內容）" class="headerlink" title=".empty() 刪除現存的元素（刪除元素內容）"></a>.empty() 刪除現存的元素（刪除元素內容）</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  $(<span class="string">'#banner'</span>).empty();</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 執行前 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>蛋糕<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>泡芙<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>布丁<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">'banner'</span>&gt;</span>banner<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 執行後 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>蛋糕<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>泡芙<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>布丁<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">'banner'</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="unwrap-刪除被現存元素包覆的元素（把wrap元素刪除）"><a href="#unwrap-刪除被現存元素包覆的元素（把wrap元素刪除）" class="headerlink" title=".unwrap() 刪除被現存元素包覆的元素（把wrap元素刪除）"></a>.unwrap() 刪除被現存元素包覆的元素（把wrap元素刪除）</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  $(<span class="string">'p'</span>).wrap(<span class="string">'&lt;div class="wp"&gt;&lt;/div&gt;'</span>);</span><br><span class="line">  $(<span class="string">'p'</span>).unwrap();</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 執行前 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>蛋糕<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>泡芙<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>布丁<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 執行 .wrap('&lt;div class="wp"&gt;&lt;/div&gt;') --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wp"</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>蛋糕<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wp"</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>泡芙<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wp"</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>布丁<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 執行 .unwrap() --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>蛋糕<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>泡芙<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>布丁<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dobubu.github.io/2019/09/15/jQuery-dynamic-4/" data-id="ck0kfe36s000s00x8yppbifg5" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/empty/">.empty()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/remove/">.remove()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/unwrap/">.unwrap()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-jQuery-dynamic-3" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/09/14/jQuery-dynamic-3/" class="article-date">
@@ -107,7 +209,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/09/14/jQuery-dynamic-3/" data-id="ck0jkhq4n001bumx8d42ua58h" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/09/14/jQuery-dynamic-3/" data-id="ck0kfe36p000l00x8c24klw97" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wrap/">.wrap()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wrapAll/">.wrapAll()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wrapInner/">.wrapInner()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
@@ -145,17 +247,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong><code>$(&#39;代表插入位置的選擇器&#39;).方法名稱(&#39;插入元素&#39;)</code></strong><br>這幾個和這篇 <a href="/2019/09/14/jQuery-dynamic-1/" title="jQuery 動態插入元素 （insertBefore、insertAfter、prependTo、appendTo）">jQuery 動態插入元素 （insertBefore、insertAfter、prependTo、appendTo）</a>類似，差別在於物件與參數之間的關係是顛倒的</p>
+        <p><strong><code>$(&#39;代表插入位置的選擇器&#39;).方法名稱(&#39;插入元素&#39;)</code></strong><br>這幾個和這篇 <a href="/2019/09/14/jQuery-dynamic-1/" title="jQuery 動態插入元素 （insertBefore、insertAfter、prependTo、appendTo）">jQuery 動態插入元素 （insertBefore、insertAfter、prependTo、appendTo）</a>類似，<font color="red">差別在於物件與參數之間的關係是顛倒的<font></font></font></p>
 <p>這邊就直接上程式碼，不另外多說</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  $(<span class="string">'#puff'</span>).before(<span class="string">'&lt;p&gt;蛋糕N&lt;/p&gt;'</span>);</span><br><span class="line">  $(<span class="string">'#puff'</span>).after(<span class="string">'&lt;p&gt;布丁N&lt;/p&gt;'</span>);</span><br><span class="line">  $(<span class="string">'#puff'</span>).prepend(<span class="string">'&lt;li&gt;餅乾N&lt;/li&gt;'</span>);</span><br><span class="line">  $(<span class="string">'#puff'</span>).append(<span class="string">'&lt;li&gt;蘋果派N&lt;/li&gt;'</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  $(<span class="string">'#puff'</span>).before(<span class="string">'&lt;p&gt;蛋糕_N&lt;/p&gt;'</span>);</span><br><span class="line">  $(<span class="string">'#puff'</span>).after(<span class="string">'&lt;p&gt;布丁_N&lt;/p&gt;'</span>);</span><br><span class="line">  $(<span class="string">'#puff'</span>).prepend(<span class="string">'&lt;li&gt;餅乾_N&lt;/li&gt;'</span>);</span><br><span class="line">  $(<span class="string">'#puff'</span>).append(<span class="string">'&lt;li&gt;蘋果派_N&lt;/li&gt;'</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>蛋糕N<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"puff"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>餅乾N<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>泡芙<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>蘋果派N<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>布丁N<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>蛋糕_N<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"puff"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>餅乾_N<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>泡芙<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>蘋果派_N<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>布丁_N<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="統整"><a href="#統整" class="headerlink" title="統整"></a>統整</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.before()</span><br><span class="line">  #puff</span><br><span class="line">    .prepend()</span><br><span class="line">    li 泡芙</span><br><span class="line">    .append()</span><br><span class="line">.after()</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/09/14/jQuery-dynamic-2/" data-id="ck0jjnkpz000yumx80e3grce2" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/09/14/jQuery-dynamic-2/" data-id="ck0kfe36q000o00x828lww267" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/after/">.after()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/append/">.append()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/before/">.before()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/prepend/">.prepend()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
@@ -194,27 +296,27 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><strong><code>$(&#39;插入元素&#39;).方法名稱(&#39;代表插入位置的選擇器&#39;)</code></strong></p>
-<h2 id="insertBefore-在元素之前插入元素"><a href="#insertBefore-在元素之前插入元素" class="headerlink" title=".insertBefore() 在元素之前插入元素"></a>.insertBefore() 在元素<font color="red">之前</font>插入元素</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  $(<span class="string">'&lt;p&gt;蛋糕N&lt;/p&gt;'</span>).insertBefore(<span class="string">'#puff'</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="insertBefore-在元素之前插入元素"><a href="#insertBefore-在元素之前插入元素" class="headerlink" title=".insertBefore() 在元素之前插入元素"></a>.insertBefore() 在元素<font color="red">之前</font>插入元素</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  $(<span class="string">'&lt;p&gt;蛋糕_N&lt;/p&gt;'</span>).insertBefore(<span class="string">'#puff'</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 執行前 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"puff"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>泡芙<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 執行後，&lt;p&gt;元素 插在 #puff 之前--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>蛋糕N<span class="tag">&lt;/<span class="name">p</span>&gt;</span>         </span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"puff"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>泡芙<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 執行前 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"puff"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>泡芙<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 執行後，&lt;p&gt;元素 插在 #puff 之前--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>蛋糕_N<span class="tag">&lt;/<span class="name">p</span>&gt;</span>         </span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"puff"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>泡芙<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="insertAfter-在元素之後插入元素"><a href="#insertAfter-在元素之後插入元素" class="headerlink" title=".insertAfter() 在元素之後插入元素"></a>.insertAfter() 在元素<font color="red">之後</font>插入元素</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  $(<span class="string">'&lt;p&gt;蛋糕N&lt;/p&gt;'</span>).insertAfter(<span class="string">'#puff'</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="insertAfter-在元素之後插入元素"><a href="#insertAfter-在元素之後插入元素" class="headerlink" title=".insertAfter() 在元素之後插入元素"></a>.insertAfter() 在元素<font color="red">之後</font>插入元素</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  $(<span class="string">'&lt;p&gt;蛋糕_N&lt;/p&gt;'</span>).insertAfter(<span class="string">'#puff'</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 執行前 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"puff"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>泡芙<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 執行後，&lt;p&gt;元素 插在 #puff 之後 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"puff"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>泡芙<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>蛋糕N<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 執行前 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"puff"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>泡芙<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 執行後，&lt;p&gt;元素 插在 #puff 之後 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"puff"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>泡芙<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>蛋糕_N<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="prependTo-在所有元素的開頭插入元素"><a href="#prependTo-在所有元素的開頭插入元素" class="headerlink" title=".prependTo() 在所有元素的開頭插入元素"></a>.prependTo() 在所有元素的<font color="red">開頭</font>插入元素</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  $(<span class="string">'&lt;li&gt;蛋糕N&lt;/li&gt;'</span>).prependTo(<span class="string">'#puff'</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="prependTo-在所有元素的開頭插入元素"><a href="#prependTo-在所有元素的開頭插入元素" class="headerlink" title=".prependTo() 在所有元素的開頭插入元素"></a>.prependTo() 在所有元素的<font color="red">開頭</font>插入元素</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  $(<span class="string">'&lt;li&gt;蛋糕_N&lt;/li&gt;'</span>).prependTo(<span class="string">'#puff'</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 執行前 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"puff"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>泡芙<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 執行後，在#puff元素的子元素開頭插入 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"puff"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>蛋糕N<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>泡芙<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 執行前 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"puff"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>泡芙<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 執行後，在#puff元素的子元素開頭插入 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"puff"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>蛋糕_N<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>泡芙<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="appendTo-在所有元素的最後插入元素"><a href="#appendTo-在所有元素的最後插入元素" class="headerlink" title=".appendTo() 在所有元素的最後插入元素"></a>.appendTo() 在所有元素的<font color="red">最後</font>插入元素</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  $(<span class="string">'&lt;li&gt;布丁N&lt;/li&gt;'</span>).appendTo(<span class="string">'#puff'</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="appendTo-在所有元素的最後插入元素"><a href="#appendTo-在所有元素的最後插入元素" class="headerlink" title=".appendTo() 在所有元素的最後插入元素"></a>.appendTo() 在所有元素的<font color="red">最後</font>插入元素</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  $(<span class="string">'&lt;li&gt;布丁_N&lt;/li&gt;'</span>).appendTo(<span class="string">'#puff'</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 執行前 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"puff"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>泡芙<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 執行後，在#puff元素的子元素結尾插入 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"puff"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>泡芙<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>布丁N<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 執行前 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"puff"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>泡芙<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 執行後，在#puff元素的子元素結尾插入 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"puff"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>泡芙<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>布丁_N<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="統整"><a href="#統整" class="headerlink" title="統整"></a>統整</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.insertBefore()</span><br><span class="line">  #puff</span><br><span class="line">    .prependTo()</span><br><span class="line">    li 泡芙</span><br><span class="line">    .appendTo()</span><br><span class="line">.insertAfter()</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/09/14/jQuery-dynamic-1/" data-id="ck0jigvgt000iumx83u36dxc5" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/09/14/jQuery-dynamic-1/" data-id="ck0kfe36n000h00x8stc8po0o" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/appendTo/">.appendTo()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/insertAfter/">.insertAfter()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/insertBefore/">.insertBefore()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/prependTo/">.prependTo()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
@@ -276,7 +378,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/09/14/css-contextual-selector/" data-id="ck0jem6kw0008umx8l9wq79kb" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/09/14/css-contextual-selector/" data-id="ck0kfe36i000a00x8dhudnq8j" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/contextual-selector/">contextual selector</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/selector/">selector</a></li></ul>
@@ -352,7 +454,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/09/14/css-attribute-selector/" data-id="ck0jebu2y0001umx8l4o18sdz" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/09/14/css-attribute-selector/" data-id="ck0kfe36h000800x8zjibqnld" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/attribute-selector/">attribute selector</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/selector/">selector</a></li></ul>
@@ -407,7 +509,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/09/14/css-selector/" data-id="ck0jeryac000eumx84c3nhiyq" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/09/14/css-selector/" data-id="ck0kfe36k000b00x8x8x0ivfv" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
@@ -510,7 +612,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/07/14/JavaScript-Patterns-2012-1-1/" data-id="ck0j0lheg0000s6x8ioqv4lzt" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/07/14/JavaScript-Patterns-2012-1-1/" data-id="ck0kfe36g000700x81py68yjr" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/閱讀/">閱讀</a></li></ul>
@@ -570,7 +672,7 @@ watch: {
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/06/29/vue-watch-window-resize/" data-id="ck0j0lheq0007s6x8504xnkf6" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/06/29/vue-watch-window-resize/" data-id="ck0kfe36u000x00x87acjuc6g" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue-js/">Vue.js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/work/">work</a></li></ul>
@@ -582,86 +684,12 @@ watch: {
 
 
   
-    <article id="post-install-nvm" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/06/23/install-nvm/" class="article-date">
-  <time datetime="2019-06-23T01:28:10.000Z" itemprop="datePublished">2019-06-23</time>
-</a>
+
+
+  <nav id="page-nav">
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/F2E/">F2E</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/06/23/install-nvm/">在mac環境下安裝nvm過程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>主要紀錄，我在mac上安裝nvm遇到的問題，和最後怎麼解決，讓我們可以繼續開心做下去</p>
-<h2 id="安装-nvm"><a href="#安装-nvm" class="headerlink" title="安装 nvm"></a>安装 nvm</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash</span><br></pre></td></tr></table></figure>
-
-<p>這邊你可以在 <a href="https://github.com/nvm-sh/nvm" target="_blank" rel="noopener">github nvm</a> 上看到</p>
-<p>接著出現下方資訊<br>這表示你的系統中沒有 .bash_profile 這個檔案<br><img src="http://ww1.sinaimg.cn/large/006tNc79gy1g4auhbtt9gj31b20jcanp.jpg" alt></p>
-<p>接著輸入 nvm 查看，會看到下面這個東西。失敗 :(</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-bash: nvm: <span class="built_in">command</span> not found</span><br></pre></td></tr></table></figure>
-
-<p>讓我們來好好解決它！！！</p>
-<p>先開啟你的資料夾（這是我的）<br><img src="http://ww4.sinaimg.cn/large/006tNc79gy1g4ayaufemoj31720swx1s.jpg" alt></p>
-<p>然後使用 shift + cmd + .<br>來開啟隱藏檔案，就會看到很多的隱藏檔（再使用一次 shift + cmd + . 就可以隱藏 隱藏檔案）<br>這邊你可以使用 touch .bash_profile 來新增檔案</p>
-<p>這邊截圖已經是我增加 .bash_profile 檔案後的畫面了 ～<br><img src="http://ww2.sinaimg.cn/large/006tNc79gy1g4aycx6zh5j31720sswyf.jpg" alt></p>
-<p>接著再開啟新的terminal，輸入一開始的安裝指令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash</span><br></pre></td></tr></table></figure>
-
-<p>接著出現下列資訊，代表你成功了 :)</p>
-<p><img src="http://ww4.sinaimg.cn/large/006tNc79gy1g4auhxasgyj31bc0e8tir.jpg" alt></p>
-<p>接著輸入 nvm 查看是否安裝成功</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm</span><br></pre></td></tr></table></figure>
-
-<p>會列出一些資訊（如下圖）<br>這邊就代表安裝成功，恭喜大家～</p>
-<p><img src="http://ww2.sinaimg.cn/large/006tNc79gy1g4autufjtej30x40u0e81.jpg" alt></p>
-<p>若還是不行，開啟剛剛新增的 .bash_profile<br>並添加代碼 source ~/.bashrc<br>存擋後，再跑一次步驟</p>
-<h3 id="列出可用版本"><a href="#列出可用版本" class="headerlink" title="列出可用版本"></a>列出可用版本</h3><p>查看有哪些 Node.js 版本可以安裝</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm ls-remote</span><br></pre></td></tr></table></figure>
-
-<p>列出所有 8.x 版本資訊</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm ls-remote 8</span><br></pre></td></tr></table></figure>
-
-<p><img src="http://ww3.sinaimg.cn/large/006tNc79gy1g4ayqjhx3gj30hm0piqaj.jpg" alt></p>
-<p>列出本機安裝的資訊</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm ls</span><br></pre></td></tr></table></figure>
-
-<h3 id="安裝需要的node版本"><a href="#安裝需要的node版本" class="headerlink" title="安裝需要的node版本"></a>安裝需要的node版本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nvm install 8.9.4</span><br><span class="line">nvm use 8.9.4</span><br></pre></td></tr></table></figure>
-
-<p>這樣就會使用 v8.9.4 的 Node.js</p>
-<p>先分享到這邊 ：）</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/06/23/install-nvm/" data-id="ck0j0lher0008s6x8t4x19y3l" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nvm/">nvm</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+  </nav>
 
 </section>
         
@@ -681,7 +709,7 @@ watch: {
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/after/">.after()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/append/">.append()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appendTo/">.appendTo()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/before/">.before()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/insertAfter/">.insertAfter()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/insertBefore/">.insertBefore()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/prepend/">.prepend()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/prependTo/">.prependTo()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wrap/">.wrap()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wrapAll/">.wrapAll()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wrapInner/">.wrapInner()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue-js/">Vue.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/attribute-selector/">attribute selector</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/contextual-selector/">contextual selector</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nvm/">nvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/selector/">selector</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/work/">work</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/閱讀/">閱讀</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/after/">.after()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/append/">.append()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appendTo/">.appendTo()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/before/">.before()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/empty/">.empty()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/insertAfter/">.insertAfter()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/insertBefore/">.insertBefore()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/prepend/">.prepend()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/prependTo/">.prependTo()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/remove/">.remove()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/replaceAll/">.replaceAll()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/replaceWith/">.replaceWith()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unwrap/">.unwrap()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wrap/">.wrap()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wrapAll/">.wrapAll()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wrapInner/">.wrapInner()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue-js/">Vue.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/attribute-selector/">attribute selector</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/contextual-selector/">contextual selector</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nvm/">nvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/selector/">selector</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/work/">work</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/閱讀/">閱讀</a></li></ul>
     </div>
   </div>
 
@@ -691,7 +719,7 @@ watch: {
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/after/" style="font-size: 10px;">.after()</a> <a href="/tags/append/" style="font-size: 10px;">.append()</a> <a href="/tags/appendTo/" style="font-size: 10px;">.appendTo()</a> <a href="/tags/before/" style="font-size: 10px;">.before()</a> <a href="/tags/insertAfter/" style="font-size: 10px;">.insertAfter()</a> <a href="/tags/insertBefore/" style="font-size: 10px;">.insertBefore()</a> <a href="/tags/prepend/" style="font-size: 10px;">.prepend()</a> <a href="/tags/prependTo/" style="font-size: 10px;">.prependTo()</a> <a href="/tags/wrap/" style="font-size: 10px;">.wrap()</a> <a href="/tags/wrapAll/" style="font-size: 10px;">.wrapAll()</a> <a href="/tags/wrapInner/" style="font-size: 10px;">.wrapInner()</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Vue-js/" style="font-size: 10px;">Vue.js</a> <a href="/tags/attribute-selector/" style="font-size: 10px;">attribute selector</a> <a href="/tags/contextual-selector/" style="font-size: 10px;">contextual selector</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/jQuery/" style="font-size: 20px;">jQuery</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/selector/" style="font-size: 15px;">selector</a> <a href="/tags/work/" style="font-size: 10px;">work</a> <a href="/tags/閱讀/" style="font-size: 10px;">閱讀</a>
+      <a href="/tags/after/" style="font-size: 10px;">.after()</a> <a href="/tags/append/" style="font-size: 10px;">.append()</a> <a href="/tags/appendTo/" style="font-size: 10px;">.appendTo()</a> <a href="/tags/before/" style="font-size: 10px;">.before()</a> <a href="/tags/empty/" style="font-size: 10px;">.empty()</a> <a href="/tags/insertAfter/" style="font-size: 10px;">.insertAfter()</a> <a href="/tags/insertBefore/" style="font-size: 10px;">.insertBefore()</a> <a href="/tags/prepend/" style="font-size: 10px;">.prepend()</a> <a href="/tags/prependTo/" style="font-size: 10px;">.prependTo()</a> <a href="/tags/remove/" style="font-size: 10px;">.remove()</a> <a href="/tags/replaceAll/" style="font-size: 10px;">.replaceAll()</a> <a href="/tags/replaceWith/" style="font-size: 10px;">.replaceWith()</a> <a href="/tags/unwrap/" style="font-size: 10px;">.unwrap()</a> <a href="/tags/wrap/" style="font-size: 10px;">.wrap()</a> <a href="/tags/wrapAll/" style="font-size: 10px;">.wrapAll()</a> <a href="/tags/wrapInner/" style="font-size: 10px;">.wrapInner()</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Vue-js/" style="font-size: 10px;">Vue.js</a> <a href="/tags/attribute-selector/" style="font-size: 10px;">attribute selector</a> <a href="/tags/contextual-selector/" style="font-size: 10px;">contextual selector</a> <a href="/tags/css/" style="font-size: 16.67px;">css</a> <a href="/tags/jQuery/" style="font-size: 20px;">jQuery</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/selector/" style="font-size: 13.33px;">selector</a> <a href="/tags/work/" style="font-size: 10px;">work</a> <a href="/tags/閱讀/" style="font-size: 10px;">閱讀</a>
     </div>
   </div>
 
@@ -713,6 +741,14 @@ watch: {
       <ul>
         
           <li>
+            <a href="/2019/09/15/jQuery-dynamic-5/">jQuery 置換元素（replaceWith、replaceAll）</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/15/jQuery-dynamic-4/">jQuery 刪除元素（remove、empty、unwrap）</a>
+          </li>
+        
+          <li>
             <a href="/2019/09/14/jQuery-dynamic-3/">jQuery 利用其他元素包覆元素（wrap、wrapAll、wrapInner）</a>
           </li>
         
@@ -722,14 +758,6 @@ watch: {
         
           <li>
             <a href="/2019/09/14/jQuery-dynamic-1/">jQuery 動態插入元素（insertBefore、insertAfter、prependTo、appendTo）</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/14/css-contextual-selector/">css-contextual-selector 關聯選取器</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/14/css-attribute-selector/">CSS-attribute-selector 屬性選取器</a>
           </li>
         
       </ul>
