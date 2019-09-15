@@ -5,15 +5,20 @@
   
 
   
-  <title>Archives: 2019/9 | Stick to it!</title>
+  <title>jQuery 7種 在父子、兄弟關係元素間穿梭（prev、prevAll、next、nextAll、siblings、parent、end、children）2種 改變目標對象（end、andSelf） | Stick to it!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Stick to it!">
-<meta property="og:url" content="https://dobubu.github.io/archives/2019/09/index.html">
+  <meta name="description" content="以現存元素為基準點取得另外的元素.prev() 前面最親近的兄弟.prevAll() 所有兄元素.next()  後面最親近的兄弟.nextAll() 所有弟元素.siblings()  所有兄弟元素.parent() 父元素.children()  所有子元素這邊直接附上codepen，直接看code會相對理解的快  改變 jQuery 物件的目標對象.end() 讓 jQuery 回復到原先狀">
+<meta name="keywords" content="jQuery,.prev(),.end(),.prevAll(),.next(),.nextAll(),.siblings(),.parent(),.children()">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery 7種 在父子、兄弟關係元素間穿梭（prev、prevAll、next、nextAll、siblings、parent、end、children）2種 改變目標對象（end、andSelf）">
+<meta property="og:url" content="https://dobubu.github.io/2019/09/15/jQuery-traverse/index.html">
 <meta property="og:site_name" content="Stick to it!">
+<meta property="og:description" content="以現存元素為基準點取得另外的元素.prev() 前面最親近的兄弟.prevAll() 所有兄元素.next()  後面最親近的兄弟.nextAll() 所有弟元素.siblings()  所有兄弟元素.parent() 父元素.children()  所有子元素這邊直接附上codepen，直接看code會相對理解的快  改變 jQuery 物件的目標對象.end() 讓 jQuery 回復到原先狀">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-09-15T05:07:41.700Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Stick to it!">
+<meta name="twitter:title" content="jQuery 7種 在父子、兄弟關係元素間穿梭（prev、prevAll、next、nextAll、siblings、parent、end、children）2種 改變目標對象（end、andSelf）">
+<meta name="twitter:description" content="以現存元素為基準點取得另外的元素.prev() 前面最親近的兄弟.prevAll() 所有兄元素.next()  後面最親近的兄弟.nextAll() 所有弟元素.siblings()  所有兄弟元素.parent() 父元素.children()  所有子元素這邊直接附上codepen，直接看code會相對理解的快  改變 jQuery 物件的目標對象.end() 讓 jQuery 回復到原先狀">
   
     <link rel="alternate" href="/atom.xml" title="Stick to it!" type="application/atom+xml">
   
@@ -60,192 +65,64 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/15/jQuery-traverse/" class="archive-article-date">
-  <time datetime="2019-09-15T03:36:27.000Z" itemprop="datePublished">Sep 15</time>
+        <section id="main"><article id="post-jQuery-traverse" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/15/jQuery-traverse/" class="article-date">
+  <time datetime="2019-09-15T03:36:27.000Z" itemprop="datePublished">2019-09-15</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/F2E/">F2E</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/15/jQuery-traverse/">jQuery 7種 在父子、兄弟關係元素間穿梭（prev、prevAll、next、nextAll、siblings、parent、end、children）2種 改變目標對象（end、andSelf）</a>
+    <h1 class="article-title" itemprop="name">
+      jQuery 7種 在父子、兄弟關係元素間穿梭（prev、prevAll、next、nextAll、siblings、parent、end、children）2種 改變目標對象（end、andSelf）
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/15/jQuery-dynamic-5/" class="archive-article-date">
-  <time datetime="2019-09-15T03:19:20.000Z" itemprop="datePublished">Sep 15</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/15/jQuery-dynamic-5/">jQuery 2種 置換元素（replaceWith、replaceAll）</a>
-    </h1>
-  
+        <h2 id="以現存元素為基準點取得另外的元素"><a href="#以現存元素為基準點取得另外的元素" class="headerlink" title="以現存元素為基準點取得另外的元素"></a>以現存元素為基準點取得另外的元素</h2><h3 id="prev-前面最親近的兄弟"><a href="#prev-前面最親近的兄弟" class="headerlink" title=".prev() 前面最親近的兄弟"></a>.prev() 前面最親近的兄弟</h3><h3 id="prevAll-所有兄元素"><a href="#prevAll-所有兄元素" class="headerlink" title=".prevAll() 所有兄元素"></a>.prevAll() 所有兄元素</h3><h3 id="next-後面最親近的兄弟"><a href="#next-後面最親近的兄弟" class="headerlink" title=".next()  後面最親近的兄弟"></a>.next()  後面最親近的兄弟</h3><h3 id="nextAll-所有弟元素"><a href="#nextAll-所有弟元素" class="headerlink" title=".nextAll() 所有弟元素"></a>.nextAll() 所有弟元素</h3><h3 id="siblings-所有兄弟元素"><a href="#siblings-所有兄弟元素" class="headerlink" title=".siblings()  所有兄弟元素"></a>.siblings()  所有兄弟元素</h3><h3 id="parent-父元素"><a href="#parent-父元素" class="headerlink" title=".parent() 父元素"></a>.parent() 父元素</h3><h3 id="children-所有子元素"><a href="#children-所有子元素" class="headerlink" title=".children()  所有子元素"></a>.children()  所有子元素</h3><p>這邊直接附上<a href="https://codepen.io/Dorothy_0528/pen/abojpeG" target="_blank" rel="noopener">codepen</a>，直接看code會相對理解的快</p>
+<hr>
+<h2 id="改變-jQuery-物件的目標對象"><a href="#改變-jQuery-物件的目標對象" class="headerlink" title="改變 jQuery 物件的目標對象"></a>改變 jQuery 物件的目標對象</h2><h3 id="end-讓-jQuery-回復到原先狀態"><a href="#end-讓-jQuery-回復到原先狀態" class="headerlink" title=".end() 讓 jQuery 回復到原先狀態"></a>.end() 讓 jQuery 回復到原先狀態</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  $(<span class="string">'#me'</span>)</span><br><span class="line">  .css(<span class="string">'font-weight'</span>, <span class="string">'bold'</span>)</span><br><span class="line">  .prev() <span class="comment">// jQuery 指到 &lt;div&gt;姊姊（兄元素）&lt;/div&gt;</span></span><br><span class="line">  .css(<span class="string">'background-color'</span>, <span class="string">'pink'</span>)</span><br><span class="line">  .end()  <span class="comment">// jQuery 指回 $('#me')</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/15/jQuery-dynamic-4/" class="archive-article-date">
-  <time datetime="2019-09-15T02:04:18.000Z" itemprop="datePublished">Sep 15</time>
-</a>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>姊姊（兄元素）<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"me"</span>&gt;</span></span><br><span class="line">  我（目前元素）</span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    小不點（子元素）</span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span>寵物（孫元素）<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="andSelf-在目前的狀態上新增前一個狀態"><a href="#andSelf-在目前的狀態上新增前一個狀態" class="headerlink" title=".andSelf() 在目前的狀態上新增前一個狀態"></a>.andSelf() 在目前的狀態上新增前一個狀態</h3><p>這邊直接附上<a href="https://www.w3school.com.cn/tiy/t.asp?f=jquery_traversing_andself" target="_blank" rel="noopener">w3school</a>代碼連結（在codepen上寫範例一直失敗😭）</p>
+
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/15/jQuery-dynamic-4/">jQuery 3種 刪除元素（remove、empty、unwrap）</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/14/jQuery-dynamic-3/" class="archive-article-date">
-  <time datetime="2019-09-14T13:09:17.000Z" itemprop="datePublished">Sep 14</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dobubu.github.io/2019/09/15/jQuery-traverse/" data-id="ck0kirbdj000e6rx8ghguphhy" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/14/jQuery-dynamic-3/">jQuery 3種 利用其他元素包覆元素（wrap、wrapAll、wrapInner）</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/14/jQuery-dynamic-2/" class="archive-article-date">
-  <time datetime="2019-09-14T12:45:51.000Z" itemprop="datePublished">Sep 14</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/14/jQuery-dynamic-2/">jQuery 4種 動態插入元素（before、after、prepend、append）</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/children/">.children()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/end/">.end()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/next/">.next()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nextAll/">.nextAll()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/parent/">.parent()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/prev/">.prev()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/prevAll/">.prevAll()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/siblings/">.siblings()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/14/jQuery-dynamic-1/" class="archive-article-date">
-  <time datetime="2019-09-14T12:12:39.000Z" itemprop="datePublished">Sep 14</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/14/jQuery-dynamic-1/">jQuery 4種 動態插入元素（insertBefore、insertAfter、prependTo、appendTo）</a>
-    </h1>
   
+    <a href="/2019/09/15/jQuery-dynamic-5/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">jQuery 2種 置換元素（replaceWith、replaceAll）</div>
+    </a>
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/14/css-contextual-selector/" class="archive-article-date">
-  <time datetime="2019-09-14T10:24:48.000Z" itemprop="datePublished">Sep 14</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/14/css-contextual-selector/">css-contextual-selector 關聯選取器</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/14/css-attribute-selector/" class="archive-article-date">
-  <time datetime="2019-09-14T10:16:45.000Z" itemprop="datePublished">Sep 14</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/14/css-attribute-selector/">CSS-attribute-selector 屬性選取器</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/14/css-selector/" class="archive-article-date">
-  <time datetime="2019-09-14T03:40:13.000Z" itemprop="datePublished">Sep 14</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/14/css-selector/">CSS-Selector（元素選取器、類別選取器）</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
 
 </section>
         

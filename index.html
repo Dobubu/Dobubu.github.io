@@ -62,6 +62,55 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-jQuery-traverse" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/15/jQuery-traverse/" class="article-date">
+  <time datetime="2019-09-15T03:36:27.000Z" itemprop="datePublished">2019-09-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/F2E/">F2E</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/15/jQuery-traverse/">jQuery 7種 在父子、兄弟關係元素間穿梭（prev、prevAll、next、nextAll、siblings、parent、end、children）2種 改變目標對象（end、andSelf）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="以現存元素為基準點取得另外的元素"><a href="#以現存元素為基準點取得另外的元素" class="headerlink" title="以現存元素為基準點取得另外的元素"></a>以現存元素為基準點取得另外的元素</h2><h3 id="prev-前面最親近的兄弟"><a href="#prev-前面最親近的兄弟" class="headerlink" title=".prev() 前面最親近的兄弟"></a>.prev() 前面最親近的兄弟</h3><h3 id="prevAll-所有兄元素"><a href="#prevAll-所有兄元素" class="headerlink" title=".prevAll() 所有兄元素"></a>.prevAll() 所有兄元素</h3><h3 id="next-後面最親近的兄弟"><a href="#next-後面最親近的兄弟" class="headerlink" title=".next()  後面最親近的兄弟"></a>.next()  後面最親近的兄弟</h3><h3 id="nextAll-所有弟元素"><a href="#nextAll-所有弟元素" class="headerlink" title=".nextAll() 所有弟元素"></a>.nextAll() 所有弟元素</h3><h3 id="siblings-所有兄弟元素"><a href="#siblings-所有兄弟元素" class="headerlink" title=".siblings()  所有兄弟元素"></a>.siblings()  所有兄弟元素</h3><h3 id="parent-父元素"><a href="#parent-父元素" class="headerlink" title=".parent() 父元素"></a>.parent() 父元素</h3><h3 id="children-所有子元素"><a href="#children-所有子元素" class="headerlink" title=".children()  所有子元素"></a>.children()  所有子元素</h3><p>這邊直接附上<a href="https://codepen.io/Dorothy_0528/pen/abojpeG" target="_blank" rel="noopener">codepen</a>，直接看code會相對理解的快</p>
+<hr>
+<h2 id="改變-jQuery-物件的目標對象"><a href="#改變-jQuery-物件的目標對象" class="headerlink" title="改變 jQuery 物件的目標對象"></a>改變 jQuery 物件的目標對象</h2><h3 id="end-讓-jQuery-回復到原先狀態"><a href="#end-讓-jQuery-回復到原先狀態" class="headerlink" title=".end() 讓 jQuery 回復到原先狀態"></a>.end() 讓 jQuery 回復到原先狀態</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  $(<span class="string">'#me'</span>)</span><br><span class="line">  .css(<span class="string">'font-weight'</span>, <span class="string">'bold'</span>)</span><br><span class="line">  .prev() <span class="comment">// jQuery 指到 &lt;div&gt;姊姊（兄元素）&lt;/div&gt;</span></span><br><span class="line">  .css(<span class="string">'background-color'</span>, <span class="string">'pink'</span>)</span><br><span class="line">  .end()  <span class="comment">// jQuery 指回 $('#me')</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>姊姊（兄元素）<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"me"</span>&gt;</span></span><br><span class="line">  我（目前元素）</span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    小不點（子元素）</span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span>寵物（孫元素）<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="andSelf-在目前的狀態上新增前一個狀態"><a href="#andSelf-在目前的狀態上新增前一個狀態" class="headerlink" title=".andSelf() 在目前的狀態上新增前一個狀態"></a>.andSelf() 在目前的狀態上新增前一個狀態</h3><p>這邊直接附上<a href="https://www.w3school.com.cn/tiy/t.asp?f=jquery_traversing_andself" target="_blank" rel="noopener">w3school</a>代碼連結（在codepen上寫範例一直失敗😭）</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dobubu.github.io/2019/09/15/jQuery-traverse/" data-id="ck0kirbdj000e6rx8ghguphhy" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/children/">.children()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/end/">.end()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/next/">.next()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nextAll/">.nextAll()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/parent/">.parent()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/prev/">.prev()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/prevAll/">.prevAll()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/siblings/">.siblings()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-jQuery-dynamic-5" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/09/15/jQuery-dynamic-5/" class="article-date">
@@ -80,7 +129,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/15/jQuery-dynamic-5/">jQuery 置換元素（replaceWith、replaceAll）</a>
+      <a class="article-title" href="/2019/09/15/jQuery-dynamic-5/">jQuery 2種 置換元素（replaceWith、replaceAll）</a>
     </h1>
   
 
@@ -100,7 +149,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/09/15/jQuery-dynamic-5/" data-id="ck0kfe36t000u00x8009rc2d8" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/09/15/jQuery-dynamic-5/" data-id="ck0kirbdp000q6rx8z5c4fo3y" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/replaceAll/">.replaceAll()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/replaceWith/">.replaceWith()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
@@ -130,7 +179,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/15/jQuery-dynamic-4/">jQuery 刪除元素（remove、empty、unwrap）</a>
+      <a class="article-title" href="/2019/09/15/jQuery-dynamic-4/">jQuery 3種 刪除元素（remove、empty、unwrap）</a>
     </h1>
   
 
@@ -152,7 +201,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/09/15/jQuery-dynamic-4/" data-id="ck0kfe36s000s00x8yppbifg5" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/09/15/jQuery-dynamic-4/" data-id="ck0kirbdm000l6rx83mor8u75" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/empty/">.empty()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/remove/">.remove()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/unwrap/">.unwrap()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
@@ -182,7 +231,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/14/jQuery-dynamic-3/">jQuery 利用其他元素包覆元素（wrap、wrapAll、wrapInner）</a>
+      <a class="article-title" href="/2019/09/14/jQuery-dynamic-3/">jQuery 3種 利用其他元素包覆元素（wrap、wrapAll、wrapInner）</a>
     </h1>
   
 
@@ -209,7 +258,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/09/14/jQuery-dynamic-3/" data-id="ck0kfe36p000l00x8c24klw97" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/09/14/jQuery-dynamic-3/" data-id="ck0kirbdk000h6rx80k3qs3u3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wrap/">.wrap()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wrapAll/">.wrapAll()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wrapInner/">.wrapInner()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
@@ -239,7 +288,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/14/jQuery-dynamic-2/">jQuery 動態插入元素（before、after、prepend、append）</a>
+      <a class="article-title" href="/2019/09/14/jQuery-dynamic-2/">jQuery 4種 動態插入元素（before、after、prepend、append）</a>
     </h1>
   
 
@@ -257,7 +306,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/09/14/jQuery-dynamic-2/" data-id="ck0kfe36q000o00x828lww267" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/09/14/jQuery-dynamic-2/" data-id="ck0kirbdi000a6rx8bxjp8b3t" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/after/">.after()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/append/">.append()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/before/">.before()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/prepend/">.prepend()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
@@ -287,7 +336,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/14/jQuery-dynamic-1/">jQuery 動態插入元素（insertBefore、insertAfter、prependTo、appendTo）</a>
+      <a class="article-title" href="/2019/09/14/jQuery-dynamic-1/">jQuery 4種 動態插入元素（insertBefore、insertAfter、prependTo、appendTo）</a>
     </h1>
   
 
@@ -316,7 +365,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/09/14/jQuery-dynamic-1/" data-id="ck0kfe36n000h00x8stc8po0o" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/09/14/jQuery-dynamic-1/" data-id="ck0kirbdf00066rx8pmqzto6w" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/appendTo/">.appendTo()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/insertAfter/">.insertAfter()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/insertBefore/">.insertBefore()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/prependTo/">.prependTo()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
@@ -378,7 +427,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/09/14/css-contextual-selector/" data-id="ck0kfe36i000a00x8dhudnq8j" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/09/14/css-contextual-selector/" data-id="ck0kirbde00056rx8m03v1itb" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/contextual-selector/">contextual selector</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/selector/">selector</a></li></ul>
@@ -454,7 +503,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/09/14/css-attribute-selector/" data-id="ck0kfe36h000800x8zjibqnld" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/09/14/css-attribute-selector/" data-id="ck0kirbdb00016rx8f27qxsmy" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/attribute-selector/">attribute selector</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/selector/">selector</a></li></ul>
@@ -509,7 +558,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/09/14/css-selector/" data-id="ck0kfe36k000b00x8x8x0ivfv" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/09/14/css-selector/" data-id="ck0kirbdh00096rx8c0lq55q3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
@@ -612,70 +661,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/07/14/JavaScript-Patterns-2012-1-1/" data-id="ck0kfe36g000700x81py68yjr" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/07/14/JavaScript-Patterns-2012-1-1/" data-id="ck0kirbd800006rx86eh3272k" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/閱讀/">閱讀</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-vue-watch-window-resize" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/06/29/vue-watch-window-resize/" class="article-date">
-  <time datetime="2019-06-29T07:39:05.000Z" itemprop="datePublished">2019-06-29</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/F2E/">F2E</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/06/29/vue-watch-window-resize/">使用Vue.js監聽視窗大小（寬）</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><font color="red">注意！window.onresize只能在專案中一處進行引用觸發，觸發後通過元件間通訊進行觸發。<font></font></font></p>
-<!-- ## 方法2 -->
-<h3 id="1-在-data-定義一個記錄寬度的屬性"><a href="#1-在-data-定義一個記錄寬度的屬性" class="headerlink" title="1. 在 data 定義一個記錄寬度的屬性"></a>1. 在 data 定義一個記錄寬度的屬性</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">data () &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    myWidth: <span class="built_in">window</span>.innerWidth + <span class="string">'px'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-將reisze事件，在mounted-時去掛載"><a href="#2-將reisze事件，在mounted-時去掛載" class="headerlink" title="2. 將reisze事件，在mounted()時去掛載"></a>2. 將reisze事件，在mounted()時去掛載</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mounted() &#123;</span><br><span class="line">  <span class="keyword">const</span> self = <span class="keyword">this</span></span><br><span class="line">  <span class="built_in">window</span>.onresize = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function">(<span class="params">(</span>) =&gt;</span> &#123;</span><br><span class="line">      self.myWidth = <span class="built_in">window</span>.innerWidth + <span class="string">'px'</span></span><br><span class="line">    &#125;)()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<!-- ## 方法1
-### 1. 在 data 定義一個記錄寬度的屬性
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">data () &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    screenWidth: <span class="built_in">document</span>.body.clientWidth</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-將reisze事件，在mounted-時去掛載-1"><a href="#2-將reisze事件，在mounted-時去掛載-1" class="headerlink" title="2. 將reisze事件，在mounted()時去掛載"></a>2. 將reisze事件，在mounted()時去掛載</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mounted() &#123;</span><br><span class="line">  <span class="keyword">const</span> self = <span class="keyword">this</span></span><br><span class="line">  <span class="built_in">window</span>.onresize = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function">(<span class="params">(</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">window</span>.screenWidth = <span class="built_in">document</span>.body.clientWidth</span><br><span class="line">      self.screenWidth = <span class="built_in">window</span>.screenWidth</span><br><span class="line">    &#125;)()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-用watch去監聽這個屬性值的變化，再將值傳給this-screenWidth"><a href="#3-用watch去監聽這個屬性值的變化，再將值傳給this-screenWidth" class="headerlink" title="3. 用watch去監聽這個屬性值的變化，再將值傳給this.screenWidth"></a>3. 用watch去監聽這個屬性值的變化，再將值傳給this.screenWidth</h3><p><code>js
-watch: {
-  screenWidth (val) {
-    this.screenWidth = val
-  }
-}</code> –&gt;</p>
-<!-- [ex](https://blog.csdn.net/qq_25386583/article/details/77161478) -->
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/06/29/vue-watch-window-resize/" data-id="ck0kfe36u000x00x87acjuc6g" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue-js/">Vue.js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/work/">work</a></li></ul>
 
     </footer>
   </div>
@@ -709,7 +698,7 @@ watch: {
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/after/">.after()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/append/">.append()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appendTo/">.appendTo()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/before/">.before()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/empty/">.empty()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/insertAfter/">.insertAfter()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/insertBefore/">.insertBefore()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/prepend/">.prepend()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/prependTo/">.prependTo()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/remove/">.remove()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/replaceAll/">.replaceAll()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/replaceWith/">.replaceWith()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unwrap/">.unwrap()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wrap/">.wrap()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wrapAll/">.wrapAll()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wrapInner/">.wrapInner()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue-js/">Vue.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/attribute-selector/">attribute selector</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/contextual-selector/">contextual selector</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nvm/">nvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/selector/">selector</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/work/">work</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/閱讀/">閱讀</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/after/">.after()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/append/">.append()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appendTo/">.appendTo()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/before/">.before()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/children/">.children()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/empty/">.empty()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/end/">.end()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/insertAfter/">.insertAfter()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/insertBefore/">.insertBefore()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/next/">.next()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nextAll/">.nextAll()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/parent/">.parent()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/prepend/">.prepend()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/prependTo/">.prependTo()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/prev/">.prev()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/prevAll/">.prevAll()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/remove/">.remove()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/replaceAll/">.replaceAll()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/replaceWith/">.replaceWith()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/siblings/">.siblings()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unwrap/">.unwrap()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wrap/">.wrap()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wrapAll/">.wrapAll()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wrapInner/">.wrapInner()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue-js/">Vue.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/attribute-selector/">attribute selector</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/contextual-selector/">contextual selector</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nvm/">nvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/selector/">selector</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/work/">work</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/閱讀/">閱讀</a></li></ul>
     </div>
   </div>
 
@@ -719,7 +708,7 @@ watch: {
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/after/" style="font-size: 10px;">.after()</a> <a href="/tags/append/" style="font-size: 10px;">.append()</a> <a href="/tags/appendTo/" style="font-size: 10px;">.appendTo()</a> <a href="/tags/before/" style="font-size: 10px;">.before()</a> <a href="/tags/empty/" style="font-size: 10px;">.empty()</a> <a href="/tags/insertAfter/" style="font-size: 10px;">.insertAfter()</a> <a href="/tags/insertBefore/" style="font-size: 10px;">.insertBefore()</a> <a href="/tags/prepend/" style="font-size: 10px;">.prepend()</a> <a href="/tags/prependTo/" style="font-size: 10px;">.prependTo()</a> <a href="/tags/remove/" style="font-size: 10px;">.remove()</a> <a href="/tags/replaceAll/" style="font-size: 10px;">.replaceAll()</a> <a href="/tags/replaceWith/" style="font-size: 10px;">.replaceWith()</a> <a href="/tags/unwrap/" style="font-size: 10px;">.unwrap()</a> <a href="/tags/wrap/" style="font-size: 10px;">.wrap()</a> <a href="/tags/wrapAll/" style="font-size: 10px;">.wrapAll()</a> <a href="/tags/wrapInner/" style="font-size: 10px;">.wrapInner()</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Vue-js/" style="font-size: 10px;">Vue.js</a> <a href="/tags/attribute-selector/" style="font-size: 10px;">attribute selector</a> <a href="/tags/contextual-selector/" style="font-size: 10px;">contextual selector</a> <a href="/tags/css/" style="font-size: 16.67px;">css</a> <a href="/tags/jQuery/" style="font-size: 20px;">jQuery</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/selector/" style="font-size: 13.33px;">selector</a> <a href="/tags/work/" style="font-size: 10px;">work</a> <a href="/tags/閱讀/" style="font-size: 10px;">閱讀</a>
+      <a href="/tags/after/" style="font-size: 10px;">.after()</a> <a href="/tags/append/" style="font-size: 10px;">.append()</a> <a href="/tags/appendTo/" style="font-size: 10px;">.appendTo()</a> <a href="/tags/before/" style="font-size: 10px;">.before()</a> <a href="/tags/children/" style="font-size: 10px;">.children()</a> <a href="/tags/empty/" style="font-size: 10px;">.empty()</a> <a href="/tags/end/" style="font-size: 10px;">.end()</a> <a href="/tags/insertAfter/" style="font-size: 10px;">.insertAfter()</a> <a href="/tags/insertBefore/" style="font-size: 10px;">.insertBefore()</a> <a href="/tags/next/" style="font-size: 10px;">.next()</a> <a href="/tags/nextAll/" style="font-size: 10px;">.nextAll()</a> <a href="/tags/parent/" style="font-size: 10px;">.parent()</a> <a href="/tags/prepend/" style="font-size: 10px;">.prepend()</a> <a href="/tags/prependTo/" style="font-size: 10px;">.prependTo()</a> <a href="/tags/prev/" style="font-size: 10px;">.prev()</a> <a href="/tags/prevAll/" style="font-size: 10px;">.prevAll()</a> <a href="/tags/remove/" style="font-size: 10px;">.remove()</a> <a href="/tags/replaceAll/" style="font-size: 10px;">.replaceAll()</a> <a href="/tags/replaceWith/" style="font-size: 10px;">.replaceWith()</a> <a href="/tags/siblings/" style="font-size: 10px;">.siblings()</a> <a href="/tags/unwrap/" style="font-size: 10px;">.unwrap()</a> <a href="/tags/wrap/" style="font-size: 10px;">.wrap()</a> <a href="/tags/wrapAll/" style="font-size: 10px;">.wrapAll()</a> <a href="/tags/wrapInner/" style="font-size: 10px;">.wrapInner()</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Vue-js/" style="font-size: 10px;">Vue.js</a> <a href="/tags/attribute-selector/" style="font-size: 10px;">attribute selector</a> <a href="/tags/contextual-selector/" style="font-size: 10px;">contextual selector</a> <a href="/tags/css/" style="font-size: 16.67px;">css</a> <a href="/tags/jQuery/" style="font-size: 20px;">jQuery</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/selector/" style="font-size: 13.33px;">selector</a> <a href="/tags/work/" style="font-size: 10px;">work</a> <a href="/tags/閱讀/" style="font-size: 10px;">閱讀</a>
     </div>
   </div>
 
@@ -741,23 +730,23 @@ watch: {
       <ul>
         
           <li>
-            <a href="/2019/09/15/jQuery-dynamic-5/">jQuery 置換元素（replaceWith、replaceAll）</a>
+            <a href="/2019/09/15/jQuery-traverse/">jQuery 7種 在父子、兄弟關係元素間穿梭（prev、prevAll、next、nextAll、siblings、parent、end、children）2種 改變目標對象（end、andSelf）</a>
           </li>
         
           <li>
-            <a href="/2019/09/15/jQuery-dynamic-4/">jQuery 刪除元素（remove、empty、unwrap）</a>
+            <a href="/2019/09/15/jQuery-dynamic-5/">jQuery 2種 置換元素（replaceWith、replaceAll）</a>
           </li>
         
           <li>
-            <a href="/2019/09/14/jQuery-dynamic-3/">jQuery 利用其他元素包覆元素（wrap、wrapAll、wrapInner）</a>
+            <a href="/2019/09/15/jQuery-dynamic-4/">jQuery 3種 刪除元素（remove、empty、unwrap）</a>
           </li>
         
           <li>
-            <a href="/2019/09/14/jQuery-dynamic-2/">jQuery 動態插入元素（before、after、prepend、append）</a>
+            <a href="/2019/09/14/jQuery-dynamic-3/">jQuery 3種 利用其他元素包覆元素（wrap、wrapAll、wrapInner）</a>
           </li>
         
           <li>
-            <a href="/2019/09/14/jQuery-dynamic-1/">jQuery 動態插入元素（insertBefore、insertAfter、prependTo、appendTo）</a>
+            <a href="/2019/09/14/jQuery-dynamic-2/">jQuery 4種 動態插入元素（before、after、prepend、append）</a>
           </li>
         
       </ul>
