@@ -7,18 +7,18 @@
   
   <title>JavaScript-Patterns-2012-介紹[1-1] | Stick to it!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="記錄閱讀 JavaScript-Patterns 2012 書籍（雖然有點舊，但還是值得來看一下～ 🤔頁碼 p.10 ~ p.17 JavaScript重要觀念 JavaScript是個物件導向語言：在JavaScript看到的程式碼，極可能都是個物件。主要有兩種物件： Native（原生物件） Host（宿主物件）   沒有Class 原型：是一個物件，當你建立的每個函式，都會自動取得一個pr">
+  <meta name="description" content="記錄閱讀 JavaScript-Patterns 2012 書籍（雖然有點舊，但還是值得來看一下～ 🤔頁碼 p.10 ~ p.15 JavaScript重要觀念 JavaScript是個物件導向語言：在JavaScript看到的程式碼，極可能都是個物件。主要有兩種物件： Native（原生物件） Host（宿主物件）   沒有Class 原型：是一個物件，當你建立的每個函式，都會自動取得一個pr">
 <meta name="keywords" content="JavaScript,閱讀">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript-Patterns-2012-介紹[1-1]">
 <meta property="og:url" content="https://dobubu.github.io/2019/07/14/JavaScript-Patterns-2012-1-1/index.html">
 <meta property="og:site_name" content="Stick to it!">
-<meta property="og:description" content="記錄閱讀 JavaScript-Patterns 2012 書籍（雖然有點舊，但還是值得來看一下～ 🤔頁碼 p.10 ~ p.17 JavaScript重要觀念 JavaScript是個物件導向語言：在JavaScript看到的程式碼，極可能都是個物件。主要有兩種物件： Native（原生物件） Host（宿主物件）   沒有Class 原型：是一個物件，當你建立的每個函式，都會自動取得一個pr">
+<meta property="og:description" content="記錄閱讀 JavaScript-Patterns 2012 書籍（雖然有點舊，但還是值得來看一下～ 🤔頁碼 p.10 ~ p.15 JavaScript重要觀念 JavaScript是個物件導向語言：在JavaScript看到的程式碼，極可能都是個物件。主要有兩種物件： Native（原生物件） Host（宿主物件）   沒有Class 原型：是一個物件，當你建立的每個函式，都會自動取得一個pr">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-28T08:34:35.671Z">
+<meta property="og:updated_time" content="2019-09-28T13:08:04.989Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript-Patterns-2012-介紹[1-1]">
-<meta name="twitter:description" content="記錄閱讀 JavaScript-Patterns 2012 書籍（雖然有點舊，但還是值得來看一下～ 🤔頁碼 p.10 ~ p.17 JavaScript重要觀念 JavaScript是個物件導向語言：在JavaScript看到的程式碼，極可能都是個物件。主要有兩種物件： Native（原生物件） Host（宿主物件）   沒有Class 原型：是一個物件，當你建立的每個函式，都會自動取得一個pr">
+<meta name="twitter:description" content="記錄閱讀 JavaScript-Patterns 2012 書籍（雖然有點舊，但還是值得來看一下～ 🤔頁碼 p.10 ~ p.15 JavaScript重要觀念 JavaScript是個物件導向語言：在JavaScript看到的程式碼，極可能都是個物件。主要有兩種物件： Native（原生物件） Host（宿主物件）   沒有Class 原型：是一個物件，當你建立的每個函式，都會自動取得一個pr">
   
     <link rel="alternate" href="/atom.xml" title="Stick to it!" type="application/atom+xml">
   
@@ -91,7 +91,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>記錄閱讀 JavaScript-Patterns 2012 書籍（雖然有點舊，但還是值得來看一下～ 🤔<br>頁碼 p.10 ~ p.17</p>
+        <p>記錄閱讀 JavaScript-Patterns 2012 書籍（雖然有點舊，但還是值得來看一下～ 🤔<br>頁碼 p.10 ~ p.15</p>
 <h2 id="JavaScript重要觀念"><a href="#JavaScript重要觀念" class="headerlink" title="JavaScript重要觀念"></a>JavaScript重要觀念</h2><ol>
 <li>JavaScript是個物件導向語言：在JavaScript看到的程式碼，極可能都是個物件。主要有兩種物件：<ul>
 <li>Native（原生物件）</li>
@@ -150,15 +150,18 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">myName = <span class="string">'global'</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(myName);  <span class="comment">// undefined</span></span><br><span class="line">  <span class="keyword">var</span> myName = <span class="string">'local'</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(myName);  <span class="comment">// local</span></span><br><span class="line">&#125;</span><br><span class="line">func()</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>（參考這兩個，他們是一樣的）</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">myName = <span class="string">'global'</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> myName;           <span class="comment">// 等於 var myName = undefined;</span></span><br><span class="line">  <span class="built_in">console</span>.log(myName);  <span class="comment">// undefined</span></span><br><span class="line">  myName = <span class="string">'local'</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(myName);  <span class="comment">// local</span></span><br><span class="line">&#125;</span><br><span class="line">func()</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">myName = <span class="string">'global'</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> myName;           <span class="comment">// 等於 var myName = undefined;</span></span><br><span class="line">  <span class="built_in">console</span>.log(myName);  <span class="comment">// undefined</span></span><br><span class="line">  myName = <span class="string">'local'</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(myName);  <span class="comment">// local</span></span><br><span class="line">&#125;</span><br><span class="line">func()</span><br></pre></td></tr></table></figure>
+
+</li>
 </ul>
+<p>同系列下篇：<a href="/2019/07/31/JavaScript-Patterns-2012-1-2/" title="JavaScript-Patterns-2012-介紹[1-2]">JavaScript-Patterns-2012-介紹[1-2]</a></p>
 </li>
 </ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/07/14/JavaScript-Patterns-2012-1-1/" data-id="ck0j0lheg0000s6x8ioqv4lzt" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/07/14/JavaScript-Patterns-2012-1-1/" data-id="ck13kqi0j0000u3x80pnd5ozi" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/閱讀/">閱讀</a></li></ul>
@@ -169,11 +172,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/09/14/css-selector/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/07/31/JavaScript-Patterns-2012-1-2/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          CSS-Selector（元素選取器、類別選取器）
+          JavaScript-Patterns-2012-介紹[1-2]
         
       </div>
     </a>
@@ -217,7 +220,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/after/" style="font-size: 10px;">.after()</a> <a href="/tags/andSelf/" style="font-size: 10px;">.andSelf()</a> <a href="/tags/append/" style="font-size: 10px;">.append()</a> <a href="/tags/appendTo/" style="font-size: 10px;">.appendTo()</a> <a href="/tags/before/" style="font-size: 10px;">.before()</a> <a href="/tags/children/" style="font-size: 10px;">.children()</a> <a href="/tags/empty/" style="font-size: 10px;">.empty()</a> <a href="/tags/end/" style="font-size: 10px;">.end()</a> <a href="/tags/insertAfter/" style="font-size: 10px;">.insertAfter()</a> <a href="/tags/insertBefore/" style="font-size: 10px;">.insertBefore()</a> <a href="/tags/next/" style="font-size: 10px;">.next()</a> <a href="/tags/nextAll/" style="font-size: 10px;">.nextAll()</a> <a href="/tags/parent/" style="font-size: 10px;">.parent()</a> <a href="/tags/prepend/" style="font-size: 10px;">.prepend()</a> <a href="/tags/prependTo/" style="font-size: 10px;">.prependTo()</a> <a href="/tags/prev/" style="font-size: 10px;">.prev()</a> <a href="/tags/prevAll/" style="font-size: 10px;">.prevAll()</a> <a href="/tags/remove/" style="font-size: 10px;">.remove()</a> <a href="/tags/replaceAll/" style="font-size: 10px;">.replaceAll()</a> <a href="/tags/replaceWith/" style="font-size: 10px;">.replaceWith()</a> <a href="/tags/siblings/" style="font-size: 10px;">.siblings()</a> <a href="/tags/unwrap/" style="font-size: 10px;">.unwrap()</a> <a href="/tags/wrap/" style="font-size: 10px;">.wrap()</a> <a href="/tags/wrapAll/" style="font-size: 10px;">.wrapAll()</a> <a href="/tags/wrapInner/" style="font-size: 10px;">.wrapInner()</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Vue-js/" style="font-size: 10px;">Vue.js</a> <a href="/tags/attribute-selector/" style="font-size: 10px;">attribute selector</a> <a href="/tags/contextual-selector/" style="font-size: 10px;">contextual selector</a> <a href="/tags/css/" style="font-size: 16.67px;">css</a> <a href="/tags/jQuery/" style="font-size: 20px;">jQuery</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/selector/" style="font-size: 13.33px;">selector</a> <a href="/tags/work/" style="font-size: 10px;">work</a> <a href="/tags/閱讀/" style="font-size: 10px;">閱讀</a>
+      <a href="/tags/after/" style="font-size: 10px;">.after()</a> <a href="/tags/andSelf/" style="font-size: 10px;">.andSelf()</a> <a href="/tags/append/" style="font-size: 10px;">.append()</a> <a href="/tags/appendTo/" style="font-size: 10px;">.appendTo()</a> <a href="/tags/before/" style="font-size: 10px;">.before()</a> <a href="/tags/children/" style="font-size: 10px;">.children()</a> <a href="/tags/empty/" style="font-size: 10px;">.empty()</a> <a href="/tags/end/" style="font-size: 10px;">.end()</a> <a href="/tags/insertAfter/" style="font-size: 10px;">.insertAfter()</a> <a href="/tags/insertBefore/" style="font-size: 10px;">.insertBefore()</a> <a href="/tags/next/" style="font-size: 10px;">.next()</a> <a href="/tags/nextAll/" style="font-size: 10px;">.nextAll()</a> <a href="/tags/parent/" style="font-size: 10px;">.parent()</a> <a href="/tags/prepend/" style="font-size: 10px;">.prepend()</a> <a href="/tags/prependTo/" style="font-size: 10px;">.prependTo()</a> <a href="/tags/prev/" style="font-size: 10px;">.prev()</a> <a href="/tags/prevAll/" style="font-size: 10px;">.prevAll()</a> <a href="/tags/remove/" style="font-size: 10px;">.remove()</a> <a href="/tags/replaceAll/" style="font-size: 10px;">.replaceAll()</a> <a href="/tags/replaceWith/" style="font-size: 10px;">.replaceWith()</a> <a href="/tags/siblings/" style="font-size: 10px;">.siblings()</a> <a href="/tags/unwrap/" style="font-size: 10px;">.unwrap()</a> <a href="/tags/wrap/" style="font-size: 10px;">.wrap()</a> <a href="/tags/wrapAll/" style="font-size: 10px;">.wrapAll()</a> <a href="/tags/wrapInner/" style="font-size: 10px;">.wrapInner()</a> <a href="/tags/JavaScript/" style="font-size: 13.33px;">JavaScript</a> <a href="/tags/Vue-js/" style="font-size: 10px;">Vue.js</a> <a href="/tags/attribute-selector/" style="font-size: 10px;">attribute selector</a> <a href="/tags/contextual-selector/" style="font-size: 10px;">contextual selector</a> <a href="/tags/css/" style="font-size: 16.67px;">css</a> <a href="/tags/jQuery/" style="font-size: 20px;">jQuery</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/selector/" style="font-size: 13.33px;">selector</a> <a href="/tags/work/" style="font-size: 10px;">work</a> <a href="/tags/閱讀/" style="font-size: 13.33px;">閱讀</a>
     </div>
   </div>
 

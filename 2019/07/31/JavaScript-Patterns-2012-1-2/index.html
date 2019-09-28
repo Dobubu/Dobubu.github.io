@@ -7,18 +7,18 @@
   
   <title>JavaScript-Patterns-2012-介紹[1-2] | Stick to it!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="頁碼 p.18 ~ p. for迴圈（重複陣列可遍歷整個陣列或類似陣列的物件 123456789// 這個寫法，每次都要存取陣列的長度，這會拖慢你的程式for(var i = 0; i &amp;lt; myArray.length; i++) &amp;#123;  // do something ...&amp;#125;// 這個寫法，只需計算一次length，用於整個迴圈中 👍for(var i = 0, ma">
+  <meta name="description" content="頁碼 p.16 ~ p.22 for迴圈（重複陣列）可遍歷整個陣列或類似陣列的物件 123456789// 這個寫法，每次都要存取陣列的長度，這會拖慢你的程式for(var i = 0; i &amp;lt; myArray.length; i++) &amp;#123;  // do something ...&amp;#125;// 這個寫法，只需計算一次length，用於整個迴圈中 👍for(var i = 0,">
 <meta name="keywords" content="JavaScript,閱讀">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript-Patterns-2012-介紹[1-2]">
 <meta property="og:url" content="https://dobubu.github.io/2019/07/31/JavaScript-Patterns-2012-1-2/index.html">
 <meta property="og:site_name" content="Stick to it!">
-<meta property="og:description" content="頁碼 p.18 ~ p. for迴圈（重複陣列可遍歷整個陣列或類似陣列的物件 123456789// 這個寫法，每次都要存取陣列的長度，這會拖慢你的程式for(var i = 0; i &amp;lt; myArray.length; i++) &amp;#123;  // do something ...&amp;#125;// 這個寫法，只需計算一次length，用於整個迴圈中 👍for(var i = 0, ma">
+<meta property="og:description" content="頁碼 p.16 ~ p.22 for迴圈（重複陣列）可遍歷整個陣列或類似陣列的物件 123456789// 這個寫法，每次都要存取陣列的長度，這會拖慢你的程式for(var i = 0; i &amp;lt; myArray.length; i++) &amp;#123;  // do something ...&amp;#125;// 這個寫法，只需計算一次length，用於整個迴圈中 👍for(var i = 0,">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-14T03:53:33.261Z">
+<meta property="og:updated_time" content="2019-09-28T13:09:34.253Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript-Patterns-2012-介紹[1-2]">
-<meta name="twitter:description" content="頁碼 p.18 ~ p. for迴圈（重複陣列可遍歷整個陣列或類似陣列的物件 123456789// 這個寫法，每次都要存取陣列的長度，這會拖慢你的程式for(var i = 0; i &amp;lt; myArray.length; i++) &amp;#123;  // do something ...&amp;#125;// 這個寫法，只需計算一次length，用於整個迴圈中 👍for(var i = 0, ma">
+<meta name="twitter:description" content="頁碼 p.16 ~ p.22 for迴圈（重複陣列）可遍歷整個陣列或類似陣列的物件 123456789// 這個寫法，每次都要存取陣列的長度，這會拖慢你的程式for(var i = 0; i &amp;lt; myArray.length; i++) &amp;#123;  // do something ...&amp;#125;// 這個寫法，只需計算一次length，用於整個迴圈中 👍for(var i = 0,">
   
     <link rel="alternate" href="/atom.xml" title="Stick to it!" type="application/atom+xml">
   
@@ -91,8 +91,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>頁碼 p.18 ~ p.</p>
-<h2 id="for迴圈（重複陣列"><a href="#for迴圈（重複陣列" class="headerlink" title="for迴圈（重複陣列"></a>for迴圈（重複陣列</h2><p><strong>可遍歷整個陣列或類似陣列的物件</strong></p>
+        <p>頁碼 p.16 ~ p.22</p>
+<h2 id="for迴圈（重複陣列）"><a href="#for迴圈（重複陣列）" class="headerlink" title="for迴圈（重複陣列）"></a>for迴圈（重複陣列）</h2><p><strong>可遍歷整個陣列或類似陣列的物件</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 這個寫法，每次都要存取陣列的長度，這會拖慢你的程式</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; myArray.length; i++) &#123;</span><br><span class="line">  <span class="comment">// do something ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 這個寫法，只需計算一次length，用於整個迴圈中 👍</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>, max = myArray.length; i &lt; max ; i++) &#123;</span><br><span class="line">  <span class="comment">// do something ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="迴圈模式的變形。優化效能"><a href="#迴圈模式的變形。優化效能" class="headerlink" title="迴圈模式的變形。優化效能"></a>迴圈模式的變形。優化效能</h3><ul>
@@ -102,7 +102,7 @@
 </li>
 </ul>
 <hr>
-<h2 id="for-in迴圈（重複物件"><a href="#for-in迴圈（重複物件" class="headerlink" title="for-in迴圈（重複物件"></a>for-in迴圈（重複物件</h2><p>  <strong>用來歷整整個<font color="red">非陣列物件</font>，又稱「列舉 enumeration」</strong></p>
+<h2 id="for-in迴圈（重複物件）"><a href="#for-in迴圈（重複物件）" class="headerlink" title="for-in迴圈（重複物件）"></a>for-in迴圈（重複物件）</h2><p>  <strong>用來歷整整個<font color="red">非陣列物件</font>，又稱「列舉 enumeration」</strong></p>
 <ul>
 <li><p>使用 <font background="yellow">hasOwnProperty()</font> 過濾掉來自原型鏈的屬性</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. 建立一個物件</span></span><br><span class="line"><span class="keyword">var</span> family = &#123;</span><br><span class="line">  sisters: <span class="number">2</span>,</span><br><span class="line">  brothers: <span class="number">1</span>,</span><br><span class="line">  father: <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2. 將clone方法，加到所有物件中。用擴充Object原型</span></span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">typeof</span> <span class="built_in">Object</span>.prototype.clone === <span class="string">"undefined"</span>) &#123;</span><br><span class="line">  <span class="built_in">Object</span>.prototype.clone = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3. 使用 for-in，並搭配 hasOwnProperty()，來印出屬性</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> family) &#123;</span><br><span class="line">  <span class="keyword">if</span> (family.hasOwnProperty(i)) &#123;   <span class="comment">// 過濾掉原型鏈的屬性</span></span><br><span class="line">    <span class="built_in">console</span>.log(i, <span class="string">":"</span> , family[i])</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">會印出這些：</span></span><br><span class="line"><span class="comment">sisters : 2</span></span><br><span class="line"><span class="comment">brothers : 1</span></span><br><span class="line"><span class="comment">father : 1</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 4. 使用 for-in，直接印出屬性</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> family) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(i, <span class="string">":"</span> , family[i])</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">會印出這些：</span></span><br><span class="line"><span class="comment">sisters : 2</span></span><br><span class="line"><span class="comment">brothers : 1</span></span><br><span class="line"><span class="comment">father : 1</span></span><br><span class="line"><span class="comment">clone : ƒ () &#123;&#125;   // 多了這個</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
@@ -117,11 +117,24 @@
 </li>
 </ul>
 <hr>
-<h2 id="switch"><a href="#switch" class="headerlink" title="switch"></a>switch</h2>
+<h2 id="不要擴充內建型別的原型"><a href="#不要擴充內建型別的原型" class="headerlink" title="不要擴充內建型別的原型"></a>不要擴充內建型別的原型</h2><hr>
+<h2 id="switch"><a href="#switch" class="headerlink" title="switch"></a>switch</h2><p>  <strong>下面模式提升可讀性和穩健性</strong><br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> inspect_me = <span class="number">0</span>,</span><br><span class="line">    result = <span class="string">''</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">switch</span>(inspect_me) &#123;</span><br><span class="line"><span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">  result = <span class="string">'zero'</span>;</span><br><span class="line">  <span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">  result = <span class="string">'one'</span>;</span><br><span class="line">  <span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">default</span>:</span><br><span class="line">  result = <span class="string">'unknow'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><p>將每個 case 與 switch 並排</p>
+</li>
+<li><p>每個 case 內的程式碼縮排</p>
+</li>
+<li><p>用 break; 結束每個 case</p>
+</li>
+<li><p>用 default; 結束 switch，即使沒有任何一個 case 符合</p>
+<p>同系列下篇：<a href="/2019/09/28/JavaScript-Patterns-2012-1-3/" title="JavaScript-Patterns-2012-介紹[1-3]">JavaScript-Patterns-2012-介紹[1-3]</a></p>
+</li>
+</ul>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/07/31/JavaScript-Patterns-2012-1-2/" data-id="ck0j0lhek0002s6x8as3nm8j8" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/07/31/JavaScript-Patterns-2012-1-2/" data-id="ck13kqi0m0001u3x80qogowo0" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/閱讀/">閱讀</a></li></ul>
@@ -136,7 +149,7 @@
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          CSS-selector
+          CSS-Selector（元素選取器、類別選取器）
         
       </div>
     </a>
@@ -170,7 +183,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue-js/">Vue.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nvm/">nvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/work/">work</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/閱讀/">閱讀</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/after/">.after()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/andSelf/">.andSelf()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/append/">.append()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appendTo/">.appendTo()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/before/">.before()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/children/">.children()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/empty/">.empty()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/end/">.end()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/insertAfter/">.insertAfter()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/insertBefore/">.insertBefore()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/next/">.next()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nextAll/">.nextAll()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/parent/">.parent()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/prepend/">.prepend()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/prependTo/">.prependTo()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/prev/">.prev()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/prevAll/">.prevAll()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/remove/">.remove()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/replaceAll/">.replaceAll()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/replaceWith/">.replaceWith()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/siblings/">.siblings()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unwrap/">.unwrap()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wrap/">.wrap()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wrapAll/">.wrapAll()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wrapInner/">.wrapInner()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue-js/">Vue.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/attribute-selector/">attribute selector</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/contextual-selector/">contextual selector</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nvm/">nvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/selector/">selector</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/work/">work</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/閱讀/">閱讀</a></li></ul>
     </div>
   </div>
 
@@ -180,7 +193,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Vue-js/" style="font-size: 10px;">Vue.js</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/work/" style="font-size: 10px;">work</a> <a href="/tags/閱讀/" style="font-size: 20px;">閱讀</a>
+      <a href="/tags/after/" style="font-size: 10px;">.after()</a> <a href="/tags/andSelf/" style="font-size: 10px;">.andSelf()</a> <a href="/tags/append/" style="font-size: 10px;">.append()</a> <a href="/tags/appendTo/" style="font-size: 10px;">.appendTo()</a> <a href="/tags/before/" style="font-size: 10px;">.before()</a> <a href="/tags/children/" style="font-size: 10px;">.children()</a> <a href="/tags/empty/" style="font-size: 10px;">.empty()</a> <a href="/tags/end/" style="font-size: 10px;">.end()</a> <a href="/tags/insertAfter/" style="font-size: 10px;">.insertAfter()</a> <a href="/tags/insertBefore/" style="font-size: 10px;">.insertBefore()</a> <a href="/tags/next/" style="font-size: 10px;">.next()</a> <a href="/tags/nextAll/" style="font-size: 10px;">.nextAll()</a> <a href="/tags/parent/" style="font-size: 10px;">.parent()</a> <a href="/tags/prepend/" style="font-size: 10px;">.prepend()</a> <a href="/tags/prependTo/" style="font-size: 10px;">.prependTo()</a> <a href="/tags/prev/" style="font-size: 10px;">.prev()</a> <a href="/tags/prevAll/" style="font-size: 10px;">.prevAll()</a> <a href="/tags/remove/" style="font-size: 10px;">.remove()</a> <a href="/tags/replaceAll/" style="font-size: 10px;">.replaceAll()</a> <a href="/tags/replaceWith/" style="font-size: 10px;">.replaceWith()</a> <a href="/tags/siblings/" style="font-size: 10px;">.siblings()</a> <a href="/tags/unwrap/" style="font-size: 10px;">.unwrap()</a> <a href="/tags/wrap/" style="font-size: 10px;">.wrap()</a> <a href="/tags/wrapAll/" style="font-size: 10px;">.wrapAll()</a> <a href="/tags/wrapInner/" style="font-size: 10px;">.wrapInner()</a> <a href="/tags/JavaScript/" style="font-size: 13.33px;">JavaScript</a> <a href="/tags/Vue-js/" style="font-size: 10px;">Vue.js</a> <a href="/tags/attribute-selector/" style="font-size: 10px;">attribute selector</a> <a href="/tags/contextual-selector/" style="font-size: 10px;">contextual selector</a> <a href="/tags/css/" style="font-size: 16.67px;">css</a> <a href="/tags/jQuery/" style="font-size: 20px;">jQuery</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/selector/" style="font-size: 13.33px;">selector</a> <a href="/tags/work/" style="font-size: 10px;">work</a> <a href="/tags/閱讀/" style="font-size: 13.33px;">閱讀</a>
     </div>
   </div>
 
@@ -202,23 +215,23 @@
       <ul>
         
           <li>
-            <a href="/2019/09/14/css-selector/">CSS-selector</a>
+            <a href="/2019/09/15/jQuery-traverse/">jQuery 7種 在父子、兄弟關係元素間穿梭（prev、prevAll、next、nextAll、siblings、parent、end、children）2種 改變目標對象（end、andSelf）</a>
           </li>
         
           <li>
-            <a href="/2019/07/31/JavaScript-Patterns-2012-1-2/">JavaScript-Patterns-2012-介紹[1-2]</a>
+            <a href="/2019/09/15/jQuery-dynamic-5/">jQuery 2種 置換元素（replaceWith、replaceAll）</a>
           </li>
         
           <li>
-            <a href="/2019/07/14/JavaScript-Patterns-2012-1-1/">JavaScript-Patterns-2012-介紹[1-1]</a>
+            <a href="/2019/09/15/jQuery-dynamic-4/">jQuery 3種 刪除元素（remove、empty、unwrap）</a>
           </li>
         
           <li>
-            <a href="/2019/06/29/vue-watch-window-resize/">使用Vue.js監聽視窗大小（寬）</a>
+            <a href="/2019/09/14/jQuery-dynamic-3/">jQuery 3種 利用其他元素包覆元素（wrap、wrapAll、wrapInner）</a>
           </li>
         
           <li>
-            <a href="/2019/06/23/install-nvm/">在mac環境下安裝nvm過程</a>
+            <a href="/2019/09/14/jQuery-dynamic-2/">jQuery 4種 動態插入元素（before、after、prepend、append）</a>
           </li>
         
       </ul>
