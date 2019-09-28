@@ -7,18 +7,18 @@
   
   <title>CSS-Selector（元素選取器、類別選取器） | Stick to it!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="CSS樣式是由 選取器＋樣式宣告 所組成 元素選取器元素名稱{屬性名稱：屬性數值;} 12p &amp;#123;color: red;&amp;#125;           h1, h2, p &amp;#123;color: pink;&amp;#125;  萬用選取器1* &amp;#123;color: red;&amp;#125;   類別選取器class1.primary &amp;#123;color: red;&amp;#125;  12&amp;l">
+  <meta name="description" content="CSS樣式是由 選取器＋樣式宣告 所組成 元素選取器元素名稱{屬性名稱：屬性數值;} 1234p &amp;#123;color: red;&amp;#125;           h1, h2, p &amp;#123;color: pink;&amp;#125;/* 萬用選取器 */* &amp;#123;color: red;&amp;#125;">
 <meta name="keywords" content="css">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS-Selector（元素選取器、類別選取器）">
 <meta property="og:url" content="https://dobubu.github.io/2019/09/14/css-selector/index.html">
 <meta property="og:site_name" content="Stick to it!">
-<meta property="og:description" content="CSS樣式是由 選取器＋樣式宣告 所組成 元素選取器元素名稱{屬性名稱：屬性數值;} 12p &amp;#123;color: red;&amp;#125;           h1, h2, p &amp;#123;color: pink;&amp;#125;  萬用選取器1* &amp;#123;color: red;&amp;#125;   類別選取器class1.primary &amp;#123;color: red;&amp;#125;  12&amp;l">
+<meta property="og:description" content="CSS樣式是由 選取器＋樣式宣告 所組成 元素選取器元素名稱{屬性名稱：屬性數值;} 1234p &amp;#123;color: red;&amp;#125;           h1, h2, p &amp;#123;color: pink;&amp;#125;/* 萬用選取器 */* &amp;#123;color: red;&amp;#125;">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-14T10:29:17.419Z">
+<meta property="og:updated_time" content="2019-09-28T08:33:34.055Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS-Selector（元素選取器、類別選取器）">
-<meta name="twitter:description" content="CSS樣式是由 選取器＋樣式宣告 所組成 元素選取器元素名稱{屬性名稱：屬性數值;} 12p &amp;#123;color: red;&amp;#125;           h1, h2, p &amp;#123;color: pink;&amp;#125;  萬用選取器1* &amp;#123;color: red;&amp;#125;   類別選取器class1.primary &amp;#123;color: red;&amp;#125;  12&amp;l">
+<meta name="twitter:description" content="CSS樣式是由 選取器＋樣式宣告 所組成 元素選取器元素名稱{屬性名稱：屬性數值;} 1234p &amp;#123;color: red;&amp;#125;           h1, h2, p &amp;#123;color: pink;&amp;#125;/* 萬用選取器 */* &amp;#123;color: red;&amp;#125;">
   
     <link rel="alternate" href="/atom.xml" title="Stick to it!" type="application/atom+xml">
   
@@ -93,9 +93,9 @@
       
         <p>CSS樣式是由 選取器＋樣式宣告 所組成</p>
 <h2 id="元素選取器"><a href="#元素選取器" class="headerlink" title="元素選取器"></a>元素選取器</h2><p><strong><code>元素名稱{屬性名稱：屬性數值;}</code></strong></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;<span class="attribute">color</span>: red;&#125;           </span><br><span class="line"><span class="selector-tag">h1</span>, <span class="selector-tag">h2</span>, <span class="selector-tag">p</span> &#123;<span class="attribute">color</span>: pink;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;<span class="attribute">color</span>: red;&#125;           </span><br><span class="line"><span class="selector-tag">h1</span>, <span class="selector-tag">h2</span>, <span class="selector-tag">p</span> &#123;<span class="attribute">color</span>: pink;&#125;</span><br><span class="line"><span class="comment">/* 萬用選取器 */</span></span><br><span class="line">* &#123;<span class="attribute">color</span>: red;&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="萬用選取器"><a href="#萬用選取器" class="headerlink" title="萬用選取器"></a>萬用選取器</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* &#123;<span class="attribute">color</span>: red;&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 
 <hr>
 <h2 id="類別選取器"><a href="#類別選取器" class="headerlink" title="類別選取器"></a>類別選取器</h2><h3 id="class"><a href="#class" class="headerlink" title="class"></a>class</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.primary</span> &#123;<span class="attribute">color</span>: red;&#125;</span><br></pre></td></tr></table></figure>
@@ -108,7 +108,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/09/14/css-selector/" data-id="ck0kirbdh00096rx8c0lq55q3" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/09/14/css-selector/" data-id="ck0jeryac000eumx84c3nhiyq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>

@@ -7,18 +7,18 @@
   
   <title>jQuery 7種 在父子、兄弟關係元素間穿梭（prev、prevAll、next、nextAll、siblings、parent、end、children）2種 改變目標對象（end、andSelf） | Stick to it!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="以現存元素為基準點取得另外的元素.prev() 前面最親近的兄弟.prevAll() 所有兄元素.next()  後面最親近的兄弟.nextAll() 所有弟元素.siblings()  所有兄弟元素.parent() 父元素.children()  所有子元素這邊直接附上codepen，直接看code會相對理解的快  改變 jQuery 物件的目標對象.end() 讓 jQuery 回復到原先狀">
+  <meta name="description" content="以現存元素為基準點取得另外的元素.prev() 前面最親近的兄弟.prevAll() 所有兄元素.next()  後面最親近的兄弟.nextAll() 所有弟元素.siblings()  所有兄弟元素.parent() 父元素.children()  所有子元素">
 <meta name="keywords" content="jQuery,.prev(),.end(),.prevAll(),.next(),.nextAll(),.siblings(),.parent(),.children(),.andSelf()">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jQuery 7種 在父子、兄弟關係元素間穿梭（prev、prevAll、next、nextAll、siblings、parent、end、children）2種 改變目標對象（end、andSelf）">
 <meta property="og:url" content="https://dobubu.github.io/2019/09/15/jQuery-traverse/index.html">
 <meta property="og:site_name" content="Stick to it!">
-<meta property="og:description" content="以現存元素為基準點取得另外的元素.prev() 前面最親近的兄弟.prevAll() 所有兄元素.next()  後面最親近的兄弟.nextAll() 所有弟元素.siblings()  所有兄弟元素.parent() 父元素.children()  所有子元素這邊直接附上codepen，直接看code會相對理解的快  改變 jQuery 物件的目標對象.end() 讓 jQuery 回復到原先狀">
+<meta property="og:description" content="以現存元素為基準點取得另外的元素.prev() 前面最親近的兄弟.prevAll() 所有兄元素.next()  後面最親近的兄弟.nextAll() 所有弟元素.siblings()  所有兄弟元素.parent() 父元素.children()  所有子元素">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-15T05:10:49.894Z">
+<meta property="og:updated_time" content="2019-09-28T08:27:36.949Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jQuery 7種 在父子、兄弟關係元素間穿梭（prev、prevAll、next、nextAll、siblings、parent、end、children）2種 改變目標對象（end、andSelf）">
-<meta name="twitter:description" content="以現存元素為基準點取得另外的元素.prev() 前面最親近的兄弟.prevAll() 所有兄元素.next()  後面最親近的兄弟.nextAll() 所有弟元素.siblings()  所有兄弟元素.parent() 父元素.children()  所有子元素這邊直接附上codepen，直接看code會相對理解的快  改變 jQuery 物件的目標對象.end() 讓 jQuery 回復到原先狀">
+<meta name="twitter:description" content="以現存元素為基準點取得另外的元素.prev() 前面最親近的兄弟.prevAll() 所有兄元素.next()  後面最親近的兄弟.nextAll() 所有弟元素.siblings()  所有兄弟元素.parent() 父元素.children()  所有子元素">
   
     <link rel="alternate" href="/atom.xml" title="Stick to it!" type="application/atom+xml">
   
@@ -91,7 +91,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="以現存元素為基準點取得另外的元素"><a href="#以現存元素為基準點取得另外的元素" class="headerlink" title="以現存元素為基準點取得另外的元素"></a>以現存元素為基準點取得另外的元素</h2><h3 id="prev-前面最親近的兄弟"><a href="#prev-前面最親近的兄弟" class="headerlink" title=".prev() 前面最親近的兄弟"></a>.prev() 前面最親近的兄弟</h3><h3 id="prevAll-所有兄元素"><a href="#prevAll-所有兄元素" class="headerlink" title=".prevAll() 所有兄元素"></a>.prevAll() 所有兄元素</h3><h3 id="next-後面最親近的兄弟"><a href="#next-後面最親近的兄弟" class="headerlink" title=".next()  後面最親近的兄弟"></a>.next()  後面最親近的兄弟</h3><h3 id="nextAll-所有弟元素"><a href="#nextAll-所有弟元素" class="headerlink" title=".nextAll() 所有弟元素"></a>.nextAll() 所有弟元素</h3><h3 id="siblings-所有兄弟元素"><a href="#siblings-所有兄弟元素" class="headerlink" title=".siblings()  所有兄弟元素"></a>.siblings()  所有兄弟元素</h3><h3 id="parent-父元素"><a href="#parent-父元素" class="headerlink" title=".parent() 父元素"></a>.parent() 父元素</h3><h3 id="children-所有子元素"><a href="#children-所有子元素" class="headerlink" title=".children()  所有子元素"></a>.children()  所有子元素</h3><p>這邊直接附上<a href="https://codepen.io/Dorothy_0528/pen/abojpeG" target="_blank" rel="noopener">codepen</a>，直接看code會相對理解的快</p>
+        <h2 id="以現存元素為基準點取得另外的元素"><a href="#以現存元素為基準點取得另外的元素" class="headerlink" title="以現存元素為基準點取得另外的元素"></a>以現存元素為基準點取得另外的元素</h2><h3 id="prev-前面最親近的兄弟"><a href="#prev-前面最親近的兄弟" class="headerlink" title=".prev() 前面最親近的兄弟"></a>.prev() 前面最親近的兄弟</h3><h3 id="prevAll-所有兄元素"><a href="#prevAll-所有兄元素" class="headerlink" title=".prevAll() 所有兄元素"></a>.prevAll() 所有兄元素</h3><h3 id="next-後面最親近的兄弟"><a href="#next-後面最親近的兄弟" class="headerlink" title=".next()  後面最親近的兄弟"></a>.next()  後面最親近的兄弟</h3><h3 id="nextAll-所有弟元素"><a href="#nextAll-所有弟元素" class="headerlink" title=".nextAll() 所有弟元素"></a>.nextAll() 所有弟元素</h3><h3 id="siblings-所有兄弟元素"><a href="#siblings-所有兄弟元素" class="headerlink" title=".siblings()  所有兄弟元素"></a>.siblings()  所有兄弟元素</h3><h3 id="parent-父元素"><a href="#parent-父元素" class="headerlink" title=".parent() 父元素"></a>.parent() 父元素</h3><h3 id="children-所有子元素"><a href="#children-所有子元素" class="headerlink" title=".children()  所有子元素"></a>.children()  所有子元素</h3><a id="more"></a>
+
+<p>這邊直接附上<a href="https://codepen.io/Dorothy_0528/pen/abojpeG" target="_blank" rel="noopener">codepen</a>，直接看code會相對理解的快</p>
 <hr>
 <h2 id="改變-jQuery-物件的目標對象"><a href="#改變-jQuery-物件的目標對象" class="headerlink" title="改變 jQuery 物件的目標對象"></a>改變 jQuery 物件的目標對象</h2><h3 id="end-讓-jQuery-回復到原先狀態"><a href="#end-讓-jQuery-回復到原先狀態" class="headerlink" title=".end() 讓 jQuery 回復到原先狀態"></a>.end() 讓 jQuery 回復到原先狀態</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  $(<span class="string">'#me'</span>)</span><br><span class="line">  .css(<span class="string">'font-weight'</span>, <span class="string">'bold'</span>)</span><br><span class="line">  .prev() <span class="comment">// jQuery 指到 &lt;div&gt;姊姊（兄元素）&lt;/div&gt;</span></span><br><span class="line">  .css(<span class="string">'background-color'</span>, <span class="string">'pink'</span>)</span><br><span class="line">  .end()  <span class="comment">// jQuery 指回 $('#me')</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
@@ -102,7 +104,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/09/15/jQuery-traverse/" data-id="ck0kirbdj000e6rx8ghguphhy" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/09/15/jQuery-traverse/" data-id="ck0kfgvpr000durx8semudtku" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/andSelf/">.andSelf()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/children/">.children()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/end/">.end()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/next/">.next()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nextAll/">.nextAll()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/parent/">.parent()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/prev/">.prev()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/prevAll/">.prevAll()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/siblings/">.siblings()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>

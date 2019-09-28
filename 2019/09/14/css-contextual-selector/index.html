@@ -7,18 +7,18 @@
   
   <title>css-contextual-selector 關聯選取器 | Stick to it!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="將CSS樣式應用到一群有關連的元素上 前代元素名稱合併子後代元素名稱{屬性名稱：屬性數值;} 後代選取器（合併子是一個空白字元）後代元素包含在前代元素之內 123ul li em &amp;#123;color: red;&amp;#125;  h1 em, h2 em &amp;#123;color: green;&amp;#125;  1234567&amp;lt;ul&amp;gt;  &amp;lt;li&amp;gt;cake&amp;lt;/li&amp;gt;">
+  <meta name="description" content="將CSS樣式應用到一群有關連的元素上 前代元素名稱合併子後代元素名稱{屬性名稱：屬性數值;} 後代選取器（合併子是一個 空白字元）後代元素包含在前代元素之內 123ul li em &amp;#123;color: red;&amp;#125;  h1 em, h2 em &amp;#123;color: green;&amp;#125;  1234567&amp;lt;ul&amp;gt;  &amp;lt;li&amp;gt;cake&amp;lt;/li&amp;gt;">
 <meta name="keywords" content="css,selector,contextual selector">
 <meta property="og:type" content="article">
 <meta property="og:title" content="css-contextual-selector 關聯選取器">
 <meta property="og:url" content="https://dobubu.github.io/2019/09/14/css-contextual-selector/index.html">
 <meta property="og:site_name" content="Stick to it!">
-<meta property="og:description" content="將CSS樣式應用到一群有關連的元素上 前代元素名稱合併子後代元素名稱{屬性名稱：屬性數值;} 後代選取器（合併子是一個空白字元）後代元素包含在前代元素之內 123ul li em &amp;#123;color: red;&amp;#125;  h1 em, h2 em &amp;#123;color: green;&amp;#125;  1234567&amp;lt;ul&amp;gt;  &amp;lt;li&amp;gt;cake&amp;lt;/li&amp;gt;">
+<meta property="og:description" content="將CSS樣式應用到一群有關連的元素上 前代元素名稱合併子後代元素名稱{屬性名稱：屬性數值;} 後代選取器（合併子是一個 空白字元）後代元素包含在前代元素之內 123ul li em &amp;#123;color: red;&amp;#125;  h1 em, h2 em &amp;#123;color: green;&amp;#125;  1234567&amp;lt;ul&amp;gt;  &amp;lt;li&amp;gt;cake&amp;lt;/li&amp;gt;">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-14T10:26:58.666Z">
+<meta property="og:updated_time" content="2019-09-28T08:31:38.671Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css-contextual-selector 關聯選取器">
-<meta name="twitter:description" content="將CSS樣式應用到一群有關連的元素上 前代元素名稱合併子後代元素名稱{屬性名稱：屬性數值;} 後代選取器（合併子是一個空白字元）後代元素包含在前代元素之內 123ul li em &amp;#123;color: red;&amp;#125;  h1 em, h2 em &amp;#123;color: green;&amp;#125;  1234567&amp;lt;ul&amp;gt;  &amp;lt;li&amp;gt;cake&amp;lt;/li&amp;gt;">
+<meta name="twitter:description" content="將CSS樣式應用到一群有關連的元素上 前代元素名稱合併子後代元素名稱{屬性名稱：屬性數值;} 後代選取器（合併子是一個 空白字元）後代元素包含在前代元素之內 123ul li em &amp;#123;color: red;&amp;#125;  h1 em, h2 em &amp;#123;color: green;&amp;#125;  1234567&amp;lt;ul&amp;gt;  &amp;lt;li&amp;gt;cake&amp;lt;/li&amp;gt;">
   
     <link rel="alternate" href="/atom.xml" title="Stick to it!" type="application/atom+xml">
   
@@ -93,29 +93,31 @@
       
         <p>將CSS樣式應用到一群有關連的元素上</p>
 <p><strong><code>前代元素名稱合併子後代元素名稱{屬性名稱：屬性數值;}</code></strong></p>
-<h2 id="後代選取器（合併子是一個空白字元）"><a href="#後代選取器（合併子是一個空白字元）" class="headerlink" title="後代選取器（合併子是一個空白字元）"></a>後代選取器（合併子是一個<font color="red">空白字元</font>）</h2><p><strong>後代元素包含在前代元素之內</strong></p>
+<h2 id="後代選取器（合併子是一個-空白字元）"><a href="#後代選取器（合併子是一個-空白字元）" class="headerlink" title="後代選取器（合併子是一個 空白字元）"></a>後代選取器（合併子是一個<font color="red"> 空白字元</font>）</h2><p><strong>後代元素包含在前代元素之內</strong></p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span> <span class="selector-tag">em</span> &#123;<span class="attribute">color</span>: red;&#125;  </span><br><span class="line"></span><br><span class="line"><span class="selector-tag">h1</span> <span class="selector-tag">em</span>, <span class="selector-tag">h2</span> <span class="selector-tag">em</span> &#123;<span class="attribute">color</span>: green;&#125;</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>cake<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span>chocolate<span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span> // chocolate 會變成 red</span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span>cake<span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span>        // cake 會變成 green</span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span>chocolate<span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">h2</span>&gt;</span>   // chocolate 會變成 green</span><br></pre></td></tr></table></figure>
 
-<h2 id="子代選取器（合併子是一個-gt-字元）"><a href="#子代選取器（合併子是一個-gt-字元）" class="headerlink" title="子代選取器（合併子是一個&gt;字元）"></a>子代選取器（合併子是一個<font color="red">&gt;</font>字元）</h2><p><strong>前代與後代<font color="red">元素之間不可以有其他元素</font>存在</strong></p>
+<a id="more"></a>
+
+<h2 id="子代選取器（合併子是一個-gt-字元）"><a href="#子代選取器（合併子是一個-gt-字元）" class="headerlink" title="子代選取器（合併子是一個 &gt; 字元）"></a>子代選取器（合併子是一個<font color="red"> &gt; </font>字元）</h2><p><strong>前代與後代<font color="red">元素之間不可以有其他元素</font>存在</strong></p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span>&gt;<span class="selector-tag">em</span> &#123;<span class="attribute">color</span>: red;&#125;</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">strong</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span>cake<span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">strong</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span>chocolate<span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span> // chocolate 會變成 red</span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="相鄰選取器（合併子是一個-字元）"><a href="#相鄰選取器（合併子是一個-字元）" class="headerlink" title="相鄰選取器（合併子是一個+字元）"></a>相鄰選取器（合併子是一個<font color="red">+</font>字元）</h2><p><strong><font color="red">只有直接接在</font>前代元素後面的後代元素</strong></p>
+<h2 id="相鄰選取器（合併子是一個-字元）"><a href="#相鄰選取器（合併子是一個-字元）" class="headerlink" title="相鄰選取器（合併子是一個 + 字元）"></a>相鄰選取器（合併子是一個<font color="red"> + </font>字元）</h2><p><strong><font color="red">只有直接接在</font>前代元素後面的後代元素</strong></p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span> + <span class="selector-tag">p</span> &#123;<span class="attribute">color</span>: red;&#125;</span><br><span class="line"><span class="selector-tag">p</span> &#123;<span class="attribute">color</span>: green;&#125;</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>cake<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>chocolate<span class="tag">&lt;/<span class="name">p</span>&gt;</span>  // chocolate 會變成 red</span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>cookie<span class="tag">&lt;/<span class="name">p</span>&gt;</span>     // cookie 是green</span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>puff<span class="tag">&lt;/<span class="name">p</span>&gt;</span>       // puff 是green</span><br></pre></td></tr></table></figure>
 
-<h2 id="一般選取器（合併子是一個～字元）"><a href="#一般選取器（合併子是一個～字元）" class="headerlink" title="一般選取器（合併子是一個～字元）"></a>一般選取器（合併子是一個<font color="red">～</font>字元）</h2><p><strong><font color="red">所有</font>接在前代元素後面的 後代元素 都會吃到</strong></p>
+<h2 id="一般選取器（合併子是一個-～-字元）"><a href="#一般選取器（合併子是一個-～-字元）" class="headerlink" title="一般選取器（合併子是一個 ～ 字元）"></a>一般選取器（合併子是一個<font color="red"> ～ </font>字元）</h2><p><strong><font color="red">所有</font>接在前代元素後面的 後代元素 都會吃到</strong></p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span> ～ <span class="selector-tag">p</span> &#123;<span class="attribute">color</span>: red;&#125;</span><br><span class="line"><span class="selector-tag">p</span> &#123;<span class="attribute">color</span>: green;&#125;</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>cake<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>chocolate<span class="tag">&lt;/<span class="name">p</span>&gt;</span>  // chocolate 會變成 red</span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>cookie<span class="tag">&lt;/<span class="name">p</span>&gt;</span>     // cookie 會變成 red</span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>puff<span class="tag">&lt;/<span class="name">p</span>&gt;</span>       // puff 會變成 red</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/09/14/css-contextual-selector/" data-id="ck0kirbde00056rx8m03v1itb" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/09/14/css-contextual-selector/" data-id="ck0jem6kw0008umx8l9wq79kb" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/contextual-selector/">contextual selector</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/selector/">selector</a></li></ul>
