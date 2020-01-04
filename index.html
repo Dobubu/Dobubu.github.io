@@ -62,6 +62,59 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Node-Practice-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/01/04/Node-Practice-1/" class="article-date">
+  <time datetime="2020-01-04T12:55:27.000Z" itemprop="datePublished">2020-01-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/F2E/">F2E</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/01/04/Node-Practice-1/">Node練習 開啟一個Web伺服器</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>這裡記錄學習Node.js過程，要動手做才會有印象💪</p>
+<h2 id="環境安裝"><a href="#環境安裝" class="headerlink" title="環境安裝"></a>環境安裝</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br><span class="line">npm install express --save</span><br></pre></td></tr></table></figure>
+
+<h2 id="新增一個app-js，並寫上以下code"><a href="#新增一個app-js，並寫上以下code" class="headerlink" title="新增一個app.js，並寫上以下code"></a>新增一個app.js，並寫上以下code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">var</span> app = express();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 開啟網址</span></span><br><span class="line">app.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.send(<span class="string">'hello express :D'</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 監聽 port</span></span><br><span class="line"><span class="keyword">var</span> port = <span class="number">3000</span>;</span><br><span class="line">app.listen(port);</span><br></pre></td></tr></table></figure>
+
+<h2 id="執行"><a href="#執行" class="headerlink" title="執行"></a>執行</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node app.js</span><br></pre></td></tr></table></figure>
+
+<p>打開網頁，輸入下面路徑，假如有顯示你輸入的內容，代表你成功了😁（這兩個都是一樣的意思，代表著本機）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">http://localhost:3000/</span><br><span class="line">http://127.0.0.1:3000/</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gaku0m61z8j31c00u0n0k.jpg" alt></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dobubu.github.io/2020/01/04/Node-Practice-1/" data-id="ck4zlv8eh0005hcx8h3ndkilm" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-npm-version" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/01/04/npm-version/" class="article-date">
@@ -99,10 +152,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2020/01/04/npm-version/" data-id="ck4zbn8ff000wu8x83rvsd82b" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2020/01/04/npm-version/" data-id="ck4zlv8g0001nhcx88m2m6nbc" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NPM/">NPM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/version/">version</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NPM/">NPM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/version/">version</a></li></ul>
 
     </footer>
   </div>
@@ -147,10 +200,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2020/01/04/npm-install/" data-id="ck4zbn8fh0010u8x8ewbpi10j" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2020/01/04/npm-install/" data-id="ck4zlv8fz001ihcx89a8sn7pa" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NPM/">NPM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/install/">install</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NPM/">NPM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/install/">install</a></li></ul>
 
     </footer>
   </div>
@@ -198,7 +251,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/10/20/UTM/" data-id="ck4zbn8f10009u8x8u6sb79nd" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/10/20/UTM/" data-id="ck4zlv8fl000mhcx8t8yp8ud5" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Analytics/">Analytics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UTM/">UTM</a></li></ul>
@@ -245,7 +298,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/09/15/jQuery-traverse/" data-id="ck4zbn8fh0012u8x81ixq1d88" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/09/15/jQuery-traverse/" data-id="ck4zlv8fy001fhcx8c8y8hpbg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/andSelf/">.andSelf()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/children/">.children()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/end/">.end()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/next/">.next()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nextAll/">.nextAll()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/parent/">.parent()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/prev/">.prev()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/prevAll/">.prevAll()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/siblings/">.siblings()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
@@ -295,7 +348,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/09/15/jQuery-dynamic-5/" data-id="ck4zbn8fi0015u8x81zyb0pxy" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/09/15/jQuery-dynamic-5/" data-id="ck4zlv8fx001chcx8jnjqfnqt" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/replaceAll/">.replaceAll()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/replaceWith/">.replaceWith()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
@@ -344,7 +397,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/09/15/jQuery-dynamic-4/" data-id="ck4zbn8fe000tu8x8sutvwbp8" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/09/15/jQuery-dynamic-4/" data-id="ck4zlv8fv0018hcx8ssyzz2bp" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/empty/">.empty()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/remove/">.remove()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/unwrap/">.unwrap()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
@@ -393,7 +446,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/09/14/jQuery-dynamic-3/" data-id="ck4zbn8fc000ou8x8lnyai7zk" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/09/14/jQuery-dynamic-3/" data-id="ck4zlv8ft0012hcx8st0ze0ca" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wrap/">.wrap()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wrapAll/">.wrapAll()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wrapInner/">.wrapInner()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
@@ -444,7 +497,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/09/14/jQuery-dynamic-2/" data-id="ck4zbn8fa000ku8x869gj201q" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/09/14/jQuery-dynamic-2/" data-id="ck4zlv8fr0010hcx8yhiryd3h" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/after/">.after()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/append/">.append()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/before/">.before()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/prepend/">.prepend()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
@@ -494,62 +547,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/09/14/jQuery-dynamic-1/" data-id="ck4zbn8fd000qu8x8xzj68whx" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/09/14/jQuery-dynamic-1/" data-id="ck4zlv8fu0015hcx85vkgdtix" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/appendTo/">.appendTo()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/insertAfter/">.insertAfter()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/insertBefore/">.insertBefore()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/prependTo/">.prependTo()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-css-contextual-selector" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/09/14/css-contextual-selector/" class="article-date">
-  <time datetime="2019-09-14T10:24:48.000Z" itemprop="datePublished">2019-09-14</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/F2E/">F2E</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/14/css-contextual-selector/">CSS-contextual-selector 關聯選取器</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>將CSS樣式應用到一群有關連的元素上</p>
-<p><strong><code>前代元素名稱合併子後代元素名稱{屬性名稱：屬性數值;}</code></strong></p>
-<h2 id="後代選取器（合併子是一個-空白字元）"><a href="#後代選取器（合併子是一個-空白字元）" class="headerlink" title="後代選取器（合併子是一個 空白字元）"></a>後代選取器（合併子是一個<font color="red"> 空白字元</font>）</h2><p><strong>後代元素包含在前代元素之內</strong></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span> <span class="selector-tag">em</span> &#123;<span class="attribute">color</span>: red;&#125;  </span><br><span class="line"></span><br><span class="line"><span class="selector-tag">h1</span> <span class="selector-tag">em</span>, <span class="selector-tag">h2</span> <span class="selector-tag">em</span> &#123;<span class="attribute">color</span>: green;&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>cake<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span>chocolate<span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span> // chocolate 會變成 red</span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span>cake<span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span>        // cake 會變成 green</span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span>chocolate<span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">h2</span>&gt;</span>   // chocolate 會變成 green</span><br></pre></td></tr></table></figure>
-        
-          <p class="article-more-link">
-            <a href="/2019/09/14/css-contextual-selector/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/09/14/css-contextual-selector/" data-id="ck4zbn8f10008u8x8wt1d3q1s" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/contextual-selector/">contextual selector</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/selector/">selector</a></li></ul>
 
     </footer>
   </div>
@@ -583,7 +584,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/after/">.after()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/andSelf/">.andSelf()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/append/">.append()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appendTo/">.appendTo()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/before/">.before()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/children/">.children()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/empty/">.empty()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/end/">.end()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/insertAfter/">.insertAfter()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/insertBefore/">.insertBefore()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/next/">.next()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nextAll/">.nextAll()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/parent/">.parent()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/prepend/">.prepend()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/prependTo/">.prependTo()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/prev/">.prev()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/prevAll/">.prevAll()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/remove/">.remove()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/replaceAll/">.replaceAll()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/replaceWith/">.replaceWith()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/siblings/">.siblings()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unwrap/">.unwrap()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wrap/">.wrap()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wrapAll/">.wrapAll()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wrapInner/">.wrapInner()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Analytics/">Analytics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NPM/">NPM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UTM/">UTM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue-js/">Vue.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/attribute-selector/">attribute selector</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/contextual-selector/">contextual selector</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/install/">install</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nvm/">nvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/selector/">selector</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/version/">version</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/work/">work</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/閱讀/">閱讀</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/after/">.after()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/andSelf/">.andSelf()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/append/">.append()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appendTo/">.appendTo()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/before/">.before()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/children/">.children()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/empty/">.empty()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/end/">.end()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/insertAfter/">.insertAfter()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/insertBefore/">.insertBefore()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/next/">.next()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nextAll/">.nextAll()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/parent/">.parent()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/prepend/">.prepend()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/prependTo/">.prependTo()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/prev/">.prev()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/prevAll/">.prevAll()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/remove/">.remove()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/replaceAll/">.replaceAll()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/replaceWith/">.replaceWith()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/siblings/">.siblings()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unwrap/">.unwrap()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wrap/">.wrap()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wrapAll/">.wrapAll()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wrapInner/">.wrapInner()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Analytics/">Analytics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NPM/">NPM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/">Node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UTM/">UTM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue-js/">Vue.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/attribute-selector/">attribute selector</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/contextual-selector/">contextual selector</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/install/">install</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nvm/">nvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/selector/">selector</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/version/">version</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/work/">work</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/閱讀/">閱讀</a></li></ul>
     </div>
   </div>
 
@@ -593,7 +594,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/after/" style="font-size: 10px;">.after()</a> <a href="/tags/andSelf/" style="font-size: 10px;">.andSelf()</a> <a href="/tags/append/" style="font-size: 10px;">.append()</a> <a href="/tags/appendTo/" style="font-size: 10px;">.appendTo()</a> <a href="/tags/before/" style="font-size: 10px;">.before()</a> <a href="/tags/children/" style="font-size: 10px;">.children()</a> <a href="/tags/empty/" style="font-size: 10px;">.empty()</a> <a href="/tags/end/" style="font-size: 10px;">.end()</a> <a href="/tags/insertAfter/" style="font-size: 10px;">.insertAfter()</a> <a href="/tags/insertBefore/" style="font-size: 10px;">.insertBefore()</a> <a href="/tags/next/" style="font-size: 10px;">.next()</a> <a href="/tags/nextAll/" style="font-size: 10px;">.nextAll()</a> <a href="/tags/parent/" style="font-size: 10px;">.parent()</a> <a href="/tags/prepend/" style="font-size: 10px;">.prepend()</a> <a href="/tags/prependTo/" style="font-size: 10px;">.prependTo()</a> <a href="/tags/prev/" style="font-size: 10px;">.prev()</a> <a href="/tags/prevAll/" style="font-size: 10px;">.prevAll()</a> <a href="/tags/remove/" style="font-size: 10px;">.remove()</a> <a href="/tags/replaceAll/" style="font-size: 10px;">.replaceAll()</a> <a href="/tags/replaceWith/" style="font-size: 10px;">.replaceWith()</a> <a href="/tags/siblings/" style="font-size: 10px;">.siblings()</a> <a href="/tags/unwrap/" style="font-size: 10px;">.unwrap()</a> <a href="/tags/wrap/" style="font-size: 10px;">.wrap()</a> <a href="/tags/wrapAll/" style="font-size: 10px;">.wrapAll()</a> <a href="/tags/wrapInner/" style="font-size: 10px;">.wrapInner()</a> <a href="/tags/Analytics/" style="font-size: 10px;">Analytics</a> <a href="/tags/JavaScript/" style="font-size: 13.33px;">JavaScript</a> <a href="/tags/NPM/" style="font-size: 13.33px;">NPM</a> <a href="/tags/UTM/" style="font-size: 10px;">UTM</a> <a href="/tags/Vue-js/" style="font-size: 10px;">Vue.js</a> <a href="/tags/attribute-selector/" style="font-size: 10px;">attribute selector</a> <a href="/tags/contextual-selector/" style="font-size: 10px;">contextual selector</a> <a href="/tags/css/" style="font-size: 16.67px;">css</a> <a href="/tags/install/" style="font-size: 10px;">install</a> <a href="/tags/jQuery/" style="font-size: 20px;">jQuery</a> <a href="/tags/node/" style="font-size: 16.67px;">node</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/selector/" style="font-size: 13.33px;">selector</a> <a href="/tags/version/" style="font-size: 10px;">version</a> <a href="/tags/work/" style="font-size: 10px;">work</a> <a href="/tags/閱讀/" style="font-size: 13.33px;">閱讀</a>
+      <a href="/tags/after/" style="font-size: 10px;">.after()</a> <a href="/tags/andSelf/" style="font-size: 10px;">.andSelf()</a> <a href="/tags/append/" style="font-size: 10px;">.append()</a> <a href="/tags/appendTo/" style="font-size: 10px;">.appendTo()</a> <a href="/tags/before/" style="font-size: 10px;">.before()</a> <a href="/tags/children/" style="font-size: 10px;">.children()</a> <a href="/tags/empty/" style="font-size: 10px;">.empty()</a> <a href="/tags/end/" style="font-size: 10px;">.end()</a> <a href="/tags/insertAfter/" style="font-size: 10px;">.insertAfter()</a> <a href="/tags/insertBefore/" style="font-size: 10px;">.insertBefore()</a> <a href="/tags/next/" style="font-size: 10px;">.next()</a> <a href="/tags/nextAll/" style="font-size: 10px;">.nextAll()</a> <a href="/tags/parent/" style="font-size: 10px;">.parent()</a> <a href="/tags/prepend/" style="font-size: 10px;">.prepend()</a> <a href="/tags/prependTo/" style="font-size: 10px;">.prependTo()</a> <a href="/tags/prev/" style="font-size: 10px;">.prev()</a> <a href="/tags/prevAll/" style="font-size: 10px;">.prevAll()</a> <a href="/tags/remove/" style="font-size: 10px;">.remove()</a> <a href="/tags/replaceAll/" style="font-size: 10px;">.replaceAll()</a> <a href="/tags/replaceWith/" style="font-size: 10px;">.replaceWith()</a> <a href="/tags/siblings/" style="font-size: 10px;">.siblings()</a> <a href="/tags/unwrap/" style="font-size: 10px;">.unwrap()</a> <a href="/tags/wrap/" style="font-size: 10px;">.wrap()</a> <a href="/tags/wrapAll/" style="font-size: 10px;">.wrapAll()</a> <a href="/tags/wrapInner/" style="font-size: 10px;">.wrapInner()</a> <a href="/tags/Analytics/" style="font-size: 10px;">Analytics</a> <a href="/tags/JavaScript/" style="font-size: 12.5px;">JavaScript</a> <a href="/tags/NPM/" style="font-size: 12.5px;">NPM</a> <a href="/tags/Node/" style="font-size: 17.5px;">Node</a> <a href="/tags/UTM/" style="font-size: 10px;">UTM</a> <a href="/tags/Vue-js/" style="font-size: 10px;">Vue.js</a> <a href="/tags/attribute-selector/" style="font-size: 10px;">attribute selector</a> <a href="/tags/contextual-selector/" style="font-size: 10px;">contextual selector</a> <a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/install/" style="font-size: 10px;">install</a> <a href="/tags/jQuery/" style="font-size: 20px;">jQuery</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/selector/" style="font-size: 12.5px;">selector</a> <a href="/tags/version/" style="font-size: 10px;">version</a> <a href="/tags/work/" style="font-size: 10px;">work</a> <a href="/tags/閱讀/" style="font-size: 12.5px;">閱讀</a>
     </div>
   </div>
 
@@ -615,6 +616,10 @@
       <ul>
         
           <li>
+            <a href="/2020/01/04/Node-Practice-1/">Node練習 開啟一個Web伺服器</a>
+          </li>
+        
+          <li>
             <a href="/2020/01/04/npm-version/">各種 npm 版本號</a>
           </li>
         
@@ -628,10 +633,6 @@
         
           <li>
             <a href="/2019/09/15/jQuery-traverse/">jQuery 7種 在父子、兄弟關係元素間穿梭（prev、prevAll、next、nextAll、siblings、parent、end、children）2種 改變目標對象（end、andSelf）</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/15/jQuery-dynamic-5/">jQuery 2種 置換元素（replaceWith、replaceAll）</a>
           </li>
         
       </ul>
