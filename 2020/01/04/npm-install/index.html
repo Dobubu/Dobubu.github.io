@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>各種 npm 安裝 | Stick to it!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="安裝方式這麼多種，哪一種方式才適合我的情況呢？ 當我們下 npm install 時候，你會發現在我們的資料夾中，會出現一個 node_modules 資料夾，這邊會存放我們安裝的所有套件 npm install -g 安裝在全域環境下 Windows：\AppData\Roming\npm\node_modules Mac：/usr/local/lib/node_modules 範例（Mac）">
+<meta name="keywords" content="node,NPM,install">
+<meta property="og:type" content="article">
+<meta property="og:title" content="各種 npm 安裝">
+<meta property="og:url" content="https://dobubu.github.io/2020/01/04/npm-install/index.html">
+<meta property="og:site_name" content="Stick to it!">
+<meta property="og:description" content="安裝方式這麼多種，哪一種方式才適合我的情況呢？ 當我們下 npm install 時候，你會發現在我們的資料夾中，會出現一個 node_modules 資料夾，這邊會存放我們安裝的所有套件 npm install -g 安裝在全域環境下 Windows：\AppData\Roming\npm\node_modules Mac：/usr/local/lib/node_modules 範例（Mac）">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-01-04T08:04:57.358Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="各種 npm 安裝">
+<meta name="twitter:description" content="安裝方式這麼多種，哪一種方式才適合我的情況呢？ 當我們下 npm install 時候，你會發現在我們的資料夾中，會出現一個 node_modules 資料夾，這邊會存放我們安裝的所有套件 npm install -g 安裝在全域環境下 Windows：\AppData\Roming\npm\node_modules Mac：/usr/local/lib/node_modules 範例（Mac）">
+  
+    <link rel="alternate" href="/atom.xml" title="Stick to it!" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Stick to it!</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://dobubu.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-npm-install" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/01/04/npm-install/" class="article-date">
+  <time datetime="2020-01-04T07:05:12.000Z" itemprop="datePublished">2020-01-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/F2E/">F2E</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      各種 npm 安裝
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>安裝方式這麼多種，哪一種方式才適合我的情況呢？</p>
+<p>當我們下 npm install 時候，你會發現在我們的資料夾中，會出現一個 node_modules 資料夾，這邊會存放我們安裝的所有套件</p>
+<h2 id="npm-install-g"><a href="#npm-install-g" class="headerlink" title="npm install -g"></a>npm install -g</h2><ol>
+<li>安裝在全域環境下<ol>
+<li>Windows：\AppData\Roming\npm\node_modules</li>
+<li>Mac：/usr/local/lib/node_modules</li>
+<li>範例（Mac）：/Users/mischahung/.nvm/versions/node/v8.9.4/lib/node_modules/nodemon</li>
+</ol>
+</li>
+<li>不會記錄在 package.json</li>
+<li>資料夾不會有 node_modules 資料夾（因為安裝在全域環境</li>
+<li>有裝過的模組套件，未來不管是哪個node專案都可使用</li>
+</ol>
+<h2 id="npm-install-–save"><a href="#npm-install-–save" class="headerlink" title="npm install –save"></a>npm install –save</h2><ol>
+<li>node應用程式上線後，會用到的npm（主要模組）</li>
+<li>安裝的模組套件會記錄在 package.json 的 dependencies</li>
+</ol>
+<h2 id="npm-install-–save-dev"><a href="#npm-install-–save-dev" class="headerlink" title="npm install –save-dev"></a>npm install –save-dev</h2><ol>
+<li>主要用來除錯、測試的模組套件（非主要模組、自己用）</li>
+<li>安裝的模組套件會記錄在 package.json 的 devDependencies</li>
+</ol>
+<h2 id="使用情境"><a href="#使用情境" class="headerlink" title="使用情境"></a>使用情境</h2><ol>
+<li>npm install -g：自己開發練習用</li>
+<li>npm install –save：上線後會用到的主要模組，和同事有協同合作</li>
+<li>npm install –save-dev：專案過程中自己測試用，即使同事沒有使用也不會出錯</li>
+</ol>
+<hr>
+<p>若看完上面還是不知道要選擇哪一個的話，那就直接使用 npm install –save 👍</p>
+<p>（若Mac的朋友們安裝失敗，前面加個 sudo 試試</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dobubu.github.io/2020/01/04/npm-install/" data-id="ck4zbn8fh0010u8x8ewbpi10j" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NPM/">NPM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/install/">install</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/01/04/npm-version/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          各種 npm 版本號
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/10/20/UTM/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">UTM 基本介紹 - 1</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/F2E/">F2E</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/after/">.after()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/andSelf/">.andSelf()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/append/">.append()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appendTo/">.appendTo()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/before/">.before()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/children/">.children()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/empty/">.empty()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/end/">.end()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/insertAfter/">.insertAfter()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/insertBefore/">.insertBefore()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/next/">.next()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nextAll/">.nextAll()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/parent/">.parent()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/prepend/">.prepend()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/prependTo/">.prependTo()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/prev/">.prev()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/prevAll/">.prevAll()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/remove/">.remove()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/replaceAll/">.replaceAll()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/replaceWith/">.replaceWith()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/siblings/">.siblings()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unwrap/">.unwrap()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wrap/">.wrap()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wrapAll/">.wrapAll()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wrapInner/">.wrapInner()</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Analytics/">Analytics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NPM/">NPM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UTM/">UTM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue-js/">Vue.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/attribute-selector/">attribute selector</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/contextual-selector/">contextual selector</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/install/">install</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nvm/">nvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/selector/">selector</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/version/">version</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/work/">work</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/閱讀/">閱讀</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/after/" style="font-size: 10px;">.after()</a> <a href="/tags/andSelf/" style="font-size: 10px;">.andSelf()</a> <a href="/tags/append/" style="font-size: 10px;">.append()</a> <a href="/tags/appendTo/" style="font-size: 10px;">.appendTo()</a> <a href="/tags/before/" style="font-size: 10px;">.before()</a> <a href="/tags/children/" style="font-size: 10px;">.children()</a> <a href="/tags/empty/" style="font-size: 10px;">.empty()</a> <a href="/tags/end/" style="font-size: 10px;">.end()</a> <a href="/tags/insertAfter/" style="font-size: 10px;">.insertAfter()</a> <a href="/tags/insertBefore/" style="font-size: 10px;">.insertBefore()</a> <a href="/tags/next/" style="font-size: 10px;">.next()</a> <a href="/tags/nextAll/" style="font-size: 10px;">.nextAll()</a> <a href="/tags/parent/" style="font-size: 10px;">.parent()</a> <a href="/tags/prepend/" style="font-size: 10px;">.prepend()</a> <a href="/tags/prependTo/" style="font-size: 10px;">.prependTo()</a> <a href="/tags/prev/" style="font-size: 10px;">.prev()</a> <a href="/tags/prevAll/" style="font-size: 10px;">.prevAll()</a> <a href="/tags/remove/" style="font-size: 10px;">.remove()</a> <a href="/tags/replaceAll/" style="font-size: 10px;">.replaceAll()</a> <a href="/tags/replaceWith/" style="font-size: 10px;">.replaceWith()</a> <a href="/tags/siblings/" style="font-size: 10px;">.siblings()</a> <a href="/tags/unwrap/" style="font-size: 10px;">.unwrap()</a> <a href="/tags/wrap/" style="font-size: 10px;">.wrap()</a> <a href="/tags/wrapAll/" style="font-size: 10px;">.wrapAll()</a> <a href="/tags/wrapInner/" style="font-size: 10px;">.wrapInner()</a> <a href="/tags/Analytics/" style="font-size: 10px;">Analytics</a> <a href="/tags/JavaScript/" style="font-size: 13.33px;">JavaScript</a> <a href="/tags/NPM/" style="font-size: 13.33px;">NPM</a> <a href="/tags/UTM/" style="font-size: 10px;">UTM</a> <a href="/tags/Vue-js/" style="font-size: 10px;">Vue.js</a> <a href="/tags/attribute-selector/" style="font-size: 10px;">attribute selector</a> <a href="/tags/contextual-selector/" style="font-size: 10px;">contextual selector</a> <a href="/tags/css/" style="font-size: 16.67px;">css</a> <a href="/tags/install/" style="font-size: 10px;">install</a> <a href="/tags/jQuery/" style="font-size: 20px;">jQuery</a> <a href="/tags/node/" style="font-size: 16.67px;">node</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/selector/" style="font-size: 13.33px;">selector</a> <a href="/tags/version/" style="font-size: 10px;">version</a> <a href="/tags/work/" style="font-size: 10px;">work</a> <a href="/tags/閱讀/" style="font-size: 13.33px;">閱讀</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/01/04/npm-version/">各種 npm 版本號</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/04/npm-install/">各種 npm 安裝</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/20/UTM/">UTM 基本介紹 - 1</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/15/jQuery-traverse/">jQuery 7種 在父子、兄弟關係元素間穿梭（prev、prevAll、next、nextAll、siblings、parent、end、children）2種 改變目標對象（end、andSelf）</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/15/jQuery-dynamic-5/">jQuery 2種 置換元素（replaceWith、replaceAll）</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Mischa Hung<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
