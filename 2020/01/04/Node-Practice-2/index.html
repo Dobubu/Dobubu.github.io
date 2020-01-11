@@ -5,15 +5,20 @@
   
 
   
-  <title>Tag: 閱讀 | Stick to it!</title>
+  <title>Node練習 了解網址路徑與路由 | Stick to it!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Stick to it!">
-<meta property="og:url" content="https://dobubu.github.io/tags/閱讀/index.html">
+  <meta name="description" content="平常打開瀏覽器搜尋資料，會發現網址上總是寫了一對看不懂的東西，但卻又有點相同之處，這網址規則到底是怎麼設計的呢？🤔這邊用 google 網址來當簡單範例，解釋每個代表的意義 1https://www.google.com/search?q=hello  https 代表傳輸協定 有 http、https 兩種 http：不安全 https：安全，有加密，表單傳送較安全  www.google.c">
+<meta name="keywords" content="Web,Node">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Node練習 了解網址路徑與路由">
+<meta property="og:url" content="https://dobubu.github.io/2020/01/04/Node-Practice-2/index.html">
 <meta property="og:site_name" content="Stick to it!">
+<meta property="og:description" content="平常打開瀏覽器搜尋資料，會發現網址上總是寫了一對看不懂的東西，但卻又有點相同之處，這網址規則到底是怎麼設計的呢？🤔這邊用 google 網址來當簡單範例，解釋每個代表的意義 1https://www.google.com/search?q=hello  https 代表傳輸協定 有 http、https 兩種 http：不安全 https：安全，有加密，表單傳送較安全  www.google.c">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-01-11T08:18:44.832Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Stick to it!">
+<meta name="twitter:title" content="Node練習 了解網址路徑與路由">
+<meta name="twitter:description" content="平常打開瀏覽器搜尋資料，會發現網址上總是寫了一對看不懂的東西，但卻又有點相同之處，這網址規則到底是怎麼設計的呢？🤔這邊用 google 網址來當簡單範例，解釋每個代表的意義 1https://www.google.com/search?q=hello  https 代表傳輸協定 有 http、https 兩種 http：不安全 https：安全，有加密，表單傳送較安全  www.google.c">
   
     <link rel="alternate" href="/atom.xml" title="Stick to it!" type="application/atom+xml">
   
@@ -60,59 +65,95 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/07/31/JavaScript-Patterns-2012-1-2/" class="archive-article-date">
-  <time datetime="2019-07-31T13:27:20.000Z" itemprop="datePublished">Jul 31</time>
+        <section id="main"><article id="post-Node-Practice-2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/01/04/Node-Practice-2/" class="article-date">
+  <time datetime="2020-01-04T12:29:03.000Z" itemprop="datePublished">2020-01-04</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/F2E/">F2E</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/31/JavaScript-Patterns-2012-1-2/">JavaScript-Patterns-2012-閱讀[1-2]</a>
+    <h1 class="article-title" itemprop="name">
+      Node練習 了解網址路徑與路由
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/07/14/JavaScript-Patterns-2012-1-1/" class="archive-article-date">
-  <time datetime="2019-07-14T12:49:13.000Z" itemprop="datePublished">Jul 14</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/14/JavaScript-Patterns-2012-1-1/">JavaScript-Patterns-2012-閱讀[1-1]</a>
-    </h1>
-  
+        <p>平常打開瀏覽器搜尋資料，會發現網址上總是寫了一對看不懂的東西，但卻又有點相同之處，這網址規則到底是怎麼設計的呢？🤔<br>這邊用 google 網址來當簡單範例，解釋每個代表的意義</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.google.com/search?q=hello</span><br></pre></td></tr></table></figure>
 
-    </header>
+<h2 id="https"><a href="#https" class="headerlink" title="https"></a>https</h2><ul>
+<li>代表傳輸協定</li>
+<li>有 http、https 兩種</li>
+<li>http：不安全</li>
+<li>https：安全，有加密，表單傳送較安全</li>
+</ul>
+<h2 id="www-google-com"><a href="#www-google-com" class="headerlink" title="www.google.com"></a><a href="http://www.google.com" target="_blank" rel="noopener">www.google.com</a></h2><ul>
+<li>網址（需購買;平常本機練習是localhost or 127.0.0.1）</li>
+</ul>
+<h2 id="google-com"><a href="#google-com" class="headerlink" title="google.com"></a>google.com</h2><ul>
+<li>主網域（Domain）</li>
+<li>由域名供應商提供</li>
+</ul>
+<h2 id="www"><a href="#www" class="headerlink" title="www"></a>www</h2><ul>
+<li>次網域（Sub Domain）</li>
+<li>可掛在主網域下，依據不同服務設置</li>
+</ul>
+<h2 id="search"><a href="#search" class="headerlink" title="search"></a>search</h2><ul>
+<li>路徑（/path），切換到不同頁面</li>
+</ul>
+<h2 id="q-hello"><a href="#q-hello" class="headerlink" title="?q=hello"></a>?q=hello</h2><ul>
+<li>參數（query）</li>
+<li>連接參數：使用 ?</li>
+<li>連接多個參數：使用 ＆</li>
+</ul>
+<p>有了網址路由的概念後，路由設計起來也會比較清楚喔～😆</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dobubu.github.io/2020/01/04/Node-Practice-2/" data-id="ck59bk3060000n2x8frj8pu0v" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/">Web</a></li></ul>
+
+    </footer>
   </div>
-</article>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/01/04/Node-Practice-1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Node練習 開啟一個Web伺服器
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2020/01/04/npm-version/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">各種 npm 版本號</div>
+    </a>
   
+</nav>
 
+  
+</article>
 
 </section>
         
