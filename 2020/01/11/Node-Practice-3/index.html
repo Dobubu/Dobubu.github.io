@@ -5,15 +5,20 @@
   
 
   
-  <title>Archives: 2019/9 | Stick to it!</title>
+  <title>Node練習 設計路由 取得指定路徑 | Stick to it!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Stick to it!">
-<meta property="og:url" content="https://dobubu.github.io/archives/2019/09/index.html">
+  <meta name="description" content="還記得我們一開始，輸入 http://localhost:3000/網頁會出現對應的內容（如下語法）這是因為路由指到/，而出現相對應的內容 123app.get(&apos;/&apos;, function(req, res) &amp;#123;  res.send(&apos;hello express :D&apos;)&amp;#125;)  若這邊我們輸入 http://localhost:3000/apple因為抓不到對應的路由，於是回應">
+<meta name="keywords" content="Node,Web">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Node練習 設計路由 取得指定路徑">
+<meta property="og:url" content="https://dobubu.github.io/2020/01/11/Node-Practice-3/index.html">
 <meta property="og:site_name" content="Stick to it!">
+<meta property="og:description" content="還記得我們一開始，輸入 http://localhost:3000/網頁會出現對應的內容（如下語法）這是因為路由指到/，而出現相對應的內容 123app.get(&apos;/&apos;, function(req, res) &amp;#123;  res.send(&apos;hello express :D&apos;)&amp;#125;)  若這邊我們輸入 http://localhost:3000/apple因為抓不到對應的路由，於是回應">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-01-11T12:53:04.634Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Stick to it!">
+<meta name="twitter:title" content="Node練習 設計路由 取得指定路徑">
+<meta name="twitter:description" content="還記得我們一開始，輸入 http://localhost:3000/網頁會出現對應的內容（如下語法）這是因為路由指到/，而出現相對應的內容 123app.get(&apos;/&apos;, function(req, res) &amp;#123;  res.send(&apos;hello express :D&apos;)&amp;#125;)  若這邊我們輸入 http://localhost:3000/apple因為抓不到對應的路由，於是回應">
   
     <link rel="alternate" href="/atom.xml" title="Stick to it!" type="application/atom+xml">
   
@@ -60,192 +65,90 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/15/jQuery-traverse/" class="archive-article-date">
-  <time datetime="2019-09-15T03:36:27.000Z" itemprop="datePublished">Sep 15</time>
+        <section id="main"><article id="post-Node-Practice-3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/01/11/Node-Practice-3/" class="article-date">
+  <time datetime="2020-01-11T08:20:37.000Z" itemprop="datePublished">2020-01-11</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/F2E/">F2E</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/15/jQuery-traverse/">jQuery 7種 在父子、兄弟關係元素間穿梭（prev、prevAll、next、nextAll、siblings、parent、end、children）2種 改變目標對象（end、andSelf）</a>
+    <h1 class="article-title" itemprop="name">
+      Node練習 設計路由 取得指定路徑
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/15/jQuery-dynamic-5/" class="archive-article-date">
-  <time datetime="2019-09-15T03:19:20.000Z" itemprop="datePublished">Sep 15</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/15/jQuery-dynamic-5/">jQuery 2種 置換元素（replaceWith、replaceAll）</a>
-    </h1>
-  
+        <p>還記得我們一開始，輸入 <a href="http://localhost:3000/" target="_blank" rel="noopener">http://localhost:3000/</a><br>網頁會出現對應的內容（如下語法）<br>這是因為路由指到/，而出現相對應的內容</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.send(<span class="string">'hello express :D'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/15/jQuery-dynamic-4/" class="archive-article-date">
-  <time datetime="2019-09-15T02:04:18.000Z" itemprop="datePublished">Sep 15</time>
-</a>
+<p>若這邊我們輸入 <a href="http://localhost:3000/apple" target="_blank" rel="noopener">http://localhost:3000/apple</a><br>因為抓不到對應的路由，於是回應我們</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cannot GET /apple</span><br></pre></td></tr></table></figure>
+
+<p><strong>讓我們開始動手做 ~</strong></p>
+<p>現在我們來設計一些路由，這邊以會員頁面來當範例</p>
+<ul>
+<li>會員<ul>
+<li>個人資料（user-profile）</li>
+<li>帳密修改（user-account）</li>
+<li>我的最愛（user-favorite）</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">'/user/profile'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.send(<span class="string">'user profile page'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">'/user/account'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.send(<span class="string">'user account page'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">'/user/favorite'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.send(<span class="string">'user favorite page'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>現在我們有三個路由，依序在網址上輸入<br><a href="http://localhost:3000/user/profile" target="_blank" rel="noopener">http://localhost:3000/user/profile</a><br><a href="http://localhost:3000/user/account" target="_blank" rel="noopener">http://localhost:3000/user/account</a><br><a href="http://localhost:3000/user/favorite" target="_blank" rel="noopener">http://localhost:3000/user/favorite</a><br>就會得到相對應的內容</p>
+<p>But 當我們需要動態取得路徑時，我們該如何得到呢？</p>
+<p>這邊會使用 <strong>params</strong> 取得路徑</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">'/user/:name'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> pName = req.params.name;</span><br><span class="line">  <span class="built_in">console</span>.log(pName)</span><br><span class="line">  res.send(<span class="string">`<span class="subst">$&#123;pName&#125;</span> page`</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>這次我們在網址上輸入<br><a href="http://localhost:3000/user/xxxxxx" target="_blank" rel="noopener">http://localhost:3000/user/xxxxxx</a><br>查看終端機，會發現印出 xxxxxx</p>
+<p>若想要增加一些判斷，可以簡單寫成</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">'/user/:name'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> pName = req.params.name;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span>(pName !== <span class="string">'Mary'</span>) &#123;</span><br><span class="line">    res.send(<span class="string">'404 :('</span>)</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    res.send(<span class="string">'Hello Mary :)'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>我們輸入<br><a href="http://localhost:3000/user/Mary" target="_blank" rel="noopener">http://localhost:3000/user/Mary</a><br>出現 Hello Mary :)<br><a href="http://localhost:3000/user/Andy" target="_blank" rel="noopener">http://localhost:3000/user/Andy</a><br>出現 404 :(</p>
+<p>大家可以觀察其他網站路由設計，設計起來也會更加清楚喔～</p>
+
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/15/jQuery-dynamic-4/">jQuery 3種 刪除元素（remove、empty、unwrap）</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/14/jQuery-dynamic-3/" class="archive-article-date">
-  <time datetime="2019-09-14T13:09:17.000Z" itemprop="datePublished">Sep 14</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dobubu.github.io/2020/01/11/Node-Practice-3/" data-id="ck59lbcw50000ylx89o2z3ir0" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/14/jQuery-dynamic-3/">jQuery 3種 利用其他元素包覆元素（wrap、wrapAll、wrapInner）</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/14/jQuery-dynamic-2/" class="archive-article-date">
-  <time datetime="2019-09-14T12:45:51.000Z" itemprop="datePublished">Sep 14</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/14/jQuery-dynamic-2/">jQuery 4種 動態插入元素（before、after、prepend、append）</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/">Web</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/14/jQuery-dynamic-1/" class="archive-article-date">
-  <time datetime="2019-09-14T12:12:39.000Z" itemprop="datePublished">Sep 14</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/14/jQuery-dynamic-1/">jQuery 4種 動態插入元素（insertBefore、insertAfter、prependTo、appendTo）</a>
-    </h1>
   
+    <a href="/2020/01/04/Node-Practice-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Node練習 開啟一個Web伺服器</div>
+    </a>
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/14/css-contextual-selector/" class="archive-article-date">
-  <time datetime="2019-09-14T10:24:48.000Z" itemprop="datePublished">Sep 14</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/14/css-contextual-selector/">CSS-contextual-selector 關聯選取器</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/14/css-attribute-selector/" class="archive-article-date">
-  <time datetime="2019-09-14T10:16:45.000Z" itemprop="datePublished">Sep 14</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/14/css-attribute-selector/">CSS-attribute-selector 屬性選取器</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/14/css-selector/" class="archive-article-date">
-  <time datetime="2019-09-14T03:40:13.000Z" itemprop="datePublished">Sep 14</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/14/css-selector/">CSS-Selector（元素選取器、類別選取器）</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
 
 </section>
         
