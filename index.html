@@ -62,6 +62,54 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Node-Practice-4" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/01/13/Node-Practice-4/" class="article-date">
+  <time datetime="2020-01-13T13:15:44.000Z" itemprop="datePublished">2020-01-13</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/F2E/">F2E</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/01/13/Node-Practice-4/">Node練習 設計路由 取得路徑參數</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在上一回，我們透過 <strong>params</strong> 取得固定網址路徑<br>這次要來取得網址參數</p>
+<p>那我們要怎麼做呢？</p>
+        
+          <p class="article-more-link">
+            <a href="/2020/01/13/Node-Practice-4/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dobubu.github.io/2020/01/13/Node-Practice-4/" data-id="ck5cho73c0009ayx8d6598q58" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/">Web</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Node-Practice-3" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/01/11/Node-Practice-3/" class="article-date">
@@ -93,39 +141,15 @@
 
 <p>若這邊我們輸入 <a href="http://localhost:3000/apple" target="_blank" rel="noopener">http://localhost:3000/apple</a><br>因為抓不到對應的路由，於是回應我們</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cannot GET /apple</span><br></pre></td></tr></table></figure>
-
-<p><strong>讓我們開始動手做 ~</strong></p>
-<p>現在我們來設計一些路由，這邊以會員頁面來當範例</p>
-<ul>
-<li>會員<ul>
-<li>個人資料（user-profile）</li>
-<li>帳密修改（user-account）</li>
-<li>我的最愛（user-favorite）</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">'/user/profile'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.send(<span class="string">'user profile page'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">'/user/account'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.send(<span class="string">'user account page'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">'/user/favorite'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.send(<span class="string">'user favorite page'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>現在我們有三個路由，依序在網址上輸入<br><a href="http://localhost:3000/user/profile" target="_blank" rel="noopener">http://localhost:3000/user/profile</a><br><a href="http://localhost:3000/user/account" target="_blank" rel="noopener">http://localhost:3000/user/account</a><br><a href="http://localhost:3000/user/favorite" target="_blank" rel="noopener">http://localhost:3000/user/favorite</a><br>就會得到相對應的內容</p>
-<p>But 當我們需要動態取得路徑時，我們該如何得到呢？</p>
-<p>這邊會使用 <strong>params</strong> 取得路徑</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">'/user/:name'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> pName = req.params.name;</span><br><span class="line">  <span class="built_in">console</span>.log(pName)</span><br><span class="line">  res.send(<span class="string">`<span class="subst">$&#123;pName&#125;</span> page`</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>這次我們在網址上輸入<br><a href="http://localhost:3000/user/xxxxxx" target="_blank" rel="noopener">http://localhost:3000/user/xxxxxx</a><br>查看終端機，會發現印出 xxxxxx</p>
-<p>若想要增加一些判斷，可以簡單寫成</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">'/user/:name'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> pName = req.params.name;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span>(pName !== <span class="string">'Mary'</span>) &#123;</span><br><span class="line">    res.send(<span class="string">'404 :('</span>)</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    res.send(<span class="string">'Hello Mary :)'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>我們輸入<br><a href="http://localhost:3000/user/Mary" target="_blank" rel="noopener">http://localhost:3000/user/Mary</a><br>出現 Hello Mary :)<br><a href="http://localhost:3000/user/Andy" target="_blank" rel="noopener">http://localhost:3000/user/Andy</a><br>出現 404 :(</p>
-<p>大家可以觀察其他網站路由設計，設計起來也會更加清楚喔～</p>
-
+        
+          <p class="article-more-link">
+            <a href="/2020/01/11/Node-Practice-3/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2020/01/11/Node-Practice-3/" data-id="ck59lbcw50000ylx89o2z3ir0" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2020/01/11/Node-Practice-3/" data-id="ck5cho7390005ayx8ljozt8bg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/">Web</a></li></ul>
@@ -165,20 +189,15 @@
       
         <p>這裡記錄學習Node.js過程，讓我們一起動手做💪</p>
 <h2 id="環境安裝"><a href="#環境安裝" class="headerlink" title="環境安裝"></a>環境安裝</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br><span class="line">npm install express --save</span><br></pre></td></tr></table></figure>
-
-<h2 id="新增一個app-js，並寫上以下code"><a href="#新增一個app-js，並寫上以下code" class="headerlink" title="新增一個app.js，並寫上以下code"></a>新增一個app.js，並寫上以下code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">var</span> app = express();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 開啟網址</span></span><br><span class="line">app.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.send(<span class="string">'hello express :D'</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 監聽 port</span></span><br><span class="line"><span class="keyword">var</span> port = <span class="number">3000</span>;</span><br><span class="line">app.listen(port);</span><br></pre></td></tr></table></figure>
-
-<h2 id="執行"><a href="#執行" class="headerlink" title="執行"></a>執行</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node app.js</span><br></pre></td></tr></table></figure>
-
-<p>打開網頁，輸入下面路徑，假如有顯示你輸入的內容，代表你成功了😁（這兩個都是一樣的意思，代表著本機）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">http://localhost:3000/</span><br><span class="line">http://127.0.0.1:3000/</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gaku0m61z8j31c00u0n0k.jpg" alt></p>
-
+        
+          <p class="article-more-link">
+            <a href="/2020/01/04/Node-Practice-1/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2020/01/04/Node-Practice-1/" data-id="ck59lbcw80001ylx8crvuwqkf" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2020/01/04/Node-Practice-1/" data-id="ck5cho7350001ayx8ef2mwp68" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li></ul>
@@ -218,38 +237,15 @@
       
         <p>平常打開瀏覽器搜尋資料，會發現網址上總是寫了一對看不懂的東西，但卻又有點相同之處，這網址規則到底是怎麼設計的呢？🤔<br>這邊用 google 網址來當簡單範例，解釋每個代表的意義</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.google.com/search?q=hello</span><br></pre></td></tr></table></figure>
-
-<h2 id="https"><a href="#https" class="headerlink" title="https"></a>https</h2><ul>
-<li>代表傳輸協定</li>
-<li>有 http、https 兩種</li>
-<li>http：不安全</li>
-<li>https：安全，有加密，表單傳送較安全</li>
-</ul>
-<h2 id="www-google-com"><a href="#www-google-com" class="headerlink" title="www.google.com"></a><a href="http://www.google.com" target="_blank" rel="noopener">www.google.com</a></h2><ul>
-<li>網址（需購買;平常本機練習是localhost or 127.0.0.1）</li>
-</ul>
-<h2 id="google-com"><a href="#google-com" class="headerlink" title="google.com"></a>google.com</h2><ul>
-<li>主網域（Domain）</li>
-<li>由域名供應商提供</li>
-</ul>
-<h2 id="www"><a href="#www" class="headerlink" title="www"></a>www</h2><ul>
-<li>次網域（Sub Domain）</li>
-<li>可掛在主網域下，依據不同服務設置</li>
-</ul>
-<h2 id="search"><a href="#search" class="headerlink" title="search"></a>search</h2><ul>
-<li>路徑（/path），切換到不同頁面</li>
-</ul>
-<h2 id="q-hello"><a href="#q-hello" class="headerlink" title="?q=hello"></a>?q=hello</h2><ul>
-<li>參數（query）</li>
-<li>連接參數：使用 ?</li>
-<li>連接多個參數：使用 ＆</li>
-</ul>
-<p>有了網址路由的概念後，路由設計起來也會比較清楚喔～😆</p>
-
+        
+          <p class="article-more-link">
+            <a href="/2020/01/04/Node-Practice-2/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2020/01/04/Node-Practice-2/" data-id="ck59lbcwf0009ylx8p0rly1yl" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2020/01/04/Node-Practice-2/" data-id="ck5cho7390004ayx8k0t2hrw7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/">Web</a></li></ul>
@@ -298,7 +294,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2020/01/04/npm-version/" data-id="ck59lbcxv0027ylx8h2mtjzoe" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2020/01/04/npm-version/" data-id="ck5cho74l0031ayx8i5rkma2z" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NPM/">NPM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/version/">version</a></li></ul>
@@ -346,7 +342,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2020/01/04/npm-install/" data-id="ck59lbcxx002eylx8vlr5y18t" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2020/01/04/npm-install/" data-id="ck5cho74j002yayx8su55ohuc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NPM/">NPM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/install/">install</a></li></ul>
@@ -397,7 +393,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/10/20/UTM/" data-id="ck59lbcwg000aylx8ivf0mg9u" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/10/20/UTM/" data-id="ck5cho73g000eayx8irp8ui5s" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Analytics/">Analytics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UTM/">UTM</a></li></ul>
@@ -444,7 +440,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/09/15/jQuery-traverse/" data-id="ck59lbcxr001zylx8onxx1ia1" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/09/15/jQuery-traverse/" data-id="ck5cho74j002zayx8ewgd2637" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/andSelf/">.andSelf()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/children/">.children()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/end/">.end()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/next/">.next()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nextAll/">.nextAll()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/parent/">.parent()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/prev/">.prev()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/prevAll/">.prevAll()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/siblings/">.siblings()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
@@ -494,7 +490,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/09/15/jQuery-dynamic-5/" data-id="ck59lbcxt0022ylx80jq9zfsg" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/09/15/jQuery-dynamic-5/" data-id="ck5cho74h002vayx89t9wdeii" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/replaceAll/">.replaceAll()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/replaceWith/">.replaceWith()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
@@ -543,59 +539,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/09/15/jQuery-dynamic-4/" data-id="ck59lbcxp001wylx86l8o46dr" class="article-share-link">Share</a>
+      <a data-url="https://dobubu.github.io/2019/09/15/jQuery-dynamic-4/" data-id="ck5cho74g002tayx8n9cv0o1m" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/empty/">.empty()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/remove/">.remove()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/unwrap/">.unwrap()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-jQuery-dynamic-3" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/09/14/jQuery-dynamic-3/" class="article-date">
-  <time datetime="2019-09-14T13:09:17.000Z" itemprop="datePublished">2019-09-14</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/F2E/">F2E</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/14/jQuery-dynamic-3/">jQuery 3種 利用其他元素包覆元素（wrap、wrapAll、wrapInner）</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="wrap-包覆各個元素"><a href="#wrap-包覆各個元素" class="headerlink" title=".wrap() 包覆各個元素"></a>.wrap() 包覆各個元素</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  $(<span class="string">'p'</span>).wrap(<span class="string">'&lt;div class="wp"&gt;&lt;/div&gt;'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 執行前 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>蛋糕<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>泡芙<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>布丁<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 執行後 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wp"</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>蛋糕<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wp"</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>泡芙<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wp"</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>布丁<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-        
-          <p class="article-more-link">
-            <a href="/2019/09/14/jQuery-dynamic-3/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://dobubu.github.io/2019/09/14/jQuery-dynamic-3/" data-id="ck59lbcxs0020ylx8xhbkscmr" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wrap/">.wrap()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wrapAll/">.wrapAll()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wrapInner/">.wrapInner()</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
 
     </footer>
   </div>
@@ -639,7 +586,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/after/" style="font-size: 10px;">.after()</a> <a href="/tags/andSelf/" style="font-size: 10px;">.andSelf()</a> <a href="/tags/append/" style="font-size: 10px;">.append()</a> <a href="/tags/appendTo/" style="font-size: 10px;">.appendTo()</a> <a href="/tags/before/" style="font-size: 10px;">.before()</a> <a href="/tags/children/" style="font-size: 10px;">.children()</a> <a href="/tags/empty/" style="font-size: 10px;">.empty()</a> <a href="/tags/end/" style="font-size: 10px;">.end()</a> <a href="/tags/insertAfter/" style="font-size: 10px;">.insertAfter()</a> <a href="/tags/insertBefore/" style="font-size: 10px;">.insertBefore()</a> <a href="/tags/next/" style="font-size: 10px;">.next()</a> <a href="/tags/nextAll/" style="font-size: 10px;">.nextAll()</a> <a href="/tags/parent/" style="font-size: 10px;">.parent()</a> <a href="/tags/prepend/" style="font-size: 10px;">.prepend()</a> <a href="/tags/prependTo/" style="font-size: 10px;">.prependTo()</a> <a href="/tags/prev/" style="font-size: 10px;">.prev()</a> <a href="/tags/prevAll/" style="font-size: 10px;">.prevAll()</a> <a href="/tags/remove/" style="font-size: 10px;">.remove()</a> <a href="/tags/replaceAll/" style="font-size: 10px;">.replaceAll()</a> <a href="/tags/replaceWith/" style="font-size: 10px;">.replaceWith()</a> <a href="/tags/siblings/" style="font-size: 10px;">.siblings()</a> <a href="/tags/unwrap/" style="font-size: 10px;">.unwrap()</a> <a href="/tags/wrap/" style="font-size: 10px;">.wrap()</a> <a href="/tags/wrapAll/" style="font-size: 10px;">.wrapAll()</a> <a href="/tags/wrapInner/" style="font-size: 10px;">.wrapInner()</a> <a href="/tags/Analytics/" style="font-size: 10px;">Analytics</a> <a href="/tags/JavaScript/" style="font-size: 13.33px;">JavaScript</a> <a href="/tags/NPM/" style="font-size: 13.33px;">NPM</a> <a href="/tags/Node/" style="font-size: 20px;">Node</a> <a href="/tags/UTM/" style="font-size: 10px;">UTM</a> <a href="/tags/Vue-js/" style="font-size: 10px;">Vue.js</a> <a href="/tags/Web/" style="font-size: 13.33px;">Web</a> <a href="/tags/attribute-selector/" style="font-size: 10px;">attribute selector</a> <a href="/tags/contextual-selector/" style="font-size: 10px;">contextual selector</a> <a href="/tags/css/" style="font-size: 16.67px;">css</a> <a href="/tags/install/" style="font-size: 10px;">install</a> <a href="/tags/jQuery/" style="font-size: 20px;">jQuery</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/selector/" style="font-size: 13.33px;">selector</a> <a href="/tags/version/" style="font-size: 10px;">version</a> <a href="/tags/work/" style="font-size: 10px;">work</a> <a href="/tags/閱讀/" style="font-size: 13.33px;">閱讀</a>
+      <a href="/tags/after/" style="font-size: 10px;">.after()</a> <a href="/tags/andSelf/" style="font-size: 10px;">.andSelf()</a> <a href="/tags/append/" style="font-size: 10px;">.append()</a> <a href="/tags/appendTo/" style="font-size: 10px;">.appendTo()</a> <a href="/tags/before/" style="font-size: 10px;">.before()</a> <a href="/tags/children/" style="font-size: 10px;">.children()</a> <a href="/tags/empty/" style="font-size: 10px;">.empty()</a> <a href="/tags/end/" style="font-size: 10px;">.end()</a> <a href="/tags/insertAfter/" style="font-size: 10px;">.insertAfter()</a> <a href="/tags/insertBefore/" style="font-size: 10px;">.insertBefore()</a> <a href="/tags/next/" style="font-size: 10px;">.next()</a> <a href="/tags/nextAll/" style="font-size: 10px;">.nextAll()</a> <a href="/tags/parent/" style="font-size: 10px;">.parent()</a> <a href="/tags/prepend/" style="font-size: 10px;">.prepend()</a> <a href="/tags/prependTo/" style="font-size: 10px;">.prependTo()</a> <a href="/tags/prev/" style="font-size: 10px;">.prev()</a> <a href="/tags/prevAll/" style="font-size: 10px;">.prevAll()</a> <a href="/tags/remove/" style="font-size: 10px;">.remove()</a> <a href="/tags/replaceAll/" style="font-size: 10px;">.replaceAll()</a> <a href="/tags/replaceWith/" style="font-size: 10px;">.replaceWith()</a> <a href="/tags/siblings/" style="font-size: 10px;">.siblings()</a> <a href="/tags/unwrap/" style="font-size: 10px;">.unwrap()</a> <a href="/tags/wrap/" style="font-size: 10px;">.wrap()</a> <a href="/tags/wrapAll/" style="font-size: 10px;">.wrapAll()</a> <a href="/tags/wrapInner/" style="font-size: 10px;">.wrapInner()</a> <a href="/tags/Analytics/" style="font-size: 10px;">Analytics</a> <a href="/tags/JavaScript/" style="font-size: 12.5px;">JavaScript</a> <a href="/tags/NPM/" style="font-size: 12.5px;">NPM</a> <a href="/tags/Node/" style="font-size: 20px;">Node</a> <a href="/tags/UTM/" style="font-size: 10px;">UTM</a> <a href="/tags/Vue-js/" style="font-size: 10px;">Vue.js</a> <a href="/tags/Web/" style="font-size: 15px;">Web</a> <a href="/tags/attribute-selector/" style="font-size: 10px;">attribute selector</a> <a href="/tags/contextual-selector/" style="font-size: 10px;">contextual selector</a> <a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/install/" style="font-size: 10px;">install</a> <a href="/tags/jQuery/" style="font-size: 17.5px;">jQuery</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/selector/" style="font-size: 12.5px;">selector</a> <a href="/tags/version/" style="font-size: 10px;">version</a> <a href="/tags/work/" style="font-size: 10px;">work</a> <a href="/tags/閱讀/" style="font-size: 12.5px;">閱讀</a>
     </div>
   </div>
 
@@ -661,6 +608,10 @@
       <ul>
         
           <li>
+            <a href="/2020/01/13/Node-Practice-4/">Node練習 設計路由 取得路徑參數</a>
+          </li>
+        
+          <li>
             <a href="/2020/01/11/Node-Practice-3/">Node練習 設計路由 取得指定路徑</a>
           </li>
         
@@ -674,10 +625,6 @@
         
           <li>
             <a href="/2020/01/04/npm-version/">各種 npm 版本號</a>
-          </li>
-        
-          <li>
-            <a href="/2020/01/04/npm-install/">各種 npm 安裝</a>
           </li>
         
       </ul>

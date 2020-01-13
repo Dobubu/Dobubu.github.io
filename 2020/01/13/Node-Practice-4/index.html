@@ -5,15 +5,20 @@
   
 
   
-  <title>Tag: .prev() | Stick to it!</title>
+  <title>Node練習 設計路由 取得路徑參數 | Stick to it!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Stick to it!">
-<meta property="og:url" content="https://dobubu.github.io/tags/prev/index.html">
+  <meta name="description" content="在上一回，我們透過 params 取得固定網址路徑這次要來取得網址參數 那我們要怎麼做呢？">
+<meta name="keywords" content="Node,Web">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Node練習 設計路由 取得路徑參數">
+<meta property="og:url" content="https://dobubu.github.io/2020/01/13/Node-Practice-4/index.html">
 <meta property="og:site_name" content="Stick to it!">
+<meta property="og:description" content="在上一回，我們透過 params 取得固定網址路徑這次要來取得網址參數 那我們要怎麼做呢？">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-01-13T13:34:05.650Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Stick to it!">
+<meta name="twitter:title" content="Node練習 設計路由 取得路徑參數">
+<meta name="twitter:description" content="在上一回，我們透過 params 取得固定網址路徑這次要來取得網址參數 那我們要怎麼做呢？">
   
     <link rel="alternate" href="/atom.xml" title="Stick to it!" type="application/atom+xml">
   
@@ -60,40 +65,66 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/15/jQuery-traverse/" class="archive-article-date">
-  <time datetime="2019-09-15T03:36:27.000Z" itemprop="datePublished">Sep 15</time>
+        <section id="main"><article id="post-Node-Practice-4" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/01/13/Node-Practice-4/" class="article-date">
+  <time datetime="2020-01-13T13:15:44.000Z" itemprop="datePublished">2020-01-13</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/F2E/">F2E</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/15/jQuery-traverse/">jQuery 7種 在父子、兄弟關係元素間穿梭（prev、prevAll、next、nextAll、siblings、parent、end、children）2種 改變目標對象（end、andSelf）</a>
+    <h1 class="article-title" itemprop="name">
+      Node練習 設計路由 取得路徑參數
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在上一回，我們透過 <strong>params</strong> 取得固定網址路徑<br>這次要來取得網址參數</p>
+<p>那我們要怎麼做呢？</p>
+<a id="more"></a>
 
+<p>這邊會使用 <strong>query</strong> 取得參數</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">'/user/:name'</span>, (req, res) =&gt; &#123;</span><br><span class="line">  <span class="keyword">let</span> &#123;name&#125; = req.params;</span><br><span class="line">  <span class="keyword">let</span> &#123;limit&#125; = req.query;</span><br><span class="line"></span><br><span class="line">  res.send(<span class="string">`<span class="subst">$&#123;name&#125;</span> 想要找出前 <span class="subst">$&#123;limit ? limit : <span class="number">0</span>&#125;</span> 筆的購買資料`</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>我們輸入<br><a href="http://localhost:3000/user/Mary?limit=27" target="_blank" rel="noopener">http://localhost:3000/user/Mary?limit=27</a><br>出現  Mary 想要找出前 27 筆的購買資料</p>
+<p>透過這些參數，後端就可以做出各種不同的篩選功能</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dobubu.github.io/2020/01/13/Node-Practice-4/" data-id="ck5cho73c0009ayx8d6598q58" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/">Web</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/01/11/Node-Practice-3/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Node練習 設計路由 取得指定路徑</div>
+    </a>
+  
+</nav>
+
+  
+</article>
 
 </section>
         
